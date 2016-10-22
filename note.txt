@@ -1,0 +1,19 @@
+Upload
+cmd = New SqlCommand("Insert Into Proposer Values(& @Picture )", con)
+If con.State = ConnectionState.Closed Then con.Open()
+
+            Dim ms As New MemoryStream()
+            PictureBox.Image.Save(ms, PictureBox.Image.RawFormat)
+            Dim data As Byte() = ms.GetBuffer()
+            Dim p As New SqlParameter("@Picture", SqlDbType.Image)
+            p.Value = data
+            cmd.Parameters.Add(p)
+            cmd.ExecuteNonQuery()
+
+            con.Close()
+
+
+Retrieve
+Dim data As Byte() = DirectCast(dr("Picture"), Byte())  
+Dim ms As New MemoryStream(data)  
+Edt_PictureBox.Image = Image.FromStream(ms)

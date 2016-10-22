@@ -23,15 +23,14 @@ Partial Class DashboardNew
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.ClarityTheme1 = New CRM.ClarityTheme()
-        Me.ClarityGroupBox1 = New CRM.ClarityGroupBox()
-        Me.ClarityListBox1 = New CRM.ClarityListBox()
-        Me.IClarityCheckBox1 = New CRM.iClarityCheckBox()
-        Me.IClarityButton1 = New CRM.iClarityButton()
-        Me.ClarityTabControl1 = New CRM.ClarityTabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.byndashmin = New CRM.iClarityButton()
+        Me.btndashmax = New CRM.iClarityButton()
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.btndashexit = New CRM.iClarityButton()
+        Me.btndashrestore = New CRM.iClarityButton()
         Me.ClarityTheme1.SuspendLayout()
-        Me.ClarityTabControl1.SuspendLayout()
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ClarityTheme1
@@ -39,136 +38,97 @@ Partial Class DashboardNew
         Me.ClarityTheme1.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer))
         Me.ClarityTheme1.BorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.ClarityTheme1.Colors = New CRM.Bloom(-1) {}
-        Me.ClarityTheme1.Controls.Add(Me.ClarityGroupBox1)
-        Me.ClarityTheme1.Controls.Add(Me.ClarityListBox1)
-        Me.ClarityTheme1.Controls.Add(Me.IClarityCheckBox1)
-        Me.ClarityTheme1.Controls.Add(Me.IClarityButton1)
-        Me.ClarityTheme1.Controls.Add(Me.ClarityTabControl1)
+        Me.ClarityTheme1.Controls.Add(Me.btndashrestore)
+        Me.ClarityTheme1.Controls.Add(Me.byndashmin)
+        Me.ClarityTheme1.Controls.Add(Me.btndashmax)
+        Me.ClarityTheme1.Controls.Add(Me.SplitContainer1)
+        Me.ClarityTheme1.Controls.Add(Me.btndashexit)
         Me.ClarityTheme1.Customization = ""
         Me.ClarityTheme1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ClarityTheme1.Font = New System.Drawing.Font("Verdana", 8.25!)
         Me.ClarityTheme1.Icon = Nothing
         Me.ClarityTheme1.Image = Nothing
         Me.ClarityTheme1.Location = New System.Drawing.Point(0, 0)
-        Me.ClarityTheme1.Movable = True
+        Me.ClarityTheme1.Movable = False
         Me.ClarityTheme1.Name = "ClarityTheme1"
         Me.ClarityTheme1.NoRounding = False
         Me.ClarityTheme1.ShowIcon = False
-        Me.ClarityTheme1.Sizable = True
-        Me.ClarityTheme1.Size = New System.Drawing.Size(606, 343)
+        Me.ClarityTheme1.Sizable = False
+        Me.ClarityTheme1.Size = New System.Drawing.Size(1362, 741)
         Me.ClarityTheme1.SmartBounds = True
         Me.ClarityTheme1.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation
         Me.ClarityTheme1.TabIndex = 0
-        Me.ClarityTheme1.Text = "Dashboard"
         Me.ClarityTheme1.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.ClarityTheme1.Transparent = False
         '
-        'ClarityGroupBox1
+        'byndashmin
         '
-        Me.ClarityGroupBox1.BorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.ClarityGroupBox1.Colors = New CRM.Bloom(-1) {}
-        Me.ClarityGroupBox1.Customization = ""
-        Me.ClarityGroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.ClarityGroupBox1.Image = Nothing
-        Me.ClarityGroupBox1.Location = New System.Drawing.Point(40, 204)
-        Me.ClarityGroupBox1.Movable = True
-        Me.ClarityGroupBox1.Name = "ClarityGroupBox1"
-        Me.ClarityGroupBox1.NoRounding = False
-        Me.ClarityGroupBox1.Sizable = True
-        Me.ClarityGroupBox1.Size = New System.Drawing.Size(172, 105)
-        Me.ClarityGroupBox1.SmartBounds = True
-        Me.ClarityGroupBox1.StartPosition = System.Windows.Forms.FormStartPosition.Manual
-        Me.ClarityGroupBox1.TabIndex = 4
-        Me.ClarityGroupBox1.Text = "ClarityGroupBox1"
-        Me.ClarityGroupBox1.TransparencyKey = System.Drawing.Color.Fuchsia
-        Me.ClarityGroupBox1.Transparent = False
+        Me.byndashmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.byndashmin.ForeColor = System.Drawing.Color.Transparent
+        Me.byndashmin.Location = New System.Drawing.Point(1246, 3)
+        Me.byndashmin.Name = "byndashmin"
+        Me.byndashmin.Size = New System.Drawing.Size(31, 23)
+        Me.byndashmin.TabIndex = 3
+        Me.byndashmin.TabStop = False
         '
-        'ClarityListBox1
+        'btndashmax
         '
-        Me.ClarityListBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer))
-        Me.ClarityListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.ClarityListBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.ClarityListBox1.FormattingEnabled = True
-        Me.ClarityListBox1.ItemHeight = 15
-        Me.ClarityListBox1.Location = New System.Drawing.Point(238, 204)
-        Me.ClarityListBox1.Name = "ClarityListBox1"
-        Me.ClarityListBox1.Size = New System.Drawing.Size(120, 90)
-        Me.ClarityListBox1.TabIndex = 3
+        Me.btndashmax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btndashmax.ForeColor = System.Drawing.Color.Transparent
+        Me.btndashmax.Location = New System.Drawing.Point(1283, 3)
+        Me.btndashmax.Name = "btndashmax"
+        Me.btndashmax.Size = New System.Drawing.Size(31, 23)
+        Me.btndashmax.TabIndex = 2
+        Me.btndashmax.TabStop = False
         '
-        'IClarityCheckBox1
+        'SplitContainer1
         '
-        Me.IClarityCheckBox1.Checked = False
-        Me.IClarityCheckBox1.Customization = "/////wAAAP8oKCj/"
-        Me.IClarityCheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.IClarityCheckBox1.Image = Nothing
-        Me.IClarityCheckBox1.Location = New System.Drawing.Point(379, 274)
-        Me.IClarityCheckBox1.Name = "IClarityCheckBox1"
-        Me.IClarityCheckBox1.NoRounding = False
-        Me.IClarityCheckBox1.Size = New System.Drawing.Size(124, 17)
-        Me.IClarityCheckBox1.TabIndex = 2
-        Me.IClarityCheckBox1.Text = "IClarityCheckBox1"
-        Me.IClarityCheckBox1.Transparent = False
+        Me.SplitContainer1.Location = New System.Drawing.Point(12, 59)
+        Me.SplitContainer1.Name = "SplitContainer1"
+        Me.SplitContainer1.Size = New System.Drawing.Size(150, 100)
+        Me.SplitContainer1.TabIndex = 1
         '
-        'IClarityButton1
+        'btndashexit
         '
-        Me.IClarityButton1.Location = New System.Drawing.Point(328, 136)
-        Me.IClarityButton1.Name = "IClarityButton1"
-        Me.IClarityButton1.Size = New System.Drawing.Size(154, 52)
-        Me.IClarityButton1.TabIndex = 1
-        Me.IClarityButton1.Text = "IClarityButton1"
+        Me.btndashexit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btndashexit.Location = New System.Drawing.Point(1319, 3)
+        Me.btndashexit.Name = "btndashexit"
+        Me.btndashexit.Size = New System.Drawing.Size(31, 23)
+        Me.btndashexit.TabIndex = 0
+        Me.btndashexit.TabStop = False
+        Me.btndashexit.Text = "X"
         '
-        'ClarityTabControl1
+        'btndashrestore
         '
-        Me.ClarityTabControl1.Controls.Add(Me.TabPage1)
-        Me.ClarityTabControl1.Controls.Add(Me.TabPage2)
-        Me.ClarityTabControl1.Location = New System.Drawing.Point(36, 54)
-        Me.ClarityTabControl1.Name = "ClarityTabControl1"
-        Me.ClarityTabControl1.SelectedIndex = 0
-        Me.ClarityTabControl1.Size = New System.Drawing.Size(200, 100)
-        Me.ClarityTabControl1.TabIndex = 0
-        '
-        'TabPage1
-        '
-        Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer))
-        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(192, 71)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "TabPage1"
-        '
-        'TabPage2
-        '
-        Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer))
-        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(192, 71)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TabPage2"
+        Me.btndashrestore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btndashrestore.ForeColor = System.Drawing.Color.Transparent
+        Me.btndashrestore.Location = New System.Drawing.Point(1283, 3)
+        Me.btndashrestore.Name = "btndashrestore"
+        Me.btndashrestore.Size = New System.Drawing.Size(31, 23)
+        Me.btndashrestore.TabIndex = 4
+        Me.btndashrestore.TabStop = False
         '
         'DashboardNew
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(606, 343)
+        Me.ClientSize = New System.Drawing.Size(1362, 741)
         Me.Controls.Add(Me.ClarityTheme1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "DashboardNew"
         Me.Text = "DashboardNew"
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.ClarityTheme1.ResumeLayout(False)
-        Me.ClarityTabControl1.ResumeLayout(False)
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents ClarityTheme1 As ClarityTheme
-    Friend WithEvents IClarityButton1 As iClarityButton
-    Friend WithEvents ClarityTabControl1 As ClarityTabControl
-    Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents ClarityGroupBox1 As ClarityGroupBox
-    Friend WithEvents ClarityListBox1 As ClarityListBox
-    Friend WithEvents IClarityCheckBox1 As iClarityCheckBox
+    Friend WithEvents btndashexit As iClarityButton
+    Friend WithEvents SplitContainer1 As SplitContainer
+    Friend WithEvents btndashmax As iClarityButton
+    Friend WithEvents byndashmin As iClarityButton
+    Friend WithEvents btndashrestore As iClarityButton
 End Class

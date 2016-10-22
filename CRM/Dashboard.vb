@@ -4,14 +4,16 @@ Imports System.Configuration
 
 Public Class Dashboard
     'Connection
-    Dim con As New SqlConnection("Data Source=DESKTOP-U7T6BFD;Initial Catalog=CRM;Integrated Security=True")
+    Dim con As New SqlConnection("Data Source=SPACEBAAR\SERVER;Initial Catalog=CRM;Integrated Security=True")
     Dim cmd As New SqlCommand
     Dim dr As SqlDataReader
 
     'PageLoad
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'CRMDataSet3.Contacts' table. You can move, or remove it, as needed.
+        Me.ContactsTableAdapter1.Fill(Me.CRMDataSet3.Contacts)
         'TODO: This line of code loads data into the 'CRMDataSet2.Contacts' table. You can move, or remove it, as needed.
-        Me.ContactsTableAdapter.Fill(Me.CRMDataSet2.Contacts)
+        'Me.ContactsTableAdapter.Fill(Me.CRMDataSet2.Contacts)
         'TODO: This line of code loads data into the 'CRMDataSet1.regi' table. You can move, or remove it, as needed.
         'Me.RegiTableAdapter.Fill(Me.CRMDataSet1.regi)
         'Panelcreate.Hide()

@@ -163,6 +163,9 @@ Partial Class Dashboard
         Me.RegiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RegiTableAdapter = New CRM.CRMDataSet1TableAdapters.regiTableAdapter()
         Me.ContactsTableAdapter = New CRM.CRMDataSet2TableAdapters.ContactsTableAdapter()
+        Me.CRMDataSet3 = New CRM.CRMDataSet3()
+        Me.ContactsBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ContactsTableAdapter1 = New CRM.CRMDataSet3TableAdapters.ContactsTableAdapter()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -198,6 +201,8 @@ Partial Class Dashboard
         Me.GroupBox2.SuspendLayout()
         CType(Me.CRMDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RegiBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CRMDataSet3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ContactsBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -1111,7 +1116,7 @@ Partial Class Dashboard
         '
         'ListBox1
         '
-        Me.ListBox1.DataSource = Me.ContactsBindingSource
+        Me.ListBox1.DataSource = Me.ContactsBindingSource1
         Me.ListBox1.DisplayMember = "fname"
         Me.ListBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListBox1.FormattingEnabled = True
@@ -1685,13 +1690,27 @@ Partial Class Dashboard
         '
         Me.ContactsTableAdapter.ClearBeforeFill = True
         '
+        'CRMDataSet3
+        '
+        Me.CRMDataSet3.DataSetName = "CRMDataSet3"
+        Me.CRMDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ContactsBindingSource1
+        '
+        Me.ContactsBindingSource1.DataMember = "Contacts"
+        Me.ContactsBindingSource1.DataSource = Me.CRMDataSet3
+        '
+        'ContactsTableAdapter1
+        '
+        Me.ContactsTableAdapter1.ClearBeforeFill = True
+        '
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1362, 741)
         Me.Controls.Add(Me.SplitContainer1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Dashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Dashboard"
@@ -1742,6 +1761,8 @@ Partial Class Dashboard
         Me.GroupBox2.PerformLayout()
         CType(Me.CRMDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RegiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CRMDataSet3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ContactsBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1898,6 +1919,9 @@ Partial Class Dashboard
     Friend WithEvents btnconreset As Button
     'Friend WithEvents LogInThemeContainer1 As LogInThemeContainer
     Friend WithEvents btnconupdate1 As Button
+    Friend WithEvents CRMDataSet3 As CRMDataSet3
+    Friend WithEvents ContactsBindingSource1 As BindingSource
+    Friend WithEvents ContactsTableAdapter1 As CRMDataSet3TableAdapters.ContactsTableAdapter
     'Friend WithEvents btnconupdate As Button
 
 End Class

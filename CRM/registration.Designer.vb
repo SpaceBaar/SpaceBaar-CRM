@@ -133,10 +133,10 @@ Partial Class registration
         Me.ClarityTheme1.Name = "ClarityTheme1"
         Me.ClarityTheme1.NoRounding = False
         Me.ClarityTheme1.ShowIcon = False
-        Me.ClarityTheme1.Sizable = True
+        Me.ClarityTheme1.Sizable = False
         Me.ClarityTheme1.Size = New System.Drawing.Size(872, 572)
         Me.ClarityTheme1.SmartBounds = True
-        Me.ClarityTheme1.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.ClarityTheme1.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation
         Me.ClarityTheme1.TabIndex = 6
         Me.ClarityTheme1.Text = "ClarityTheme1"
         Me.ClarityTheme1.TransparencyKey = System.Drawing.Color.Fuchsia
@@ -620,7 +620,6 @@ Partial Class registration
         Me.MinimizeBox = False
         Me.Name = "registration"
         Me.ShowIcon = False
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.ClarityTheme1.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)

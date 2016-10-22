@@ -2,18 +2,9 @@
 
 Public Class Login
 
-    Dim con As New SqlConnection("Data Source=DESKTOP-U7T6BFD;Initial Catalog=CRM;Integrated Security=True")
+    Dim con As New SqlConnection("Data Source=SPACEBAAR\SERVER;Initial Catalog=CRM;Integrated Security=True")
     Dim cmd As New SqlCommand
     Dim dr As SqlDataReader
-
-    Private Sub btnregister_Click(sender As Object, e As EventArgs) Handles btnregister.Click
-        registration.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub btnexit_Click(sender As Object, e As EventArgs) Handles btnexit.Click
-        Me.Close()
-    End Sub
 
     Private Sub btnlogin_Click(sender As Object, e As EventArgs) Handles btnlogin.Click
         cmd.Connection = con
@@ -34,7 +25,18 @@ Public Class Login
             End If
             con.Close()
         End If
+    End Sub
 
+    Private Sub btnexit_Click(sender As Object, e As EventArgs) Handles btnexit.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btnregister_Click(sender As Object, e As EventArgs) Handles btnregister.Click
+        registration.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Login_Load(sender As Object, e As EventArgs) Handles Me.Load
 
     End Sub
 End Class

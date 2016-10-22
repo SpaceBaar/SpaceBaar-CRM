@@ -121,4 +121,7 @@
   <data name="spacebaar editographyblak" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\spacebaar editographyblak.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="spacebaar editography" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spacebaar editography.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

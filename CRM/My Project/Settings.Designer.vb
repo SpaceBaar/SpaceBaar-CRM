@@ -57,10 +57,20 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=MAYUR-PC\PSYDY;Initial Catalog=CRM;Integrated Security=True")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-U7T6BFD;Initial Catalog=CRM;Integrated Security=True")>  _
         Public ReadOnly Property CRMConnectionString() As String
             Get
                 Return CType(Me("CRMConnectionString"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=SPACEBAAR\SERVER;Initial Catalog=CRM;Integrated Security=True")>  _
+        Public ReadOnly Property SpaceBaarCrm() As String
+            Get
+                Return CType(Me("SpaceBaarCrm"),String)
             End Get
         End Property
     End Class

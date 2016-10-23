@@ -23,13 +23,13 @@ Partial Class DashboardNew
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.ClarityTheme1 = New CRM.ClarityTheme()
+        Me.ClarityGroupBox1 = New CRM.ClarityGroupBox()
+        Me.ClarityListBox1 = New CRM.ClarityListBox()
+        Me.IClarityCheckBox1 = New CRM.iClarityCheckBox()
+        Me.IClarityButton1 = New CRM.iClarityButton()
         Me.ClarityTabControl1 = New CRM.ClarityTabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.IClarityButton1 = New CRM.iClarityButton()
-        Me.IClarityCheckBox1 = New CRM.iClarityCheckBox()
-        Me.ClarityListBox1 = New CRM.ClarityListBox()
-        Me.ClarityGroupBox1 = New CRM.ClarityGroupBox()
         Me.ClarityTheme1.SuspendLayout()
         Me.ClarityTabControl1.SuspendLayout()
         Me.SuspendLayout()
@@ -63,6 +63,60 @@ Partial Class DashboardNew
         Me.ClarityTheme1.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.ClarityTheme1.Transparent = False
         '
+        'ClarityGroupBox1
+        '
+        Me.ClarityGroupBox1.BorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.ClarityGroupBox1.Colors = New CRM.Bloom(-1) {}
+        Me.ClarityGroupBox1.Customization = ""
+        Me.ClarityGroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.ClarityGroupBox1.Image = Nothing
+        Me.ClarityGroupBox1.Location = New System.Drawing.Point(40, 204)
+        Me.ClarityGroupBox1.Movable = True
+        Me.ClarityGroupBox1.Name = "ClarityGroupBox1"
+        Me.ClarityGroupBox1.NoRounding = False
+        Me.ClarityGroupBox1.Sizable = True
+        Me.ClarityGroupBox1.Size = New System.Drawing.Size(172, 105)
+        Me.ClarityGroupBox1.SmartBounds = True
+        Me.ClarityGroupBox1.StartPosition = System.Windows.Forms.FormStartPosition.Manual
+        Me.ClarityGroupBox1.TabIndex = 4
+        Me.ClarityGroupBox1.Text = "ClarityGroupBox1"
+        Me.ClarityGroupBox1.TransparencyKey = System.Drawing.Color.Fuchsia
+        Me.ClarityGroupBox1.Transparent = False
+        '
+        'ClarityListBox1
+        '
+        Me.ClarityListBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer))
+        Me.ClarityListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ClarityListBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.ClarityListBox1.FormattingEnabled = True
+        Me.ClarityListBox1.ItemHeight = 15
+        Me.ClarityListBox1.Location = New System.Drawing.Point(238, 204)
+        Me.ClarityListBox1.Name = "ClarityListBox1"
+        Me.ClarityListBox1.Size = New System.Drawing.Size(120, 90)
+        Me.ClarityListBox1.TabIndex = 3
+        '
+        'IClarityCheckBox1
+        '
+        Me.IClarityCheckBox1.Checked = False
+        Me.IClarityCheckBox1.Customization = "/////wAAAP8oKCj/"
+        Me.IClarityCheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.IClarityCheckBox1.Image = Nothing
+        Me.IClarityCheckBox1.Location = New System.Drawing.Point(379, 274)
+        Me.IClarityCheckBox1.Name = "IClarityCheckBox1"
+        Me.IClarityCheckBox1.NoRounding = False
+        Me.IClarityCheckBox1.Size = New System.Drawing.Size(124, 17)
+        Me.IClarityCheckBox1.TabIndex = 2
+        Me.IClarityCheckBox1.Text = "IClarityCheckBox1"
+        Me.IClarityCheckBox1.Transparent = False
+        '
+        'IClarityButton1
+        '
+        Me.IClarityButton1.Location = New System.Drawing.Point(328, 136)
+        Me.IClarityButton1.Name = "IClarityButton1"
+        Me.IClarityButton1.Size = New System.Drawing.Size(154, 52)
+        Me.IClarityButton1.TabIndex = 1
+        Me.IClarityButton1.Text = "IClarityButton1"
+        '
         'ClarityTabControl1
         '
         Me.ClarityTabControl1.Controls.Add(Me.TabPage1)
@@ -92,60 +146,6 @@ Partial Class DashboardNew
         Me.TabPage2.Size = New System.Drawing.Size(192, 71)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "TabPage2"
-        '
-        'IClarityButton1
-        '
-        Me.IClarityButton1.Location = New System.Drawing.Point(328, 136)
-        Me.IClarityButton1.Name = "IClarityButton1"
-        Me.IClarityButton1.Size = New System.Drawing.Size(154, 52)
-        Me.IClarityButton1.TabIndex = 1
-        Me.IClarityButton1.Text = "IClarityButton1"
-        '
-        'IClarityCheckBox1
-        '
-        Me.IClarityCheckBox1.Checked = False
-        Me.IClarityCheckBox1.Customization = "/////wAAAP8oKCj/"
-        Me.IClarityCheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.IClarityCheckBox1.Image = Nothing
-        Me.IClarityCheckBox1.Location = New System.Drawing.Point(379, 274)
-        Me.IClarityCheckBox1.Name = "IClarityCheckBox1"
-        Me.IClarityCheckBox1.NoRounding = False
-        Me.IClarityCheckBox1.Size = New System.Drawing.Size(124, 17)
-        Me.IClarityCheckBox1.TabIndex = 2
-        Me.IClarityCheckBox1.Text = "IClarityCheckBox1"
-        Me.IClarityCheckBox1.Transparent = False
-        '
-        'ClarityListBox1
-        '
-        Me.ClarityListBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer))
-        Me.ClarityListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.ClarityListBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.ClarityListBox1.FormattingEnabled = True
-        Me.ClarityListBox1.ItemHeight = 15
-        Me.ClarityListBox1.Location = New System.Drawing.Point(238, 204)
-        Me.ClarityListBox1.Name = "ClarityListBox1"
-        Me.ClarityListBox1.Size = New System.Drawing.Size(120, 90)
-        Me.ClarityListBox1.TabIndex = 3
-        '
-        'ClarityGroupBox1
-        '
-        Me.ClarityGroupBox1.BorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.ClarityGroupBox1.Colors = New CRM.Bloom(-1) {}
-        Me.ClarityGroupBox1.Customization = ""
-        Me.ClarityGroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.ClarityGroupBox1.Image = Nothing
-        Me.ClarityGroupBox1.Location = New System.Drawing.Point(40, 204)
-        Me.ClarityGroupBox1.Movable = True
-        Me.ClarityGroupBox1.Name = "ClarityGroupBox1"
-        Me.ClarityGroupBox1.NoRounding = False
-        Me.ClarityGroupBox1.Sizable = True
-        Me.ClarityGroupBox1.Size = New System.Drawing.Size(172, 105)
-        Me.ClarityGroupBox1.SmartBounds = True
-        Me.ClarityGroupBox1.StartPosition = System.Windows.Forms.FormStartPosition.Manual
-        Me.ClarityGroupBox1.TabIndex = 4
-        Me.ClarityGroupBox1.Text = "ClarityGroupBox1"
-        Me.ClarityGroupBox1.TransparencyKey = System.Drawing.Color.Fuchsia
-        Me.ClarityGroupBox1.Transparent = False
         '
         'DashboardNew
         '

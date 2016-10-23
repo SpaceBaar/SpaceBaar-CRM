@@ -82,8 +82,6 @@ Public Class registration
         gender = "Female"
     End Sub
 
-
-
     'Private Sub txtmobile_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtmobile.KeyPress
     '    If Asc(e.KeyChar) < 65 Or Asc(e.KeyChar) > 122 Then
     '        e.Handled = False

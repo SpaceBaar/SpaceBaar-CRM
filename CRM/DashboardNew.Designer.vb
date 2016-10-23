@@ -22,15 +22,21 @@ Partial Class DashboardNew
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DashboardNew))
         Me.ClarityTheme1 = New CRM.ClarityTheme()
-        Me.byndashmin = New CRM.iClarityButton()
-        Me.btndashmax = New CRM.iClarityButton()
+        Me.btndashrestore = New System.Windows.Forms.Button()
+        Me.btndashmin = New System.Windows.Forms.Button()
+        Me.btndashmax = New System.Windows.Forms.Button()
+        Me.btndashexit = New System.Windows.Forms.Button()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.btndashexit = New CRM.iClarityButton()
-        Me.btndashrestore = New CRM.iClarityButton()
+        Me.DotNetBarTabcontrol1 = New CRM.DotNetBarTabcontrol()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.ClarityTheme1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        Me.DotNetBarTabcontrol1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ClarityTheme1
@@ -39,20 +45,20 @@ Partial Class DashboardNew
         Me.ClarityTheme1.BorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.ClarityTheme1.Colors = New CRM.Bloom(-1) {}
         Me.ClarityTheme1.Controls.Add(Me.btndashrestore)
-        Me.ClarityTheme1.Controls.Add(Me.byndashmin)
+        Me.ClarityTheme1.Controls.Add(Me.btndashmin)
         Me.ClarityTheme1.Controls.Add(Me.btndashmax)
-        Me.ClarityTheme1.Controls.Add(Me.SplitContainer1)
         Me.ClarityTheme1.Controls.Add(Me.btndashexit)
+        Me.ClarityTheme1.Controls.Add(Me.SplitContainer1)
         Me.ClarityTheme1.Customization = ""
         Me.ClarityTheme1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ClarityTheme1.Font = New System.Drawing.Font("Verdana", 8.25!)
-        Me.ClarityTheme1.Icon = Nothing
+        Me.ClarityTheme1.Icon = CType(resources.GetObject("ClarityTheme1.Icon"), System.Drawing.Icon)
         Me.ClarityTheme1.Image = Nothing
         Me.ClarityTheme1.Location = New System.Drawing.Point(0, 0)
         Me.ClarityTheme1.Movable = False
         Me.ClarityTheme1.Name = "ClarityTheme1"
         Me.ClarityTheme1.NoRounding = False
-        Me.ClarityTheme1.ShowIcon = False
+        Me.ClarityTheme1.ShowIcon = True
         Me.ClarityTheme1.Sizable = False
         Me.ClarityTheme1.Size = New System.Drawing.Size(1362, 741)
         Me.ClarityTheme1.SmartBounds = True
@@ -61,52 +67,97 @@ Partial Class DashboardNew
         Me.ClarityTheme1.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.ClarityTheme1.Transparent = False
         '
-        'byndashmin
+        'btndashrestore
         '
-        Me.byndashmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.byndashmin.ForeColor = System.Drawing.Color.Transparent
-        Me.byndashmin.Location = New System.Drawing.Point(1246, 3)
-        Me.byndashmin.Name = "byndashmin"
-        Me.byndashmin.Size = New System.Drawing.Size(31, 23)
-        Me.byndashmin.TabIndex = 3
-        Me.byndashmin.TabStop = False
+        Me.btndashrestore.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btndashrestore.ForeColor = System.Drawing.Color.Transparent
+        Me.btndashrestore.Image = Global.CRM.My.Resources.Resources.User_Interface_Restore_Window_icon
+        Me.btndashrestore.Location = New System.Drawing.Point(1298, 3)
+        Me.btndashrestore.Name = "btndashrestore"
+        Me.btndashrestore.Size = New System.Drawing.Size(23, 23)
+        Me.btndashrestore.TabIndex = 4
+        Me.btndashrestore.UseVisualStyleBackColor = True
+        '
+        'btndashmin
+        '
+        Me.btndashmin.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btndashmin.ForeColor = System.Drawing.Color.Transparent
+        Me.btndashmin.Image = Global.CRM.My.Resources.Resources.Programming_Minimize_Window_icon
+        Me.btndashmin.Location = New System.Drawing.Point(1269, 3)
+        Me.btndashmin.Name = "btndashmin"
+        Me.btndashmin.Size = New System.Drawing.Size(23, 23)
+        Me.btndashmin.TabIndex = 3
+        Me.btndashmin.UseVisualStyleBackColor = True
         '
         'btndashmax
         '
-        Me.btndashmax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btndashmax.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btndashmax.ForeColor = System.Drawing.Color.Transparent
-        Me.btndashmax.Location = New System.Drawing.Point(1283, 3)
+        Me.btndashmax.Image = Global.CRM.My.Resources.Resources.Programming_Maximize_Window_icon
+        Me.btndashmax.Location = New System.Drawing.Point(1298, 3)
         Me.btndashmax.Name = "btndashmax"
-        Me.btndashmax.Size = New System.Drawing.Size(31, 23)
+        Me.btndashmax.Size = New System.Drawing.Size(23, 23)
         Me.btndashmax.TabIndex = 2
-        Me.btndashmax.TabStop = False
-        '
-        'SplitContainer1
-        '
-        Me.SplitContainer1.Location = New System.Drawing.Point(12, 59)
-        Me.SplitContainer1.Name = "SplitContainer1"
-        Me.SplitContainer1.Size = New System.Drawing.Size(150, 100)
-        Me.SplitContainer1.TabIndex = 1
+        Me.btndashmax.UseVisualStyleBackColor = True
         '
         'btndashexit
         '
         Me.btndashexit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btndashexit.Location = New System.Drawing.Point(1319, 3)
+        Me.btndashexit.ForeColor = System.Drawing.Color.Transparent
+        Me.btndashexit.Image = Global.CRM.My.Resources.Resources.Close_icon
+        Me.btndashexit.Location = New System.Drawing.Point(1327, 3)
         Me.btndashexit.Name = "btndashexit"
-        Me.btndashexit.Size = New System.Drawing.Size(31, 23)
+        Me.btndashexit.Size = New System.Drawing.Size(23, 23)
         Me.btndashexit.TabIndex = 0
-        Me.btndashexit.TabStop = False
-        Me.btndashexit.Text = "X"
+        Me.btndashexit.UseVisualStyleBackColor = True
         '
-        'btndashrestore
+        'SplitContainer1
         '
-        Me.btndashrestore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btndashrestore.ForeColor = System.Drawing.Color.Transparent
-        Me.btndashrestore.Location = New System.Drawing.Point(1283, 3)
-        Me.btndashrestore.Name = "btndashrestore"
-        Me.btndashrestore.Size = New System.Drawing.Size(31, 23)
-        Me.btndashrestore.TabIndex = 4
-        Me.btndashrestore.TabStop = False
+        Me.SplitContainer1.Location = New System.Drawing.Point(12, 32)
+        Me.SplitContainer1.Name = "SplitContainer1"
+        Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'SplitContainer1.Panel2
+        '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.DotNetBarTabcontrol1)
+        Me.SplitContainer1.Size = New System.Drawing.Size(1338, 697)
+        Me.SplitContainer1.SplitterDistance = 38
+        Me.SplitContainer1.TabIndex = 1
+        '
+        'DotNetBarTabcontrol1
+        '
+        Me.DotNetBarTabcontrol1.Alignment = System.Windows.Forms.TabAlignment.Left
+        Me.DotNetBarTabcontrol1.Controls.Add(Me.TabPage1)
+        Me.DotNetBarTabcontrol1.Controls.Add(Me.TabPage2)
+        Me.DotNetBarTabcontrol1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DotNetBarTabcontrol1.ItemSize = New System.Drawing.Size(35, 85)
+        Me.DotNetBarTabcontrol1.Location = New System.Drawing.Point(0, 0)
+        Me.DotNetBarTabcontrol1.Multiline = True
+        Me.DotNetBarTabcontrol1.Name = "DotNetBarTabcontrol1"
+        Me.DotNetBarTabcontrol1.SelectedIndex = 0
+        Me.DotNetBarTabcontrol1.Size = New System.Drawing.Size(1338, 655)
+        Me.DotNetBarTabcontrol1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
+        Me.DotNetBarTabcontrol1.TabIndex = 0
+        '
+        'TabPage1
+        '
+        Me.TabPage1.BackColor = System.Drawing.Color.White
+        Me.TabPage1.Location = New System.Drawing.Point(89, 4)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(1245, 647)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "TabPage1"
+        '
+        'TabPage2
+        '
+        Me.TabPage2.BackColor = System.Drawing.Color.White
+        Me.TabPage2.Location = New System.Drawing.Point(89, 4)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(1245, 647)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "TabPage2"
         '
         'DashboardNew
         '
@@ -115,20 +166,26 @@ Partial Class DashboardNew
         Me.ClientSize = New System.Drawing.Size(1362, 741)
         Me.Controls.Add(Me.ClarityTheme1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "DashboardNew"
         Me.Text = "DashboardNew"
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.ClarityTheme1.ResumeLayout(False)
+        Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        Me.DotNetBarTabcontrol1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents ClarityTheme1 As ClarityTheme
-    Friend WithEvents btndashexit As iClarityButton
     Friend WithEvents SplitContainer1 As SplitContainer
-    Friend WithEvents btndashmax As iClarityButton
-    Friend WithEvents byndashmin As iClarityButton
-    Friend WithEvents btndashrestore As iClarityButton
+    Friend WithEvents btndashexit As Button
+    Friend WithEvents btndashmin As Button
+    Friend WithEvents btndashmax As Button
+    Friend WithEvents btndashrestore As Button
+    Friend WithEvents DotNetBarTabcontrol1 As DotNetBarTabcontrol
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents TabPage2 As TabPage
 End Class

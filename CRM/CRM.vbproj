@@ -225,7 +225,16 @@
     <None Include="Resources\spacebaar editography.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\maximize.png" />
+    <None Include="Resources\Programming-Minimize-Window-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Programming-Maximize-Window-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Interface-Restore-Window-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -59,7 +59,7 @@ Partial Class DashboardNew
         Me.ClarityTheme1.SmartBounds = True
         Me.ClarityTheme1.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation
         Me.ClarityTheme1.TabIndex = 0
-        Me.ClarityTheme1.Text = "s"
+        Me.ClarityTheme1.Text = "Dashboard"
         Me.ClarityTheme1.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.ClarityTheme1.Transparent = False
         '

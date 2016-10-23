@@ -20,7 +20,6 @@
 
     Private Sub DashboardNew_Load(sender As Object, e As EventArgs) Handles Me.Load
         btndashrestore.Hide()
-        Me.MaximumSize = New Size(My.Computer.Screen.WorkingArea.Size.Width,
-                                  My.Computer.Screen.WorkingArea.Size.Height - 1)
+
     End Sub
 End Class

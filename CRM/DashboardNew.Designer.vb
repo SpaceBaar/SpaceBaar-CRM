@@ -28,15 +28,7 @@ Partial Class DashboardNew
         Me.btndashmin = New System.Windows.Forms.Button()
         Me.btndashmax = New System.Windows.Forms.Button()
         Me.btndashexit = New System.Windows.Forms.Button()
-        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.DotNetBarTabcontrol1 = New CRM.DotNetBarTabcontrol()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.ClarityTheme1.SuspendLayout()
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SplitContainer1.Panel2.SuspendLayout()
-        Me.SplitContainer1.SuspendLayout()
-        Me.DotNetBarTabcontrol1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ClarityTheme1
@@ -48,19 +40,18 @@ Partial Class DashboardNew
         Me.ClarityTheme1.Controls.Add(Me.btndashmin)
         Me.ClarityTheme1.Controls.Add(Me.btndashmax)
         Me.ClarityTheme1.Controls.Add(Me.btndashexit)
-        Me.ClarityTheme1.Controls.Add(Me.SplitContainer1)
         Me.ClarityTheme1.Customization = ""
         Me.ClarityTheme1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ClarityTheme1.Font = New System.Drawing.Font("Verdana", 8.25!)
         Me.ClarityTheme1.Icon = CType(resources.GetObject("ClarityTheme1.Icon"), System.Drawing.Icon)
         Me.ClarityTheme1.Image = Nothing
         Me.ClarityTheme1.Location = New System.Drawing.Point(0, 0)
-        Me.ClarityTheme1.Movable = False
+        Me.ClarityTheme1.Movable = True
         Me.ClarityTheme1.Name = "ClarityTheme1"
         Me.ClarityTheme1.NoRounding = False
         Me.ClarityTheme1.ShowIcon = True
         Me.ClarityTheme1.Sizable = False
-        Me.ClarityTheme1.Size = New System.Drawing.Size(1362, 741)
+        Me.ClarityTheme1.Size = New System.Drawing.Size(1362, 705)
         Me.ClarityTheme1.SmartBounds = True
         Me.ClarityTheme1.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation
         Me.ClarityTheme1.TabIndex = 0
@@ -111,59 +102,11 @@ Partial Class DashboardNew
         Me.btndashexit.TabIndex = 0
         Me.btndashexit.UseVisualStyleBackColor = True
         '
-        'SplitContainer1
-        '
-        Me.SplitContainer1.Location = New System.Drawing.Point(12, 32)
-        Me.SplitContainer1.Name = "SplitContainer1"
-        Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
-        '
-        'SplitContainer1.Panel2
-        '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.DotNetBarTabcontrol1)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1338, 697)
-        Me.SplitContainer1.SplitterDistance = 38
-        Me.SplitContainer1.TabIndex = 1
-        '
-        'DotNetBarTabcontrol1
-        '
-        Me.DotNetBarTabcontrol1.Alignment = System.Windows.Forms.TabAlignment.Left
-        Me.DotNetBarTabcontrol1.Controls.Add(Me.TabPage1)
-        Me.DotNetBarTabcontrol1.Controls.Add(Me.TabPage2)
-        Me.DotNetBarTabcontrol1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DotNetBarTabcontrol1.ItemSize = New System.Drawing.Size(35, 85)
-        Me.DotNetBarTabcontrol1.Location = New System.Drawing.Point(0, 0)
-        Me.DotNetBarTabcontrol1.Multiline = True
-        Me.DotNetBarTabcontrol1.Name = "DotNetBarTabcontrol1"
-        Me.DotNetBarTabcontrol1.SelectedIndex = 0
-        Me.DotNetBarTabcontrol1.Size = New System.Drawing.Size(1338, 655)
-        Me.DotNetBarTabcontrol1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
-        Me.DotNetBarTabcontrol1.TabIndex = 0
-        '
-        'TabPage1
-        '
-        Me.TabPage1.BackColor = System.Drawing.Color.White
-        Me.TabPage1.Location = New System.Drawing.Point(89, 4)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1245, 647)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "TabPage1"
-        '
-        'TabPage2
-        '
-        Me.TabPage2.BackColor = System.Drawing.Color.White
-        Me.TabPage2.Location = New System.Drawing.Point(89, 4)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1245, 647)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TabPage2"
-        '
         'DashboardNew
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1362, 741)
+        Me.ClientSize = New System.Drawing.Size(1362, 705)
         Me.Controls.Add(Me.ClarityTheme1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -171,21 +114,13 @@ Partial Class DashboardNew
         Me.Text = "DashboardNew"
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.ClarityTheme1.ResumeLayout(False)
-        Me.SplitContainer1.Panel2.ResumeLayout(False)
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SplitContainer1.ResumeLayout(False)
-        Me.DotNetBarTabcontrol1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents ClarityTheme1 As ClarityTheme
-    Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents btndashexit As Button
     Friend WithEvents btndashmin As Button
     Friend WithEvents btndashmax As Button
     Friend WithEvents btndashrestore As Button
-    Friend WithEvents DotNetBarTabcontrol1 As DotNetBarTabcontrol
-    Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents TabPage2 As TabPage
 End Class

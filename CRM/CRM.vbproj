@@ -125,9 +125,6 @@
     <Compile Include="Theme.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Theme2.vb">
-      <SubType>Component</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Dashboard.resx">

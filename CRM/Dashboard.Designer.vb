@@ -163,7 +163,6 @@ Partial Class Dashboard
         Me.RegiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RegiTableAdapter = New CRM.CRMDataSet1TableAdapters.regiTableAdapter()
         Me.ContactsTableAdapter = New CRM.CRMDataSet2TableAdapters.ContactsTableAdapter()
-        'Me.LogInThemeContainer1 = New CRM.LogInThemeContainer()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -1684,33 +1683,12 @@ Partial Class Dashboard
         '
         Me.ContactsTableAdapter.ClearBeforeFill = True
         '
-        ''LogInThemeContainer1
-        ''
-        'Me.LogInThemeContainer1.AllowClose = True
-        'Me.LogInThemeContainer1.AllowMaximize = True
-        'Me.LogInThemeContainer1.AllowMinimize = True
-        'Me.LogInThemeContainer1.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
-        'Me.LogInThemeContainer1.BaseColour = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
-        'Me.LogInThemeContainer1.BorderColour = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        'Me.LogInThemeContainer1.ContainerColour = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(54, Byte), Integer))
-        'Me.LogInThemeContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-        'Me.LogInThemeContainer1.FontColour = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        'Me.LogInThemeContainer1.FontSize = 12
-        'Me.LogInThemeContainer1.HoverColour = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer))
-        'Me.LogInThemeContainer1.Location = New System.Drawing.Point(0, 0)
-        'Me.LogInThemeContainer1.Name = "LogInThemeContainer1"
-        'Me.LogInThemeContainer1.ShowIcon = True
-        'Me.LogInThemeContainer1.Size = New System.Drawing.Size(1362, 741)
-        'Me.LogInThemeContainer1.TabIndex = 1
-        'Me.LogInThemeContainer1.Text = "LogInThemeContainer1"
-        ''
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1362, 741)
         Me.Controls.Add(Me.SplitContainer1)
-        'Me.Controls.Add(Me.LogInThemeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Dashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

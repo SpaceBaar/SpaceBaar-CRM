@@ -2,7 +2,7 @@
 
 Public Class Login
 
-    Dim con As New SqlConnection("Data Source=MAYUR-PC\PSYDY;Initial Catalog=CRM;Integrated Security=True")
+    Dim con As New SqlConnection("Data Source=DESKTOP-U7T6BFD;Initial Catalog=CRM;Integrated Security=True")
     Dim cmd As New SqlCommand
     Dim dr As SqlDataReader
 

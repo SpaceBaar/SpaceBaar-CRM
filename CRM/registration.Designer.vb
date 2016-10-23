@@ -75,9 +75,11 @@ Partial Class registration
         Me.txtusername = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
+        Me.ClarityTheme1 = New CRM.ClarityTheme()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.ClarityTheme1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -107,9 +109,10 @@ Partial Class registration
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txtname)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(37, 45)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.White
+        Me.GroupBox1.Location = New System.Drawing.Point(35, 40)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(361, 499)
+        Me.GroupBox1.Size = New System.Drawing.Size(361, 481)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Personal Profile"
@@ -118,7 +121,7 @@ Partial Class registration
         '
         Me.txtcountry.Location = New System.Drawing.Point(143, 299)
         Me.txtcountry.Name = "txtcountry"
-        Me.txtcountry.Size = New System.Drawing.Size(188, 20)
+        Me.txtcountry.Size = New System.Drawing.Size(188, 21)
         Me.txtcountry.TabIndex = 24
         '
         'Label23
@@ -126,7 +129,7 @@ Partial Class registration
         Me.Label23.AutoSize = True
         Me.Label23.Location = New System.Drawing.Point(28, 306)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(43, 13)
+        Me.Label23.Size = New System.Drawing.Size(53, 13)
         Me.Label23.TabIndex = 23
         Me.Label23.Text = "Country"
         '
@@ -134,7 +137,7 @@ Partial Class registration
         '
         Me.txtstate.Location = New System.Drawing.Point(143, 261)
         Me.txtstate.Name = "txtstate"
-        Me.txtstate.Size = New System.Drawing.Size(188, 20)
+        Me.txtstate.Size = New System.Drawing.Size(188, 21)
         Me.txtstate.TabIndex = 22
         '
         'Label19
@@ -142,7 +145,7 @@ Partial Class registration
         Me.Label19.AutoSize = True
         Me.Label19.Location = New System.Drawing.Point(28, 264)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(32, 13)
+        Me.Label19.Size = New System.Drawing.Size(37, 13)
         Me.Label19.TabIndex = 21
         Me.Label19.Text = "State"
         '
@@ -150,7 +153,7 @@ Partial Class registration
         '
         Me.txtcity.Location = New System.Drawing.Point(143, 229)
         Me.txtcity.Name = "txtcity"
-        Me.txtcity.Size = New System.Drawing.Size(188, 20)
+        Me.txtcity.Size = New System.Drawing.Size(188, 21)
         Me.txtcity.TabIndex = 20
         '
         'Label18
@@ -158,7 +161,7 @@ Partial Class registration
         Me.Label18.AutoSize = True
         Me.Label18.Location = New System.Drawing.Point(28, 232)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(24, 13)
+        Me.Label18.Size = New System.Drawing.Size(30, 13)
         Me.Label18.TabIndex = 19
         Me.Label18.Text = "City"
         '
@@ -166,7 +169,7 @@ Partial Class registration
         '
         Me.txtaddressline2.Location = New System.Drawing.Point(143, 192)
         Me.txtaddressline2.Name = "txtaddressline2"
-        Me.txtaddressline2.Size = New System.Drawing.Size(188, 20)
+        Me.txtaddressline2.Size = New System.Drawing.Size(188, 21)
         Me.txtaddressline2.TabIndex = 18
         '
         'Label17
@@ -174,7 +177,7 @@ Partial Class registration
         Me.Label17.AutoSize = True
         Me.Label17.Location = New System.Drawing.Point(28, 195)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(77, 13)
+        Me.Label17.Size = New System.Drawing.Size(91, 13)
         Me.Label17.TabIndex = 17
         Me.Label17.Text = "Address Line 2"
         '
@@ -182,7 +185,7 @@ Partial Class registration
         '
         Me.txtfax.Location = New System.Drawing.Point(143, 446)
         Me.txtfax.Name = "txtfax"
-        Me.txtfax.Size = New System.Drawing.Size(188, 20)
+        Me.txtfax.Size = New System.Drawing.Size(188, 21)
         Me.txtfax.TabIndex = 16
         '
         'Label16
@@ -190,7 +193,7 @@ Partial Class registration
         Me.Label16.AutoSize = True
         Me.Label16.Location = New System.Drawing.Point(28, 453)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(24, 13)
+        Me.Label16.Size = New System.Drawing.Size(26, 13)
         Me.Label16.TabIndex = 15
         Me.Label16.Text = "Fax"
         '
@@ -198,7 +201,7 @@ Partial Class registration
         '
         Me.DateTimePicker1.Location = New System.Drawing.Point(143, 111)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 21)
         Me.DateTimePicker1.TabIndex = 14
         '
         'Label15
@@ -206,7 +209,7 @@ Partial Class registration
         Me.Label15.AutoSize = True
         Me.Label15.Location = New System.Drawing.Point(28, 111)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(30, 13)
+        Me.Label15.Size = New System.Drawing.Size(33, 13)
         Me.Label15.TabIndex = 13
         Me.Label15.Text = "DOB"
         '
@@ -215,7 +218,7 @@ Partial Class registration
         Me.rbtnfemale.AutoSize = True
         Me.rbtnfemale.Location = New System.Drawing.Point(239, 70)
         Me.rbtnfemale.Name = "rbtnfemale"
-        Me.rbtnfemale.Size = New System.Drawing.Size(59, 17)
+        Me.rbtnfemale.Size = New System.Drawing.Size(66, 17)
         Me.rbtnfemale.TabIndex = 12
         Me.rbtnfemale.TabStop = True
         Me.rbtnfemale.Text = "Female"
@@ -226,7 +229,7 @@ Partial Class registration
         Me.rbtnmale.AutoSize = True
         Me.rbtnmale.Location = New System.Drawing.Point(143, 70)
         Me.rbtnmale.Name = "rbtnmale"
-        Me.rbtnmale.Size = New System.Drawing.Size(48, 17)
+        Me.rbtnmale.Size = New System.Drawing.Size(51, 17)
         Me.rbtnmale.TabIndex = 11
         Me.rbtnmale.TabStop = True
         Me.rbtnmale.Text = "Male"
@@ -237,7 +240,7 @@ Partial Class registration
         Me.Label14.AutoSize = True
         Me.Label14.Location = New System.Drawing.Point(28, 74)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(42, 13)
+        Me.Label14.Size = New System.Drawing.Size(49, 13)
         Me.Label14.TabIndex = 8
         Me.Label14.Text = "Gender"
         '
@@ -245,7 +248,7 @@ Partial Class registration
         '
         Me.txttelnumber.Location = New System.Drawing.Point(143, 411)
         Me.txttelnumber.Name = "txttelnumber"
-        Me.txttelnumber.Size = New System.Drawing.Size(188, 20)
+        Me.txttelnumber.Size = New System.Drawing.Size(188, 21)
         Me.txttelnumber.TabIndex = 10
         '
         'Label12
@@ -253,7 +256,7 @@ Partial Class registration
         Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(28, 418)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(98, 13)
+        Me.Label12.Size = New System.Drawing.Size(114, 13)
         Me.Label12.TabIndex = 9
         Me.Label12.Text = "Telephone Number"
         '
@@ -261,21 +264,21 @@ Partial Class registration
         '
         Me.txtemail.Location = New System.Drawing.Point(143, 337)
         Me.txtemail.Name = "txtemail"
-        Me.txtemail.Size = New System.Drawing.Size(188, 20)
+        Me.txtemail.Size = New System.Drawing.Size(188, 21)
         Me.txtemail.TabIndex = 8
         '
         'txtaddressline1
         '
         Me.txtaddressline1.Location = New System.Drawing.Point(143, 154)
         Me.txtaddressline1.Name = "txtaddressline1"
-        Me.txtaddressline1.Size = New System.Drawing.Size(188, 20)
+        Me.txtaddressline1.Size = New System.Drawing.Size(188, 21)
         Me.txtaddressline1.TabIndex = 7
         '
         'txtmobile
         '
         Me.txtmobile.Location = New System.Drawing.Point(143, 371)
         Me.txtmobile.Name = "txtmobile"
-        Me.txtmobile.Size = New System.Drawing.Size(188, 20)
+        Me.txtmobile.Size = New System.Drawing.Size(188, 21)
         Me.txtmobile.TabIndex = 6
         '
         'Label4
@@ -283,7 +286,7 @@ Partial Class registration
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(28, 344)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(46, 13)
+        Me.Label4.Size = New System.Drawing.Size(56, 13)
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "Email ID"
         '
@@ -292,7 +295,7 @@ Partial Class registration
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(28, 157)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(77, 13)
+        Me.Label3.Size = New System.Drawing.Size(91, 13)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Address Line 1"
         '
@@ -301,7 +304,7 @@ Partial Class registration
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(28, 378)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(78, 13)
+        Me.Label2.Size = New System.Drawing.Size(92, 13)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Mobile Number"
         '
@@ -309,7 +312,7 @@ Partial Class registration
         '
         Me.txtname.Location = New System.Drawing.Point(143, 30)
         Me.txtname.Name = "txtname"
-        Me.txtname.Size = New System.Drawing.Size(188, 20)
+        Me.txtname.Size = New System.Drawing.Size(188, 21)
         Me.txtname.TabIndex = 2
         '
         'Label1
@@ -317,7 +320,7 @@ Partial Class registration
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(28, 37)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(35, 13)
+        Me.Label1.Size = New System.Drawing.Size(40, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Name"
         '
@@ -339,7 +342,8 @@ Partial Class registration
         Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Location = New System.Drawing.Point(454, 45)
+        Me.GroupBox2.ForeColor = System.Drawing.Color.White
+        Me.GroupBox2.Location = New System.Drawing.Point(437, 40)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(402, 328)
         Me.GroupBox2.TabIndex = 1
@@ -350,7 +354,7 @@ Partial Class registration
         '
         Me.txtcompstate.Location = New System.Drawing.Point(147, 219)
         Me.txtcompstate.Name = "txtcompstate"
-        Me.txtcompstate.Size = New System.Drawing.Size(188, 20)
+        Me.txtcompstate.Size = New System.Drawing.Size(188, 21)
         Me.txtcompstate.TabIndex = 30
         '
         'Label7
@@ -358,7 +362,7 @@ Partial Class registration
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(34, 222)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(32, 13)
+        Me.Label7.Size = New System.Drawing.Size(37, 13)
         Me.Label7.TabIndex = 29
         Me.Label7.Text = "State"
         '
@@ -366,7 +370,7 @@ Partial Class registration
         '
         Me.txtcompcity.Location = New System.Drawing.Point(147, 187)
         Me.txtcompcity.Name = "txtcompcity"
-        Me.txtcompcity.Size = New System.Drawing.Size(188, 20)
+        Me.txtcompcity.Size = New System.Drawing.Size(188, 21)
         Me.txtcompcity.TabIndex = 28
         '
         'Label20
@@ -374,7 +378,7 @@ Partial Class registration
         Me.Label20.AutoSize = True
         Me.Label20.Location = New System.Drawing.Point(34, 190)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(24, 13)
+        Me.Label20.Size = New System.Drawing.Size(30, 13)
         Me.Label20.TabIndex = 27
         Me.Label20.Text = "City"
         '
@@ -382,7 +386,7 @@ Partial Class registration
         '
         Me.txtcomaddline2.Location = New System.Drawing.Point(147, 150)
         Me.txtcomaddline2.Name = "txtcomaddline2"
-        Me.txtcomaddline2.Size = New System.Drawing.Size(188, 20)
+        Me.txtcomaddline2.Size = New System.Drawing.Size(188, 21)
         Me.txtcomaddline2.TabIndex = 26
         '
         'Label21
@@ -390,7 +394,7 @@ Partial Class registration
         Me.Label21.AutoSize = True
         Me.Label21.Location = New System.Drawing.Point(34, 153)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(77, 13)
+        Me.Label21.Size = New System.Drawing.Size(91, 13)
         Me.Label21.TabIndex = 25
         Me.Label21.Text = "Address Line 2"
         '
@@ -398,7 +402,7 @@ Partial Class registration
         '
         Me.txtcomaddline1.Location = New System.Drawing.Point(147, 112)
         Me.txtcomaddline1.Name = "txtcomaddline1"
-        Me.txtcomaddline1.Size = New System.Drawing.Size(188, 20)
+        Me.txtcomaddline1.Size = New System.Drawing.Size(188, 21)
         Me.txtcomaddline1.TabIndex = 24
         '
         'Label22
@@ -406,7 +410,7 @@ Partial Class registration
         Me.Label22.AutoSize = True
         Me.Label22.Location = New System.Drawing.Point(34, 115)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(77, 13)
+        Me.Label22.Size = New System.Drawing.Size(91, 13)
         Me.Label22.TabIndex = 23
         Me.Label22.Text = "Address Line 1"
         '
@@ -414,28 +418,28 @@ Partial Class registration
         '
         Me.txtwebsite.Location = New System.Drawing.Point(147, 285)
         Me.txtwebsite.Name = "txtwebsite"
-        Me.txtwebsite.Size = New System.Drawing.Size(188, 20)
+        Me.txtwebsite.Size = New System.Drawing.Size(188, 21)
         Me.txtwebsite.TabIndex = 11
         '
         'txtcompanyemail
         '
         Me.txtcompanyemail.Location = New System.Drawing.Point(147, 255)
         Me.txtcompanyemail.Name = "txtcompanyemail"
-        Me.txtcompanyemail.Size = New System.Drawing.Size(188, 20)
+        Me.txtcompanyemail.Size = New System.Drawing.Size(188, 21)
         Me.txtcompanyemail.TabIndex = 10
         '
         'txtcompanycontact
         '
         Me.txtcompanycontact.Location = New System.Drawing.Point(147, 74)
         Me.txtcompanycontact.Name = "txtcompanycontact"
-        Me.txtcompanycontact.Size = New System.Drawing.Size(188, 20)
+        Me.txtcompanycontact.Size = New System.Drawing.Size(188, 21)
         Me.txtcompanycontact.TabIndex = 8
         '
         'txtcompanyname
         '
         Me.txtcompanyname.Location = New System.Drawing.Point(147, 34)
         Me.txtcompanyname.Name = "txtcompanyname"
-        Me.txtcompanyname.Size = New System.Drawing.Size(188, 20)
+        Me.txtcompanyname.Size = New System.Drawing.Size(188, 21)
         Me.txtcompanyname.TabIndex = 7
         '
         'Label9
@@ -443,7 +447,7 @@ Partial Class registration
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(34, 292)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(46, 13)
+        Me.Label9.Size = New System.Drawing.Size(51, 13)
         Me.Label9.TabIndex = 6
         Me.Label9.Text = "Website"
         '
@@ -452,7 +456,7 @@ Partial Class registration
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(34, 258)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(46, 13)
+        Me.Label8.Size = New System.Drawing.Size(56, 13)
         Me.Label8.TabIndex = 5
         Me.Label8.Text = "Email ID"
         '
@@ -461,7 +465,7 @@ Partial Class registration
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(34, 77)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(84, 13)
+        Me.Label6.Size = New System.Drawing.Size(100, 13)
         Me.Label6.TabIndex = 3
         Me.Label6.Text = "Contact Number"
         '
@@ -470,13 +474,13 @@ Partial Class registration
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(34, 37)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(35, 13)
+        Me.Label5.Size = New System.Drawing.Size(40, 13)
         Me.Label5.TabIndex = 2
         Me.Label5.Text = "Name"
         '
         'btnregister
         '
-        Me.btnregister.Location = New System.Drawing.Point(293, 561)
+        Me.btnregister.Location = New System.Drawing.Point(291, 531)
         Me.btnregister.Name = "btnregister"
         Me.btnregister.Size = New System.Drawing.Size(75, 23)
         Me.btnregister.TabIndex = 2
@@ -486,7 +490,7 @@ Partial Class registration
         'btncancel
         '
         Me.btncancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btncancel.Location = New System.Drawing.Point(491, 561)
+        Me.btncancel.Location = New System.Drawing.Point(487, 531)
         Me.btncancel.Name = "btncancel"
         Me.btncancel.Size = New System.Drawing.Size(75, 23)
         Me.btncancel.TabIndex = 3
@@ -501,100 +505,130 @@ Partial Class registration
         Me.GroupBox3.Controls.Add(Me.Label11)
         Me.GroupBox3.Controls.Add(Me.txtusername)
         Me.GroupBox3.Controls.Add(Me.Label10)
-        Me.GroupBox3.Location = New System.Drawing.Point(454, 389)
+        Me.GroupBox3.ForeColor = System.Drawing.Color.White
+        Me.GroupBox3.Location = New System.Drawing.Point(437, 384)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(402, 155)
+        Me.GroupBox3.Size = New System.Drawing.Size(402, 137)
         Me.GroupBox3.TabIndex = 4
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Login Details"
         '
         'txtcnfpassword
         '
-        Me.txtcnfpassword.Location = New System.Drawing.Point(147, 108)
+        Me.txtcnfpassword.Location = New System.Drawing.Point(147, 99)
         Me.txtcnfpassword.Name = "txtcnfpassword"
         Me.txtcnfpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtcnfpassword.Size = New System.Drawing.Size(188, 20)
+        Me.txtcnfpassword.Size = New System.Drawing.Size(188, 21)
         Me.txtcnfpassword.TabIndex = 7
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(34, 115)
+        Me.Label13.Location = New System.Drawing.Point(34, 106)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(93, 13)
+        Me.Label13.Size = New System.Drawing.Size(111, 13)
         Me.Label13.TabIndex = 6
-        Me.Label13.Text = "Confirm Username"
+        Me.Label13.Text = "Confirm Password"
         '
         'txtpassword
         '
-        Me.txtpassword.Location = New System.Drawing.Point(147, 73)
+        Me.txtpassword.Location = New System.Drawing.Point(147, 64)
         Me.txtpassword.Name = "txtpassword"
         Me.txtpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtpassword.Size = New System.Drawing.Size(188, 20)
+        Me.txtpassword.Size = New System.Drawing.Size(188, 21)
         Me.txtpassword.TabIndex = 5
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(34, 80)
+        Me.Label11.Location = New System.Drawing.Point(34, 71)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(53, 13)
+        Me.Label11.Size = New System.Drawing.Size(61, 13)
         Me.Label11.TabIndex = 4
         Me.Label11.Text = "Password"
         '
         'txtusername
         '
-        Me.txtusername.Location = New System.Drawing.Point(147, 33)
+        Me.txtusername.Location = New System.Drawing.Point(147, 24)
         Me.txtusername.Name = "txtusername"
-        Me.txtusername.Size = New System.Drawing.Size(188, 20)
+        Me.txtusername.Size = New System.Drawing.Size(188, 21)
         Me.txtusername.TabIndex = 3
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(34, 40)
+        Me.Label10.Location = New System.Drawing.Point(34, 31)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(55, 13)
+        Me.Label10.Size = New System.Drawing.Size(65, 13)
         Me.Label10.TabIndex = 2
         Me.Label10.Text = "Username"
         '
         'Label24
         '
         Me.Label24.AutoSize = True
+        Me.Label24.BackColor = System.Drawing.Color.Transparent
         Me.Label24.Font = New System.Drawing.Font("Lucida Fax", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.ForeColor = System.Drawing.SystemColors.Control
         Me.Label24.Location = New System.Drawing.Point(355, 12)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(137, 18)
         Me.Label24.TabIndex = 5
         Me.Label24.Text = "REGISTRATION"
         '
+        'ClarityTheme1
+        '
+        Me.ClarityTheme1.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer))
+        Me.ClarityTheme1.BorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.ClarityTheme1.Colors = New CRM.Bloom(-1) {}
+        Me.ClarityTheme1.Controls.Add(Me.btnregister)
+        Me.ClarityTheme1.Controls.Add(Me.GroupBox3)
+        Me.ClarityTheme1.Controls.Add(Me.btncancel)
+        Me.ClarityTheme1.Controls.Add(Me.GroupBox2)
+        Me.ClarityTheme1.Controls.Add(Me.GroupBox1)
+        Me.ClarityTheme1.Customization = ""
+        Me.ClarityTheme1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ClarityTheme1.Font = New System.Drawing.Font("Verdana", 8.25!)
+        Me.ClarityTheme1.Icon = Nothing
+        Me.ClarityTheme1.Image = Nothing
+        Me.ClarityTheme1.Location = New System.Drawing.Point(0, 0)
+        Me.ClarityTheme1.Movable = True
+        Me.ClarityTheme1.Name = "ClarityTheme1"
+        Me.ClarityTheme1.NoRounding = False
+        Me.ClarityTheme1.ShowIcon = False
+        Me.ClarityTheme1.Sizable = True
+        Me.ClarityTheme1.Size = New System.Drawing.Size(872, 572)
+        Me.ClarityTheme1.SmartBounds = True
+        Me.ClarityTheme1.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.ClarityTheme1.TabIndex = 6
+        Me.ClarityTheme1.Text = "ClarityTheme1"
+        Me.ClarityTheme1.TransparencyKey = System.Drawing.Color.Fuchsia
+        Me.ClarityTheme1.Transparent = False
+        '
         'registration
         '
         Me.AcceptButton = Me.btnregister
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer))
         Me.CancelButton = Me.btncancel
-        Me.ClientSize = New System.Drawing.Size(876, 576)
+        Me.ClientSize = New System.Drawing.Size(872, 572)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label24)
-        Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.btncancel)
-        Me.Controls.Add(Me.btnregister)
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Controls.Add(Me.ClarityTheme1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "registration"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        Me.ClarityTheme1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -653,4 +687,5 @@ Partial Class registration
     Friend WithEvents txtcomaddline1 As TextBox
     Friend WithEvents Label22 As Label
     Friend WithEvents Label24 As Label
+    Friend WithEvents ClarityTheme1 As ClarityTheme
 End Class

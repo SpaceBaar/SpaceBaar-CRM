@@ -94,6 +94,12 @@
     <Compile Include="Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DashboardNew.Designer.vb">
+      <DependentUpon>DashboardNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -125,10 +131,16 @@
     <Compile Include="Theme.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Themedesign.vb">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardNew.resx">
+      <DependentUpon>DashboardNew.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>

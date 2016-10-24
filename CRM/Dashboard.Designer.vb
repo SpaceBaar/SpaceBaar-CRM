@@ -1059,7 +1059,7 @@ Partial Class Dashboard
         Me.TabPage8.Location = New System.Drawing.Point(4, 22)
         Me.TabPage8.Name = "TabPage8"
         Me.TabPage8.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage8.Size = New System.Drawing.Size(1086, 715)
+        Me.TabPage8.Size = New System.Drawing.Size(1083, 707)
         Me.TabPage8.TabIndex = 7
         Me.TabPage8.Text = "Contact Details"
         Me.TabPage8.UseVisualStyleBackColor = True
@@ -1080,8 +1080,8 @@ Partial Class Dashboard
         Me.SplitContainer2.Panel2.Controls.Add(Me.Panelcreate)
         Me.SplitContainer2.Panel2.Controls.Add(Me.btncreatecontact)
         Me.SplitContainer2.Panel2.Controls.Add(Me.btnviewcontacts)
-        Me.SplitContainer2.Size = New System.Drawing.Size(1080, 709)
-        Me.SplitContainer2.SplitterDistance = 236
+        Me.SplitContainer2.Size = New System.Drawing.Size(1077, 701)
+        Me.SplitContainer2.SplitterDistance = 235
         Me.SplitContainer2.SplitterWidth = 1
         Me.SplitContainer2.TabIndex = 0
         '
@@ -1101,17 +1101,17 @@ Partial Class Dashboard
         'SplitContainer3.Panel2
         '
         Me.SplitContainer3.Panel2.Controls.Add(Me.ListBox1)
-        Me.SplitContainer3.Size = New System.Drawing.Size(236, 709)
-        Me.SplitContainer3.SplitterDistance = 28
+        Me.SplitContainer3.Size = New System.Drawing.Size(235, 701)
+        Me.SplitContainer3.SplitterDistance = 27
         Me.SplitContainer3.SplitterWidth = 1
         Me.SplitContainer3.TabIndex = 0
         '
         'TextBox1
         '
         Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TextBox1.Location = New System.Drawing.Point(0, 8)
+        Me.TextBox1.Location = New System.Drawing.Point(0, 7)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(236, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(235, 20)
         Me.TextBox1.TabIndex = 0
         '
         'ListBox1
@@ -1122,7 +1122,7 @@ Partial Class Dashboard
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.Location = New System.Drawing.Point(0, 0)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(236, 680)
+        Me.ListBox1.Size = New System.Drawing.Size(235, 673)
         Me.ListBox1.TabIndex = 0
         Me.ListBox1.ValueMember = "fname"
         '
@@ -1178,13 +1178,13 @@ Partial Class Dashboard
         Me.Panelcreate.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panelcreate.Location = New System.Drawing.Point(0, 0)
         Me.Panelcreate.Name = "Panelcreate"
-        Me.Panelcreate.Size = New System.Drawing.Size(843, 709)
+        Me.Panelcreate.Size = New System.Drawing.Size(841, 701)
         Me.Panelcreate.TabIndex = 0
         '
         'btnconupdate1
         '
         Me.btnconupdate1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnconupdate1.Location = New System.Drawing.Point(367, 662)
+        Me.btnconupdate1.Location = New System.Drawing.Point(367, 654)
         Me.btnconupdate1.Name = "btnconupdate1"
         Me.btnconupdate1.Size = New System.Drawing.Size(75, 23)
         Me.btnconupdate1.TabIndex = 39
@@ -1194,7 +1194,7 @@ Partial Class Dashboard
         'btnconreset
         '
         Me.btnconreset.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnconreset.Location = New System.Drawing.Point(474, 662)
+        Me.btnconreset.Location = New System.Drawing.Point(474, 654)
         Me.btnconreset.Name = "btnconreset"
         Me.btnconreset.Size = New System.Drawing.Size(75, 23)
         Me.btnconreset.TabIndex = 38
@@ -1586,7 +1586,7 @@ Partial Class Dashboard
         'btncondelete
         '
         Me.btncondelete.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btncondelete.Location = New System.Drawing.Point(580, 662)
+        Me.btncondelete.Location = New System.Drawing.Point(580, 654)
         Me.btncondelete.Name = "btncondelete"
         Me.btncondelete.Size = New System.Drawing.Size(75, 23)
         Me.btncondelete.TabIndex = 7
@@ -1596,7 +1596,7 @@ Partial Class Dashboard
         'btnconsave
         '
         Me.btnconsave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnconsave.Location = New System.Drawing.Point(253, 662)
+        Me.btnconsave.Location = New System.Drawing.Point(253, 654)
         Me.btnconsave.Name = "btnconsave"
         Me.btnconsave.Size = New System.Drawing.Size(75, 23)
         Me.btnconsave.TabIndex = 6

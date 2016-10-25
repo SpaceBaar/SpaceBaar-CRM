@@ -38,7 +38,38 @@ Partial Class DashboardNew
         Me.TabPage6 = New System.Windows.Forms.TabPage()
         Me.TabPage7 = New System.Windows.Forms.TabPage()
         Me.TabPage8 = New System.Windows.Forms.TabPage()
+        Me.IClarityButton4 = New CRM.iClarityButton()
+        Me.IClarityButton3 = New CRM.iClarityButton()
+        Me.IClarityButton2 = New CRM.iClarityButton()
+        Me.IClarityButton1 = New CRM.iClarityButton()
+        Me.ClarityGroupBox3 = New CRM.ClarityGroupBox()
+        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.TextBox17 = New System.Windows.Forms.TextBox()
+        Me.TextBox18 = New System.Windows.Forms.TextBox()
+        Me.TextBox19 = New System.Windows.Forms.TextBox()
+        Me.ClarityLabel11 = New CRM.ClarityLabel()
+        Me.ClarityLabel12 = New CRM.ClarityLabel()
+        Me.ClarityLabel13 = New CRM.ClarityLabel()
+        Me.ClarityLabel14 = New CRM.ClarityLabel()
+        Me.ClarityLabel15 = New CRM.ClarityLabel()
+        Me.ClarityGroupBox2 = New CRM.ClarityGroupBox()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.ClarityLabel6 = New CRM.ClarityLabel()
+        Me.ClarityLabel7 = New CRM.ClarityLabel()
+        Me.ClarityLabel8 = New CRM.ClarityLabel()
+        Me.ClarityLabel9 = New CRM.ClarityLabel()
+        Me.ClarityLabel10 = New CRM.ClarityLabel()
         Me.ClarityGroupBox1 = New CRM.ClarityGroupBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.ClarityLabel5 = New CRM.ClarityLabel()
         Me.ClarityLabel4 = New CRM.ClarityLabel()
         Me.ClarityLabel3 = New CRM.ClarityLabel()
@@ -57,37 +88,6 @@ Partial Class DashboardNew
         Me.btndashmin = New System.Windows.Forms.Button()
         Me.btndashmax = New System.Windows.Forms.Button()
         Me.btndashexit = New System.Windows.Forms.Button()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.ClarityGroupBox2 = New CRM.ClarityGroupBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.ClarityLabel6 = New CRM.ClarityLabel()
-        Me.ClarityLabel7 = New CRM.ClarityLabel()
-        Me.ClarityLabel8 = New CRM.ClarityLabel()
-        Me.ClarityLabel9 = New CRM.ClarityLabel()
-        Me.ClarityLabel10 = New CRM.ClarityLabel()
-        Me.ClarityGroupBox3 = New CRM.ClarityGroupBox()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
-        Me.TextBox16 = New System.Windows.Forms.TextBox()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
-        Me.TextBox18 = New System.Windows.Forms.TextBox()
-        Me.TextBox19 = New System.Windows.Forms.TextBox()
-        Me.ClarityLabel11 = New CRM.ClarityLabel()
-        Me.ClarityLabel12 = New CRM.ClarityLabel()
-        Me.ClarityLabel13 = New CRM.ClarityLabel()
-        Me.ClarityLabel14 = New CRM.ClarityLabel()
-        Me.ClarityLabel15 = New CRM.ClarityLabel()
-        Me.IClarityButton1 = New CRM.iClarityButton()
-        Me.IClarityButton2 = New CRM.iClarityButton()
-        Me.IClarityButton3 = New CRM.iClarityButton()
-        Me.IClarityButton4 = New CRM.iClarityButton()
         Me.ClarityTheme1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
@@ -105,9 +105,9 @@ Partial Class DashboardNew
         CType(Me.SplitContainer4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer4.SuspendLayout()
         Me.TabPage8.SuspendLayout()
-        Me.ClarityGroupBox1.SuspendLayout()
-        Me.ClarityGroupBox2.SuspendLayout()
         Me.ClarityGroupBox3.SuspendLayout()
+        Me.ClarityGroupBox2.SuspendLayout()
+        Me.ClarityGroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ClarityTheme1
@@ -315,6 +315,318 @@ Partial Class DashboardNew
         Me.TabPage8.TabIndex = 7
         Me.TabPage8.Text = "Contact Details"
         '
+        'IClarityButton4
+        '
+        Me.IClarityButton4.Location = New System.Drawing.Point(752, 508)
+        Me.IClarityButton4.Name = "IClarityButton4"
+        Me.IClarityButton4.Size = New System.Drawing.Size(75, 23)
+        Me.IClarityButton4.TabIndex = 15
+        Me.IClarityButton4.Text = "Reset"
+        '
+        'IClarityButton3
+        '
+        Me.IClarityButton3.Location = New System.Drawing.Point(662, 508)
+        Me.IClarityButton3.Name = "IClarityButton3"
+        Me.IClarityButton3.Size = New System.Drawing.Size(75, 23)
+        Me.IClarityButton3.TabIndex = 14
+        Me.IClarityButton3.Text = "Delete"
+        '
+        'IClarityButton2
+        '
+        Me.IClarityButton2.Location = New System.Drawing.Point(572, 508)
+        Me.IClarityButton2.Name = "IClarityButton2"
+        Me.IClarityButton2.Size = New System.Drawing.Size(75, 23)
+        Me.IClarityButton2.TabIndex = 13
+        Me.IClarityButton2.Text = "Update"
+        '
+        'IClarityButton1
+        '
+        Me.IClarityButton1.Location = New System.Drawing.Point(473, 508)
+        Me.IClarityButton1.Name = "IClarityButton1"
+        Me.IClarityButton1.Size = New System.Drawing.Size(75, 23)
+        Me.IClarityButton1.TabIndex = 12
+        Me.IClarityButton1.Text = "Save"
+        '
+        'ClarityGroupBox3
+        '
+        Me.ClarityGroupBox3.BorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.ClarityGroupBox3.Colors = New CRM.Bloom(-1) {}
+        Me.ClarityGroupBox3.Controls.Add(Me.TextBox15)
+        Me.ClarityGroupBox3.Controls.Add(Me.TextBox16)
+        Me.ClarityGroupBox3.Controls.Add(Me.TextBox17)
+        Me.ClarityGroupBox3.Controls.Add(Me.TextBox18)
+        Me.ClarityGroupBox3.Controls.Add(Me.TextBox19)
+        Me.ClarityGroupBox3.Controls.Add(Me.ClarityLabel11)
+        Me.ClarityGroupBox3.Controls.Add(Me.ClarityLabel12)
+        Me.ClarityGroupBox3.Controls.Add(Me.ClarityLabel13)
+        Me.ClarityGroupBox3.Controls.Add(Me.ClarityLabel14)
+        Me.ClarityGroupBox3.Controls.Add(Me.ClarityLabel15)
+        Me.ClarityGroupBox3.Customization = ""
+        Me.ClarityGroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.ClarityGroupBox3.Image = Nothing
+        Me.ClarityGroupBox3.Location = New System.Drawing.Point(29, 386)
+        Me.ClarityGroupBox3.Movable = True
+        Me.ClarityGroupBox3.Name = "ClarityGroupBox3"
+        Me.ClarityGroupBox3.NoRounding = False
+        Me.ClarityGroupBox3.Sizable = True
+        Me.ClarityGroupBox3.Size = New System.Drawing.Size(354, 220)
+        Me.ClarityGroupBox3.SmartBounds = True
+        Me.ClarityGroupBox3.StartPosition = System.Windows.Forms.FormStartPosition.Manual
+        Me.ClarityGroupBox3.TabIndex = 11
+        Me.ClarityGroupBox3.Text = "Company Details"
+        Me.ClarityGroupBox3.TransparencyKey = System.Drawing.Color.Fuchsia
+        Me.ClarityGroupBox3.Transparent = False
+        '
+        'TextBox15
+        '
+        Me.TextBox15.Location = New System.Drawing.Point(125, 183)
+        Me.TextBox15.Name = "TextBox15"
+        Me.TextBox15.Size = New System.Drawing.Size(202, 20)
+        Me.TextBox15.TabIndex = 10
+        '
+        'TextBox16
+        '
+        Me.TextBox16.Location = New System.Drawing.Point(125, 150)
+        Me.TextBox16.Name = "TextBox16"
+        Me.TextBox16.Size = New System.Drawing.Size(202, 20)
+        Me.TextBox16.TabIndex = 9
+        '
+        'TextBox17
+        '
+        Me.TextBox17.Location = New System.Drawing.Point(125, 115)
+        Me.TextBox17.Name = "TextBox17"
+        Me.TextBox17.Size = New System.Drawing.Size(202, 20)
+        Me.TextBox17.TabIndex = 8
+        '
+        'TextBox18
+        '
+        Me.TextBox18.Location = New System.Drawing.Point(125, 77)
+        Me.TextBox18.Name = "TextBox18"
+        Me.TextBox18.Size = New System.Drawing.Size(202, 20)
+        Me.TextBox18.TabIndex = 7
+        '
+        'TextBox19
+        '
+        Me.TextBox19.Location = New System.Drawing.Point(125, 41)
+        Me.TextBox19.Name = "TextBox19"
+        Me.TextBox19.Size = New System.Drawing.Size(202, 20)
+        Me.TextBox19.TabIndex = 6
+        '
+        'ClarityLabel11
+        '
+        Me.ClarityLabel11.BackColor = System.Drawing.Color.Transparent
+        Me.ClarityLabel11.Colors = New CRM.Bloom(-1) {}
+        Me.ClarityLabel11.Customization = ""
+        Me.ClarityLabel11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.ClarityLabel11.Image = Nothing
+        Me.ClarityLabel11.Location = New System.Drawing.Point(14, 190)
+        Me.ClarityLabel11.Name = "ClarityLabel11"
+        Me.ClarityLabel11.NoRounding = False
+        Me.ClarityLabel11.Size = New System.Drawing.Size(48, 13)
+        Me.ClarityLabel11.TabIndex = 4
+        Me.ClarityLabel11.Text = "Website"
+        Me.ClarityLabel11.Transparent = True
+        '
+        'ClarityLabel12
+        '
+        Me.ClarityLabel12.BackColor = System.Drawing.Color.Transparent
+        Me.ClarityLabel12.Colors = New CRM.Bloom(-1) {}
+        Me.ClarityLabel12.Customization = ""
+        Me.ClarityLabel12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.ClarityLabel12.Image = Nothing
+        Me.ClarityLabel12.Location = New System.Drawing.Point(13, 157)
+        Me.ClarityLabel12.Name = "ClarityLabel12"
+        Me.ClarityLabel12.NoRounding = False
+        Me.ClarityLabel12.Size = New System.Drawing.Size(49, 13)
+        Me.ClarityLabel12.TabIndex = 3
+        Me.ClarityLabel12.Text = "Address"
+        Me.ClarityLabel12.Transparent = True
+        '
+        'ClarityLabel13
+        '
+        Me.ClarityLabel13.BackColor = System.Drawing.Color.Transparent
+        Me.ClarityLabel13.Colors = New CRM.Bloom(-1) {}
+        Me.ClarityLabel13.Customization = ""
+        Me.ClarityLabel13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.ClarityLabel13.Image = Nothing
+        Me.ClarityLabel13.Location = New System.Drawing.Point(14, 122)
+        Me.ClarityLabel13.Name = "ClarityLabel13"
+        Me.ClarityLabel13.NoRounding = False
+        Me.ClarityLabel13.Size = New System.Drawing.Size(88, 13)
+        Me.ClarityLabel13.TabIndex = 2
+        Me.ClarityLabel13.Text = "Company Name"
+        Me.ClarityLabel13.Transparent = True
+        '
+        'ClarityLabel14
+        '
+        Me.ClarityLabel14.BackColor = System.Drawing.Color.Transparent
+        Me.ClarityLabel14.Colors = New CRM.Bloom(-1) {}
+        Me.ClarityLabel14.Customization = ""
+        Me.ClarityLabel14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.ClarityLabel14.Image = Nothing
+        Me.ClarityLabel14.Location = New System.Drawing.Point(13, 84)
+        Me.ClarityLabel14.Name = "ClarityLabel14"
+        Me.ClarityLabel14.NoRounding = False
+        Me.ClarityLabel14.Size = New System.Drawing.Size(67, 13)
+        Me.ClarityLabel14.TabIndex = 1
+        Me.ClarityLabel14.Text = "Designation"
+        Me.ClarityLabel14.Transparent = True
+        '
+        'ClarityLabel15
+        '
+        Me.ClarityLabel15.BackColor = System.Drawing.Color.Transparent
+        Me.ClarityLabel15.Colors = New CRM.Bloom(-1) {}
+        Me.ClarityLabel15.Customization = ""
+        Me.ClarityLabel15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.ClarityLabel15.Image = Nothing
+        Me.ClarityLabel15.Location = New System.Drawing.Point(13, 48)
+        Me.ClarityLabel15.Name = "ClarityLabel15"
+        Me.ClarityLabel15.NoRounding = False
+        Me.ClarityLabel15.Size = New System.Drawing.Size(61, 13)
+        Me.ClarityLabel15.TabIndex = 0
+        Me.ClarityLabel15.Text = "Profession"
+        Me.ClarityLabel15.Transparent = True
+        '
+        'ClarityGroupBox2
+        '
+        Me.ClarityGroupBox2.BorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.ClarityGroupBox2.Colors = New CRM.Bloom(-1) {}
+        Me.ClarityGroupBox2.Controls.Add(Me.TextBox10)
+        Me.ClarityGroupBox2.Controls.Add(Me.TextBox11)
+        Me.ClarityGroupBox2.Controls.Add(Me.TextBox12)
+        Me.ClarityGroupBox2.Controls.Add(Me.TextBox13)
+        Me.ClarityGroupBox2.Controls.Add(Me.TextBox14)
+        Me.ClarityGroupBox2.Controls.Add(Me.ClarityLabel6)
+        Me.ClarityGroupBox2.Controls.Add(Me.ClarityLabel7)
+        Me.ClarityGroupBox2.Controls.Add(Me.ClarityLabel8)
+        Me.ClarityGroupBox2.Controls.Add(Me.ClarityLabel9)
+        Me.ClarityGroupBox2.Controls.Add(Me.ClarityLabel10)
+        Me.ClarityGroupBox2.Customization = ""
+        Me.ClarityGroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.ClarityGroupBox2.Image = Nothing
+        Me.ClarityGroupBox2.Location = New System.Drawing.Point(473, 138)
+        Me.ClarityGroupBox2.Movable = True
+        Me.ClarityGroupBox2.Name = "ClarityGroupBox2"
+        Me.ClarityGroupBox2.NoRounding = False
+        Me.ClarityGroupBox2.Sizable = True
+        Me.ClarityGroupBox2.Size = New System.Drawing.Size(354, 220)
+        Me.ClarityGroupBox2.SmartBounds = True
+        Me.ClarityGroupBox2.StartPosition = System.Windows.Forms.FormStartPosition.Manual
+        Me.ClarityGroupBox2.TabIndex = 11
+        Me.ClarityGroupBox2.Text = "Alternate Address"
+        Me.ClarityGroupBox2.TransparencyKey = System.Drawing.Color.Fuchsia
+        Me.ClarityGroupBox2.Transparent = False
+        '
+        'TextBox10
+        '
+        Me.TextBox10.Location = New System.Drawing.Point(125, 183)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(202, 20)
+        Me.TextBox10.TabIndex = 10
+        '
+        'TextBox11
+        '
+        Me.TextBox11.Location = New System.Drawing.Point(125, 150)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.Size = New System.Drawing.Size(202, 20)
+        Me.TextBox11.TabIndex = 9
+        '
+        'TextBox12
+        '
+        Me.TextBox12.Location = New System.Drawing.Point(125, 115)
+        Me.TextBox12.Name = "TextBox12"
+        Me.TextBox12.Size = New System.Drawing.Size(202, 20)
+        Me.TextBox12.TabIndex = 8
+        '
+        'TextBox13
+        '
+        Me.TextBox13.Location = New System.Drawing.Point(125, 77)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.Size = New System.Drawing.Size(202, 20)
+        Me.TextBox13.TabIndex = 7
+        '
+        'TextBox14
+        '
+        Me.TextBox14.Location = New System.Drawing.Point(125, 41)
+        Me.TextBox14.Name = "TextBox14"
+        Me.TextBox14.Size = New System.Drawing.Size(202, 20)
+        Me.TextBox14.TabIndex = 6
+        '
+        'ClarityLabel6
+        '
+        Me.ClarityLabel6.BackColor = System.Drawing.Color.Transparent
+        Me.ClarityLabel6.Colors = New CRM.Bloom(-1) {}
+        Me.ClarityLabel6.Customization = ""
+        Me.ClarityLabel6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.ClarityLabel6.Image = Nothing
+        Me.ClarityLabel6.Location = New System.Drawing.Point(14, 190)
+        Me.ClarityLabel6.Name = "ClarityLabel6"
+        Me.ClarityLabel6.NoRounding = False
+        Me.ClarityLabel6.Size = New System.Drawing.Size(47, 13)
+        Me.ClarityLabel6.TabIndex = 4
+        Me.ClarityLabel6.Text = "Country"
+        Me.ClarityLabel6.Transparent = True
+        '
+        'ClarityLabel7
+        '
+        Me.ClarityLabel7.BackColor = System.Drawing.Color.Transparent
+        Me.ClarityLabel7.Colors = New CRM.Bloom(-1) {}
+        Me.ClarityLabel7.Customization = ""
+        Me.ClarityLabel7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.ClarityLabel7.Image = Nothing
+        Me.ClarityLabel7.Location = New System.Drawing.Point(13, 157)
+        Me.ClarityLabel7.Name = "ClarityLabel7"
+        Me.ClarityLabel7.NoRounding = False
+        Me.ClarityLabel7.Size = New System.Drawing.Size(68, 13)
+        Me.ClarityLabel7.TabIndex = 3
+        Me.ClarityLabel7.Text = "Postal Code"
+        Me.ClarityLabel7.Transparent = True
+        '
+        'ClarityLabel8
+        '
+        Me.ClarityLabel8.BackColor = System.Drawing.Color.Transparent
+        Me.ClarityLabel8.Colors = New CRM.Bloom(-1) {}
+        Me.ClarityLabel8.Customization = ""
+        Me.ClarityLabel8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.ClarityLabel8.Image = Nothing
+        Me.ClarityLabel8.Location = New System.Drawing.Point(14, 122)
+        Me.ClarityLabel8.Name = "ClarityLabel8"
+        Me.ClarityLabel8.NoRounding = False
+        Me.ClarityLabel8.Size = New System.Drawing.Size(34, 13)
+        Me.ClarityLabel8.TabIndex = 2
+        Me.ClarityLabel8.Text = "State"
+        Me.ClarityLabel8.Transparent = True
+        '
+        'ClarityLabel9
+        '
+        Me.ClarityLabel9.BackColor = System.Drawing.Color.Transparent
+        Me.ClarityLabel9.Colors = New CRM.Bloom(-1) {}
+        Me.ClarityLabel9.Customization = ""
+        Me.ClarityLabel9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.ClarityLabel9.Image = Nothing
+        Me.ClarityLabel9.Location = New System.Drawing.Point(13, 84)
+        Me.ClarityLabel9.Name = "ClarityLabel9"
+        Me.ClarityLabel9.NoRounding = False
+        Me.ClarityLabel9.Size = New System.Drawing.Size(30, 13)
+        Me.ClarityLabel9.TabIndex = 1
+        Me.ClarityLabel9.Text = " City"
+        Me.ClarityLabel9.Transparent = True
+        '
+        'ClarityLabel10
+        '
+        Me.ClarityLabel10.BackColor = System.Drawing.Color.Transparent
+        Me.ClarityLabel10.Colors = New CRM.Bloom(-1) {}
+        Me.ClarityLabel10.Customization = ""
+        Me.ClarityLabel10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.ClarityLabel10.Image = Nothing
+        Me.ClarityLabel10.Location = New System.Drawing.Point(13, 48)
+        Me.ClarityLabel10.Name = "ClarityLabel10"
+        Me.ClarityLabel10.NoRounding = False
+        Me.ClarityLabel10.Size = New System.Drawing.Size(81, 13)
+        Me.ClarityLabel10.TabIndex = 0
+        Me.ClarityLabel10.Text = "Address Street"
+        Me.ClarityLabel10.Transparent = True
+        '
         'ClarityGroupBox1
         '
         Me.ClarityGroupBox1.BorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -344,6 +656,41 @@ Partial Class DashboardNew
         Me.ClarityGroupBox1.Text = "Permanent Address"
         Me.ClarityGroupBox1.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.ClarityGroupBox1.Transparent = False
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Location = New System.Drawing.Point(125, 183)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(202, 20)
+        Me.TextBox9.TabIndex = 10
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(125, 150)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(202, 20)
+        Me.TextBox8.TabIndex = 9
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Location = New System.Drawing.Point(125, 115)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(202, 20)
+        Me.TextBox7.TabIndex = 8
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(125, 77)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(202, 20)
+        Me.TextBox6.TabIndex = 7
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(125, 41)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(202, 20)
+        Me.TextBox5.TabIndex = 6
         '
         'ClarityLabel5
         '
@@ -538,353 +885,6 @@ Partial Class DashboardNew
         Me.btndashexit.TabIndex = 0
         Me.btndashexit.UseVisualStyleBackColor = True
         '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(125, 41)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(202, 20)
-        Me.TextBox5.TabIndex = 6
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(125, 77)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(202, 20)
-        Me.TextBox6.TabIndex = 7
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(125, 115)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(202, 20)
-        Me.TextBox7.TabIndex = 8
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Location = New System.Drawing.Point(125, 150)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(202, 20)
-        Me.TextBox8.TabIndex = 9
-        '
-        'TextBox9
-        '
-        Me.TextBox9.Location = New System.Drawing.Point(125, 183)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(202, 20)
-        Me.TextBox9.TabIndex = 10
-        '
-        'ClarityGroupBox2
-        '
-        Me.ClarityGroupBox2.BorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.ClarityGroupBox2.Colors = New CRM.Bloom(-1) {}
-        Me.ClarityGroupBox2.Controls.Add(Me.TextBox10)
-        Me.ClarityGroupBox2.Controls.Add(Me.TextBox11)
-        Me.ClarityGroupBox2.Controls.Add(Me.TextBox12)
-        Me.ClarityGroupBox2.Controls.Add(Me.TextBox13)
-        Me.ClarityGroupBox2.Controls.Add(Me.TextBox14)
-        Me.ClarityGroupBox2.Controls.Add(Me.ClarityLabel6)
-        Me.ClarityGroupBox2.Controls.Add(Me.ClarityLabel7)
-        Me.ClarityGroupBox2.Controls.Add(Me.ClarityLabel8)
-        Me.ClarityGroupBox2.Controls.Add(Me.ClarityLabel9)
-        Me.ClarityGroupBox2.Controls.Add(Me.ClarityLabel10)
-        Me.ClarityGroupBox2.Customization = ""
-        Me.ClarityGroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.ClarityGroupBox2.Image = Nothing
-        Me.ClarityGroupBox2.Location = New System.Drawing.Point(473, 138)
-        Me.ClarityGroupBox2.Movable = True
-        Me.ClarityGroupBox2.Name = "ClarityGroupBox2"
-        Me.ClarityGroupBox2.NoRounding = False
-        Me.ClarityGroupBox2.Sizable = True
-        Me.ClarityGroupBox2.Size = New System.Drawing.Size(354, 220)
-        Me.ClarityGroupBox2.SmartBounds = True
-        Me.ClarityGroupBox2.StartPosition = System.Windows.Forms.FormStartPosition.Manual
-        Me.ClarityGroupBox2.TabIndex = 11
-        Me.ClarityGroupBox2.Text = "Alternate Address"
-        Me.ClarityGroupBox2.TransparencyKey = System.Drawing.Color.Fuchsia
-        Me.ClarityGroupBox2.Transparent = False
-        '
-        'TextBox10
-        '
-        Me.TextBox10.Location = New System.Drawing.Point(125, 183)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(202, 20)
-        Me.TextBox10.TabIndex = 10
-        '
-        'TextBox11
-        '
-        Me.TextBox11.Location = New System.Drawing.Point(125, 150)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(202, 20)
-        Me.TextBox11.TabIndex = 9
-        '
-        'TextBox12
-        '
-        Me.TextBox12.Location = New System.Drawing.Point(125, 115)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(202, 20)
-        Me.TextBox12.TabIndex = 8
-        '
-        'TextBox13
-        '
-        Me.TextBox13.Location = New System.Drawing.Point(125, 77)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(202, 20)
-        Me.TextBox13.TabIndex = 7
-        '
-        'TextBox14
-        '
-        Me.TextBox14.Location = New System.Drawing.Point(125, 41)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(202, 20)
-        Me.TextBox14.TabIndex = 6
-        '
-        'ClarityLabel6
-        '
-        Me.ClarityLabel6.BackColor = System.Drawing.Color.Transparent
-        Me.ClarityLabel6.Colors = New CRM.Bloom(-1) {}
-        Me.ClarityLabel6.Customization = ""
-        Me.ClarityLabel6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.ClarityLabel6.Image = Nothing
-        Me.ClarityLabel6.Location = New System.Drawing.Point(14, 190)
-        Me.ClarityLabel6.Name = "ClarityLabel6"
-        Me.ClarityLabel6.NoRounding = False
-        Me.ClarityLabel6.Size = New System.Drawing.Size(47, 13)
-        Me.ClarityLabel6.TabIndex = 4
-        Me.ClarityLabel6.Text = "Country"
-        Me.ClarityLabel6.Transparent = True
-        '
-        'ClarityLabel7
-        '
-        Me.ClarityLabel7.BackColor = System.Drawing.Color.Transparent
-        Me.ClarityLabel7.Colors = New CRM.Bloom(-1) {}
-        Me.ClarityLabel7.Customization = ""
-        Me.ClarityLabel7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.ClarityLabel7.Image = Nothing
-        Me.ClarityLabel7.Location = New System.Drawing.Point(13, 157)
-        Me.ClarityLabel7.Name = "ClarityLabel7"
-        Me.ClarityLabel7.NoRounding = False
-        Me.ClarityLabel7.Size = New System.Drawing.Size(68, 13)
-        Me.ClarityLabel7.TabIndex = 3
-        Me.ClarityLabel7.Text = "Postal Code"
-        Me.ClarityLabel7.Transparent = True
-        '
-        'ClarityLabel8
-        '
-        Me.ClarityLabel8.BackColor = System.Drawing.Color.Transparent
-        Me.ClarityLabel8.Colors = New CRM.Bloom(-1) {}
-        Me.ClarityLabel8.Customization = ""
-        Me.ClarityLabel8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.ClarityLabel8.Image = Nothing
-        Me.ClarityLabel8.Location = New System.Drawing.Point(14, 122)
-        Me.ClarityLabel8.Name = "ClarityLabel8"
-        Me.ClarityLabel8.NoRounding = False
-        Me.ClarityLabel8.Size = New System.Drawing.Size(34, 13)
-        Me.ClarityLabel8.TabIndex = 2
-        Me.ClarityLabel8.Text = "State"
-        Me.ClarityLabel8.Transparent = True
-        '
-        'ClarityLabel9
-        '
-        Me.ClarityLabel9.BackColor = System.Drawing.Color.Transparent
-        Me.ClarityLabel9.Colors = New CRM.Bloom(-1) {}
-        Me.ClarityLabel9.Customization = ""
-        Me.ClarityLabel9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.ClarityLabel9.Image = Nothing
-        Me.ClarityLabel9.Location = New System.Drawing.Point(13, 84)
-        Me.ClarityLabel9.Name = "ClarityLabel9"
-        Me.ClarityLabel9.NoRounding = False
-        Me.ClarityLabel9.Size = New System.Drawing.Size(30, 13)
-        Me.ClarityLabel9.TabIndex = 1
-        Me.ClarityLabel9.Text = " City"
-        Me.ClarityLabel9.Transparent = True
-        '
-        'ClarityLabel10
-        '
-        Me.ClarityLabel10.BackColor = System.Drawing.Color.Transparent
-        Me.ClarityLabel10.Colors = New CRM.Bloom(-1) {}
-        Me.ClarityLabel10.Customization = ""
-        Me.ClarityLabel10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.ClarityLabel10.Image = Nothing
-        Me.ClarityLabel10.Location = New System.Drawing.Point(13, 48)
-        Me.ClarityLabel10.Name = "ClarityLabel10"
-        Me.ClarityLabel10.NoRounding = False
-        Me.ClarityLabel10.Size = New System.Drawing.Size(81, 13)
-        Me.ClarityLabel10.TabIndex = 0
-        Me.ClarityLabel10.Text = "Address Street"
-        Me.ClarityLabel10.Transparent = True
-        '
-        'ClarityGroupBox3
-        '
-        Me.ClarityGroupBox3.BorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.ClarityGroupBox3.Colors = New CRM.Bloom(-1) {}
-        Me.ClarityGroupBox3.Controls.Add(Me.TextBox15)
-        Me.ClarityGroupBox3.Controls.Add(Me.TextBox16)
-        Me.ClarityGroupBox3.Controls.Add(Me.TextBox17)
-        Me.ClarityGroupBox3.Controls.Add(Me.TextBox18)
-        Me.ClarityGroupBox3.Controls.Add(Me.TextBox19)
-        Me.ClarityGroupBox3.Controls.Add(Me.ClarityLabel11)
-        Me.ClarityGroupBox3.Controls.Add(Me.ClarityLabel12)
-        Me.ClarityGroupBox3.Controls.Add(Me.ClarityLabel13)
-        Me.ClarityGroupBox3.Controls.Add(Me.ClarityLabel14)
-        Me.ClarityGroupBox3.Controls.Add(Me.ClarityLabel15)
-        Me.ClarityGroupBox3.Customization = ""
-        Me.ClarityGroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.ClarityGroupBox3.Image = Nothing
-        Me.ClarityGroupBox3.Location = New System.Drawing.Point(29, 386)
-        Me.ClarityGroupBox3.Movable = True
-        Me.ClarityGroupBox3.Name = "ClarityGroupBox3"
-        Me.ClarityGroupBox3.NoRounding = False
-        Me.ClarityGroupBox3.Sizable = True
-        Me.ClarityGroupBox3.Size = New System.Drawing.Size(354, 220)
-        Me.ClarityGroupBox3.SmartBounds = True
-        Me.ClarityGroupBox3.StartPosition = System.Windows.Forms.FormStartPosition.Manual
-        Me.ClarityGroupBox3.TabIndex = 11
-        Me.ClarityGroupBox3.Text = "Company Details"
-        Me.ClarityGroupBox3.TransparencyKey = System.Drawing.Color.Fuchsia
-        Me.ClarityGroupBox3.Transparent = False
-        '
-        'TextBox15
-        '
-        Me.TextBox15.Location = New System.Drawing.Point(125, 183)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.Size = New System.Drawing.Size(202, 20)
-        Me.TextBox15.TabIndex = 10
-        '
-        'TextBox16
-        '
-        Me.TextBox16.Location = New System.Drawing.Point(125, 150)
-        Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.Size = New System.Drawing.Size(202, 20)
-        Me.TextBox16.TabIndex = 9
-        '
-        'TextBox17
-        '
-        Me.TextBox17.Location = New System.Drawing.Point(125, 115)
-        Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.Size = New System.Drawing.Size(202, 20)
-        Me.TextBox17.TabIndex = 8
-        '
-        'TextBox18
-        '
-        Me.TextBox18.Location = New System.Drawing.Point(125, 77)
-        Me.TextBox18.Name = "TextBox18"
-        Me.TextBox18.Size = New System.Drawing.Size(202, 20)
-        Me.TextBox18.TabIndex = 7
-        '
-        'TextBox19
-        '
-        Me.TextBox19.Location = New System.Drawing.Point(125, 41)
-        Me.TextBox19.Name = "TextBox19"
-        Me.TextBox19.Size = New System.Drawing.Size(202, 20)
-        Me.TextBox19.TabIndex = 6
-        '
-        'ClarityLabel11
-        '
-        Me.ClarityLabel11.BackColor = System.Drawing.Color.Transparent
-        Me.ClarityLabel11.Colors = New CRM.Bloom(-1) {}
-        Me.ClarityLabel11.Customization = ""
-        Me.ClarityLabel11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.ClarityLabel11.Image = Nothing
-        Me.ClarityLabel11.Location = New System.Drawing.Point(14, 190)
-        Me.ClarityLabel11.Name = "ClarityLabel11"
-        Me.ClarityLabel11.NoRounding = False
-        Me.ClarityLabel11.Size = New System.Drawing.Size(48, 13)
-        Me.ClarityLabel11.TabIndex = 4
-        Me.ClarityLabel11.Text = "Website"
-        Me.ClarityLabel11.Transparent = True
-        '
-        'ClarityLabel12
-        '
-        Me.ClarityLabel12.BackColor = System.Drawing.Color.Transparent
-        Me.ClarityLabel12.Colors = New CRM.Bloom(-1) {}
-        Me.ClarityLabel12.Customization = ""
-        Me.ClarityLabel12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.ClarityLabel12.Image = Nothing
-        Me.ClarityLabel12.Location = New System.Drawing.Point(13, 157)
-        Me.ClarityLabel12.Name = "ClarityLabel12"
-        Me.ClarityLabel12.NoRounding = False
-        Me.ClarityLabel12.Size = New System.Drawing.Size(49, 13)
-        Me.ClarityLabel12.TabIndex = 3
-        Me.ClarityLabel12.Text = "Address"
-        Me.ClarityLabel12.Transparent = True
-        '
-        'ClarityLabel13
-        '
-        Me.ClarityLabel13.BackColor = System.Drawing.Color.Transparent
-        Me.ClarityLabel13.Colors = New CRM.Bloom(-1) {}
-        Me.ClarityLabel13.Customization = ""
-        Me.ClarityLabel13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.ClarityLabel13.Image = Nothing
-        Me.ClarityLabel13.Location = New System.Drawing.Point(14, 122)
-        Me.ClarityLabel13.Name = "ClarityLabel13"
-        Me.ClarityLabel13.NoRounding = False
-        Me.ClarityLabel13.Size = New System.Drawing.Size(88, 13)
-        Me.ClarityLabel13.TabIndex = 2
-        Me.ClarityLabel13.Text = "Company Name"
-        Me.ClarityLabel13.Transparent = True
-        '
-        'ClarityLabel14
-        '
-        Me.ClarityLabel14.BackColor = System.Drawing.Color.Transparent
-        Me.ClarityLabel14.Colors = New CRM.Bloom(-1) {}
-        Me.ClarityLabel14.Customization = ""
-        Me.ClarityLabel14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.ClarityLabel14.Image = Nothing
-        Me.ClarityLabel14.Location = New System.Drawing.Point(13, 84)
-        Me.ClarityLabel14.Name = "ClarityLabel14"
-        Me.ClarityLabel14.NoRounding = False
-        Me.ClarityLabel14.Size = New System.Drawing.Size(67, 13)
-        Me.ClarityLabel14.TabIndex = 1
-        Me.ClarityLabel14.Text = "Designation"
-        Me.ClarityLabel14.Transparent = True
-        '
-        'ClarityLabel15
-        '
-        Me.ClarityLabel15.BackColor = System.Drawing.Color.Transparent
-        Me.ClarityLabel15.Colors = New CRM.Bloom(-1) {}
-        Me.ClarityLabel15.Customization = ""
-        Me.ClarityLabel15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.ClarityLabel15.Image = Nothing
-        Me.ClarityLabel15.Location = New System.Drawing.Point(13, 48)
-        Me.ClarityLabel15.Name = "ClarityLabel15"
-        Me.ClarityLabel15.NoRounding = False
-        Me.ClarityLabel15.Size = New System.Drawing.Size(61, 13)
-        Me.ClarityLabel15.TabIndex = 0
-        Me.ClarityLabel15.Text = "Profession"
-        Me.ClarityLabel15.Transparent = True
-        '
-        'IClarityButton1
-        '
-        Me.IClarityButton1.Location = New System.Drawing.Point(473, 508)
-        Me.IClarityButton1.Name = "IClarityButton1"
-        Me.IClarityButton1.Size = New System.Drawing.Size(75, 23)
-        Me.IClarityButton1.TabIndex = 12
-        Me.IClarityButton1.Text = "Save"
-        '
-        'IClarityButton2
-        '
-        Me.IClarityButton2.Location = New System.Drawing.Point(572, 508)
-        Me.IClarityButton2.Name = "IClarityButton2"
-        Me.IClarityButton2.Size = New System.Drawing.Size(75, 23)
-        Me.IClarityButton2.TabIndex = 13
-        Me.IClarityButton2.Text = "Update"
-        '
-        'IClarityButton3
-        '
-        Me.IClarityButton3.Location = New System.Drawing.Point(662, 508)
-        Me.IClarityButton3.Name = "IClarityButton3"
-        Me.IClarityButton3.Size = New System.Drawing.Size(75, 23)
-        Me.IClarityButton3.TabIndex = 14
-        Me.IClarityButton3.Text = "Delete"
-        '
-        'IClarityButton4
-        '
-        Me.IClarityButton4.Location = New System.Drawing.Point(752, 508)
-        Me.IClarityButton4.Name = "IClarityButton4"
-        Me.IClarityButton4.Size = New System.Drawing.Size(75, 23)
-        Me.IClarityButton4.TabIndex = 15
-        Me.IClarityButton4.Text = "Reset"
-        '
         'DashboardNew
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -914,12 +914,12 @@ Partial Class DashboardNew
         Me.SplitContainer4.ResumeLayout(False)
         Me.TabPage8.ResumeLayout(False)
         Me.TabPage8.PerformLayout()
-        Me.ClarityGroupBox1.ResumeLayout(False)
-        Me.ClarityGroupBox1.PerformLayout()
-        Me.ClarityGroupBox2.ResumeLayout(False)
-        Me.ClarityGroupBox2.PerformLayout()
         Me.ClarityGroupBox3.ResumeLayout(False)
         Me.ClarityGroupBox3.PerformLayout()
+        Me.ClarityGroupBox2.ResumeLayout(False)
+        Me.ClarityGroupBox2.PerformLayout()
+        Me.ClarityGroupBox1.ResumeLayout(False)
+        Me.ClarityGroupBox1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

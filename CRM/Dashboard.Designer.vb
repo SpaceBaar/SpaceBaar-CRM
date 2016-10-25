@@ -107,8 +107,8 @@ Partial Class Dashboard
         Me.SplitContainer3 = New System.Windows.Forms.SplitContainer()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.ContactsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CRMDataSet2 = New CRM.CRMDataSet2()
+        Me.ContactsBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CRMDataSet3 = New CRM.CRMDataSet3()
         Me.Panelcreate = New System.Windows.Forms.Panel()
         Me.btnconupdate1 = New System.Windows.Forms.Button()
         Me.btnconreset = New System.Windows.Forms.Button()
@@ -159,12 +159,12 @@ Partial Class Dashboard
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btncreatecontact = New System.Windows.Forms.Button()
         Me.btnviewcontacts = New System.Windows.Forms.Button()
+        Me.ContactsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CRMDataSet2 = New CRM.CRMDataSet2()
         Me.CRMDataSet1 = New CRM.CRMDataSet1()
         Me.RegiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RegiTableAdapter = New CRM.CRMDataSet1TableAdapters.regiTableAdapter()
         Me.ContactsTableAdapter = New CRM.CRMDataSet2TableAdapters.ContactsTableAdapter()
-        Me.CRMDataSet3 = New CRM.CRMDataSet3()
-        Me.ContactsBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ContactsTableAdapter1 = New CRM.CRMDataSet3TableAdapters.ContactsTableAdapter()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
@@ -194,15 +194,15 @@ Partial Class Dashboard
         Me.SplitContainer3.Panel1.SuspendLayout()
         Me.SplitContainer3.Panel2.SuspendLayout()
         Me.SplitContainer3.SuspendLayout()
-        CType(Me.ContactsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CRMDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ContactsBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CRMDataSet3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panelcreate.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.ContactsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CRMDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CRMDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RegiBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CRMDataSet3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ContactsBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -220,8 +220,8 @@ Partial Class Dashboard
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.TabControl1)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1362, 741)
-        Me.SplitContainer1.SplitterDistance = 264
+        Me.SplitContainer1.Size = New System.Drawing.Size(1354, 733)
+        Me.SplitContainer1.SplitterDistance = 259
         Me.SplitContainer1.TabIndex = 0
         '
         'PictureBox1
@@ -231,7 +231,7 @@ Partial Class Dashboard
         Me.PictureBox1.Image = Global.CRM.My.Resources.Resources.spacebaar_editographyblak
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(264, 103)
+        Me.PictureBox1.Size = New System.Drawing.Size(259, 103)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -250,7 +250,7 @@ Partial Class Dashboard
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1094, 741)
+        Me.TabControl1.Size = New System.Drawing.Size(1091, 733)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
@@ -258,7 +258,7 @@ Partial Class Dashboard
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1086, 715)
+        Me.TabPage1.Size = New System.Drawing.Size(1083, 707)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Home"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -1059,7 +1059,7 @@ Partial Class Dashboard
         Me.TabPage8.Location = New System.Drawing.Point(4, 22)
         Me.TabPage8.Name = "TabPage8"
         Me.TabPage8.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage8.Size = New System.Drawing.Size(1086, 715)
+        Me.TabPage8.Size = New System.Drawing.Size(1083, 707)
         Me.TabPage8.TabIndex = 7
         Me.TabPage8.Text = "Contact Details"
         Me.TabPage8.UseVisualStyleBackColor = True
@@ -1080,8 +1080,8 @@ Partial Class Dashboard
         Me.SplitContainer2.Panel2.Controls.Add(Me.Panelcreate)
         Me.SplitContainer2.Panel2.Controls.Add(Me.btncreatecontact)
         Me.SplitContainer2.Panel2.Controls.Add(Me.btnviewcontacts)
-        Me.SplitContainer2.Size = New System.Drawing.Size(1080, 709)
-        Me.SplitContainer2.SplitterDistance = 236
+        Me.SplitContainer2.Size = New System.Drawing.Size(1077, 701)
+        Me.SplitContainer2.SplitterDistance = 235
         Me.SplitContainer2.SplitterWidth = 1
         Me.SplitContainer2.TabIndex = 0
         '
@@ -1101,17 +1101,17 @@ Partial Class Dashboard
         'SplitContainer3.Panel2
         '
         Me.SplitContainer3.Panel2.Controls.Add(Me.ListBox1)
-        Me.SplitContainer3.Size = New System.Drawing.Size(236, 709)
-        Me.SplitContainer3.SplitterDistance = 28
+        Me.SplitContainer3.Size = New System.Drawing.Size(235, 701)
+        Me.SplitContainer3.SplitterDistance = 27
         Me.SplitContainer3.SplitterWidth = 1
         Me.SplitContainer3.TabIndex = 0
         '
         'TextBox1
         '
         Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TextBox1.Location = New System.Drawing.Point(0, 8)
+        Me.TextBox1.Location = New System.Drawing.Point(0, 7)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(236, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(235, 20)
         Me.TextBox1.TabIndex = 0
         '
         'ListBox1
@@ -1122,19 +1122,19 @@ Partial Class Dashboard
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.Location = New System.Drawing.Point(0, 0)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(236, 680)
+        Me.ListBox1.Size = New System.Drawing.Size(235, 673)
         Me.ListBox1.TabIndex = 0
         Me.ListBox1.ValueMember = "fname"
         '
-        'ContactsBindingSource
+        'ContactsBindingSource1
         '
-        Me.ContactsBindingSource.DataMember = "Contacts"
-        Me.ContactsBindingSource.DataSource = Me.CRMDataSet2
+        Me.ContactsBindingSource1.DataMember = "Contacts"
+        Me.ContactsBindingSource1.DataSource = Me.CRMDataSet3
         '
-        'CRMDataSet2
+        'CRMDataSet3
         '
-        Me.CRMDataSet2.DataSetName = "CRMDataSet2"
-        Me.CRMDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.CRMDataSet3.DataSetName = "CRMDataSet3"
+        Me.CRMDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Panelcreate
         '
@@ -1178,13 +1178,13 @@ Partial Class Dashboard
         Me.Panelcreate.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panelcreate.Location = New System.Drawing.Point(0, 0)
         Me.Panelcreate.Name = "Panelcreate"
-        Me.Panelcreate.Size = New System.Drawing.Size(843, 709)
+        Me.Panelcreate.Size = New System.Drawing.Size(841, 701)
         Me.Panelcreate.TabIndex = 0
         '
         'btnconupdate1
         '
         Me.btnconupdate1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnconupdate1.Location = New System.Drawing.Point(367, 662)
+        Me.btnconupdate1.Location = New System.Drawing.Point(367, 654)
         Me.btnconupdate1.Name = "btnconupdate1"
         Me.btnconupdate1.Size = New System.Drawing.Size(75, 23)
         Me.btnconupdate1.TabIndex = 39
@@ -1194,7 +1194,7 @@ Partial Class Dashboard
         'btnconreset
         '
         Me.btnconreset.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnconreset.Location = New System.Drawing.Point(474, 662)
+        Me.btnconreset.Location = New System.Drawing.Point(474, 654)
         Me.btnconreset.Name = "btnconreset"
         Me.btnconreset.Size = New System.Drawing.Size(75, 23)
         Me.btnconreset.TabIndex = 38
@@ -1586,7 +1586,7 @@ Partial Class Dashboard
         'btncondelete
         '
         Me.btncondelete.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btncondelete.Location = New System.Drawing.Point(580, 662)
+        Me.btncondelete.Location = New System.Drawing.Point(580, 654)
         Me.btncondelete.Name = "btncondelete"
         Me.btncondelete.Size = New System.Drawing.Size(75, 23)
         Me.btncondelete.TabIndex = 7
@@ -1596,7 +1596,7 @@ Partial Class Dashboard
         'btnconsave
         '
         Me.btnconsave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnconsave.Location = New System.Drawing.Point(253, 662)
+        Me.btnconsave.Location = New System.Drawing.Point(253, 654)
         Me.btnconsave.Name = "btnconsave"
         Me.btnconsave.Size = New System.Drawing.Size(75, 23)
         Me.btnconsave.TabIndex = 6
@@ -1672,6 +1672,16 @@ Partial Class Dashboard
         Me.btnviewcontacts.Text = "View Contacts"
         Me.btnviewcontacts.UseVisualStyleBackColor = True
         '
+        'ContactsBindingSource
+        '
+        Me.ContactsBindingSource.DataMember = "Contacts"
+        Me.ContactsBindingSource.DataSource = Me.CRMDataSet2
+        '
+        'CRMDataSet2
+        '
+        Me.CRMDataSet2.DataSetName = "CRMDataSet2"
+        Me.CRMDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'CRMDataSet1
         '
         Me.CRMDataSet1.DataSetName = "CRMDataSet1"
@@ -1690,16 +1700,6 @@ Partial Class Dashboard
         '
         Me.ContactsTableAdapter.ClearBeforeFill = True
         '
-        'CRMDataSet3
-        '
-        Me.CRMDataSet3.DataSetName = "CRMDataSet3"
-        Me.CRMDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ContactsBindingSource1
-        '
-        Me.ContactsBindingSource1.DataMember = "Contacts"
-        Me.ContactsBindingSource1.DataSource = Me.CRMDataSet3
-        '
         'ContactsTableAdapter1
         '
         Me.ContactsTableAdapter1.ClearBeforeFill = True
@@ -1708,7 +1708,7 @@ Partial Class Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1362, 741)
+        Me.ClientSize = New System.Drawing.Size(1354, 733)
         Me.Controls.Add(Me.SplitContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Dashboard"
@@ -1751,18 +1751,18 @@ Partial Class Dashboard
         Me.SplitContainer3.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer3.ResumeLayout(False)
-        CType(Me.ContactsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CRMDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ContactsBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CRMDataSet3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panelcreate.ResumeLayout(False)
         Me.Panelcreate.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.ContactsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CRMDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CRMDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RegiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CRMDataSet3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ContactsBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

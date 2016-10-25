@@ -131,7 +131,7 @@ Partial Class DashboardNew
         Me.ClarityTheme1.NoRounding = False
         Me.ClarityTheme1.ShowIcon = True
         Me.ClarityTheme1.Sizable = False
-        Me.ClarityTheme1.Size = New System.Drawing.Size(1362, 705)
+        Me.ClarityTheme1.Size = New System.Drawing.Size(1354, 705)
         Me.ClarityTheme1.SmartBounds = True
         Me.ClarityTheme1.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation
         Me.ClarityTheme1.TabIndex = 0
@@ -889,7 +889,7 @@ Partial Class DashboardNew
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1362, 705)
+        Me.ClientSize = New System.Drawing.Size(1354, 705)
         Me.Controls.Add(Me.ClarityTheme1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

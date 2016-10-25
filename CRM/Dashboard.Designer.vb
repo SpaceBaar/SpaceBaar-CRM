@@ -270,7 +270,7 @@ Partial Class Dashboard
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1086, 715)
+        Me.TabPage2.Size = New System.Drawing.Size(1083, 707)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Sales"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -283,7 +283,7 @@ Partial Class Dashboard
         Me.Leads.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Leads.Location = New System.Drawing.Point(3, 3)
         Me.Leads.Name = "Leads"
-        Me.Leads.Size = New System.Drawing.Size(1080, 709)
+        Me.Leads.Size = New System.Drawing.Size(1077, 701)
         Me.Leads.TabIndex = 2
         '
         'CrtLeads
@@ -292,7 +292,7 @@ Partial Class Dashboard
         Me.CrtLeads.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CrtLeads.Location = New System.Drawing.Point(0, 0)
         Me.CrtLeads.Name = "CrtLeads"
-        Me.CrtLeads.Size = New System.Drawing.Size(1080, 709)
+        Me.CrtLeads.Size = New System.Drawing.Size(1077, 701)
         Me.CrtLeads.TabIndex = 4
         '
         'Panel1
@@ -341,13 +341,13 @@ Partial Class Dashboard
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1080, 709)
+        Me.Panel1.Size = New System.Drawing.Size(1077, 701)
         Me.Panel1.TabIndex = 1
         '
         'btnldupdate
         '
         Me.btnldupdate.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnldupdate.Location = New System.Drawing.Point(385, 662)
+        Me.btnldupdate.Location = New System.Drawing.Point(385, 654)
         Me.btnldupdate.Name = "btnldupdate"
         Me.btnldupdate.Size = New System.Drawing.Size(75, 23)
         Me.btnldupdate.TabIndex = 42
@@ -497,7 +497,7 @@ Partial Class Dashboard
         'btnldcancel
         '
         Me.btnldcancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnldcancel.Location = New System.Drawing.Point(593, 662)
+        Me.btnldcancel.Location = New System.Drawing.Point(593, 654)
         Me.btnldcancel.Name = "btnldcancel"
         Me.btnldcancel.Size = New System.Drawing.Size(75, 23)
         Me.btnldcancel.TabIndex = 7
@@ -507,7 +507,7 @@ Partial Class Dashboard
         'btnldsave
         '
         Me.btnldsave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnldsave.Location = New System.Drawing.Point(207, 662)
+        Me.btnldsave.Location = New System.Drawing.Point(207, 654)
         Me.btnldsave.Name = "btnldsave"
         Me.btnldsave.Size = New System.Drawing.Size(75, 23)
         Me.btnldsave.TabIndex = 6
@@ -546,7 +546,7 @@ Partial Class Dashboard
         Me.LeadDetails.Controls.Add(Me.Label39)
         Me.LeadDetails.Location = New System.Drawing.Point(474, 405)
         Me.LeadDetails.Name = "LeadDetails"
-        Me.LeadDetails.Size = New System.Drawing.Size(304, 181)
+        Me.LeadDetails.Size = New System.Drawing.Size(304, 214)
         Me.LeadDetails.TabIndex = 37
         Me.LeadDetails.TabStop = False
         Me.LeadDetails.Text = "Lead Details"
@@ -978,7 +978,7 @@ Partial Class Dashboard
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1086, 715)
+        Me.TabPage3.Size = New System.Drawing.Size(1083, 707)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "HRM"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -989,7 +989,7 @@ Partial Class Dashboard
         Me.TabPage5.Location = New System.Drawing.Point(4, 22)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(1086, 715)
+        Me.TabPage5.Size = New System.Drawing.Size(1083, 707)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Products/Services"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -1009,8 +1009,8 @@ Partial Class Dashboard
         Me.SplitContainer4.Panel2.AllowDrop = True
         Me.SplitContainer4.Panel2.AutoScroll = True
         Me.SplitContainer4.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.SplitContainer4.Size = New System.Drawing.Size(1080, 709)
-        Me.SplitContainer4.SplitterDistance = 227
+        Me.SplitContainer4.Size = New System.Drawing.Size(1077, 701)
+        Me.SplitContainer4.SplitterDistance = 226
         Me.SplitContainer4.TabIndex = 0
         '
         'SplitContainer5
@@ -1019,8 +1019,8 @@ Partial Class Dashboard
         Me.SplitContainer5.Location = New System.Drawing.Point(0, 0)
         Me.SplitContainer5.Name = "SplitContainer5"
         Me.SplitContainer5.Orientation = System.Windows.Forms.Orientation.Horizontal
-        Me.SplitContainer5.Size = New System.Drawing.Size(227, 709)
-        Me.SplitContainer5.SplitterDistance = 105
+        Me.SplitContainer5.Size = New System.Drawing.Size(226, 701)
+        Me.SplitContainer5.SplitterDistance = 103
         Me.SplitContainer5.TabIndex = 0
         '
         'TabPage6
@@ -1028,7 +1028,7 @@ Partial Class Dashboard
         Me.TabPage6.Location = New System.Drawing.Point(4, 22)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage6.Size = New System.Drawing.Size(1086, 715)
+        Me.TabPage6.Size = New System.Drawing.Size(1083, 707)
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "Purchase Order"
         Me.TabPage6.UseVisualStyleBackColor = True
@@ -1038,7 +1038,7 @@ Partial Class Dashboard
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(1086, 715)
+        Me.TabPage4.Size = New System.Drawing.Size(1083, 707)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Account"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -1048,7 +1048,7 @@ Partial Class Dashboard
         Me.TabPage7.Location = New System.Drawing.Point(4, 22)
         Me.TabPage7.Name = "TabPage7"
         Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage7.Size = New System.Drawing.Size(1086, 715)
+        Me.TabPage7.Size = New System.Drawing.Size(1083, 707)
         Me.TabPage7.TabIndex = 6
         Me.TabPage7.Text = "Tools"
         Me.TabPage7.UseVisualStyleBackColor = True

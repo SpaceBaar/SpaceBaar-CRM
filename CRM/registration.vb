@@ -35,12 +35,17 @@ Public Class registration
 
     'End Sub
 
-    Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
-        Me.Close()
-        Login.Show()
+
+
+    Private Sub rbtnmale_CheckedChanged(sender As Object, e As EventArgs) Handles rbtnmale.CheckedChanged
+        gender = "Male"
     End Sub
 
-    Private Sub btnregister_Click(sender As Object, e As EventArgs) Handles btnregister.Click
+    Private Sub rbtnfemale_CheckedChanged(sender As Object, e As EventArgs) Handles rbtnfemale.CheckedChanged
+        gender = "Female"
+    End Sub
+
+    Private Sub btnregister_Click_1(sender As Object, e As EventArgs) Handles btnregister.Click
         Dim email As New Regex("^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$")
         Dim cemail As New Regex("^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$")
         Dim num As New Regex("^([+][9][1]|[9][1]|[0]){0,1}([7-9]{1})([0-9]{9})$")
@@ -65,21 +70,17 @@ Public Class registration
                     MsgBox("Invalid number")
                 End If
             Else
-                    MsgBox("Invalid Email")
+                MsgBox("Invalid Email")
             End If
         Else
-                MsgBox("Password Does not Match")
+            MsgBox("Password Does not Match")
 
         End If
-
     End Sub
 
-    Private Sub rbtnmale_CheckedChanged(sender As Object, e As EventArgs) Handles rbtnmale.CheckedChanged
-        gender = "Male"
-    End Sub
-
-    Private Sub rbtnfemale_CheckedChanged(sender As Object, e As EventArgs) Handles rbtnfemale.CheckedChanged
-        gender = "Female"
+    Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
+        Me.Close()
+        Login.Show()
     End Sub
 
     'Private Sub txtmobile_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtmobile.KeyPress

@@ -23,16 +23,7 @@ Partial Class registration
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label24 = New System.Windows.Forms.Label()
-        Me.btnregister = New System.Windows.Forms.Button()
-        Me.btncancel = New System.Windows.Forms.Button()
         Me.ClarityTheme1 = New CRM.ClarityTheme()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.txtcnfpassword = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.txtpassword = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.txtusername = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.txtcompstate = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -76,10 +67,19 @@ Partial Class registration
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtname = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnregister = New CRM.iClarityButton()
+        Me.btncancel = New CRM.iClarityButton()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtusername = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.txtpassword = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.txtcnfpassword = New System.Windows.Forms.TextBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.ClarityTheme1.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label24
@@ -94,33 +94,14 @@ Partial Class registration
         Me.Label24.TabIndex = 5
         Me.Label24.Text = "REGISTRATION"
         '
-        'btnregister
-        '
-        Me.btnregister.Location = New System.Drawing.Point(291, 531)
-        Me.btnregister.Name = "btnregister"
-        Me.btnregister.Size = New System.Drawing.Size(75, 23)
-        Me.btnregister.TabIndex = 2
-        Me.btnregister.Text = "Register"
-        Me.btnregister.UseVisualStyleBackColor = True
-        '
-        'btncancel
-        '
-        Me.btncancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btncancel.Location = New System.Drawing.Point(487, 531)
-        Me.btncancel.Name = "btncancel"
-        Me.btncancel.Size = New System.Drawing.Size(75, 23)
-        Me.btncancel.TabIndex = 3
-        Me.btncancel.Text = "Cancel"
-        Me.btncancel.UseVisualStyleBackColor = True
-        '
         'ClarityTheme1
         '
         Me.ClarityTheme1.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer))
         Me.ClarityTheme1.BorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.ClarityTheme1.Colors = New CRM.Bloom(-1) {}
+        Me.ClarityTheme1.Controls.Add(Me.btncancel)
         Me.ClarityTheme1.Controls.Add(Me.btnregister)
         Me.ClarityTheme1.Controls.Add(Me.GroupBox3)
-        Me.ClarityTheme1.Controls.Add(Me.btncancel)
         Me.ClarityTheme1.Controls.Add(Me.GroupBox2)
         Me.ClarityTheme1.Controls.Add(Me.GroupBox1)
         Me.ClarityTheme1.Customization = ""
@@ -141,72 +122,6 @@ Partial Class registration
         Me.ClarityTheme1.Text = "ClarityTheme1"
         Me.ClarityTheme1.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.ClarityTheme1.Transparent = False
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.txtcnfpassword)
-        Me.GroupBox3.Controls.Add(Me.Label13)
-        Me.GroupBox3.Controls.Add(Me.txtpassword)
-        Me.GroupBox3.Controls.Add(Me.Label11)
-        Me.GroupBox3.Controls.Add(Me.txtusername)
-        Me.GroupBox3.Controls.Add(Me.Label10)
-        Me.GroupBox3.ForeColor = System.Drawing.Color.White
-        Me.GroupBox3.Location = New System.Drawing.Point(437, 384)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(402, 137)
-        Me.GroupBox3.TabIndex = 4
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Login Details"
-        '
-        'txtcnfpassword
-        '
-        Me.txtcnfpassword.Location = New System.Drawing.Point(147, 99)
-        Me.txtcnfpassword.Name = "txtcnfpassword"
-        Me.txtcnfpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtcnfpassword.Size = New System.Drawing.Size(188, 21)
-        Me.txtcnfpassword.TabIndex = 7
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(34, 106)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(111, 13)
-        Me.Label13.TabIndex = 6
-        Me.Label13.Text = "Confirm Password"
-        '
-        'txtpassword
-        '
-        Me.txtpassword.Location = New System.Drawing.Point(147, 64)
-        Me.txtpassword.Name = "txtpassword"
-        Me.txtpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtpassword.Size = New System.Drawing.Size(188, 21)
-        Me.txtpassword.TabIndex = 5
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(34, 71)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(61, 13)
-        Me.Label11.TabIndex = 4
-        Me.Label11.Text = "Password"
-        '
-        'txtusername
-        '
-        Me.txtusername.Location = New System.Drawing.Point(147, 24)
-        Me.txtusername.Name = "txtusername"
-        Me.txtusername.Size = New System.Drawing.Size(188, 21)
-        Me.txtusername.TabIndex = 3
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(34, 31)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(65, 13)
-        Me.Label10.TabIndex = 2
-        Me.Label10.Text = "Username"
         '
         'GroupBox2
         '
@@ -604,13 +519,93 @@ Partial Class registration
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Name"
         '
+        'btnregister
+        '
+        Me.btnregister.Location = New System.Drawing.Point(291, 531)
+        Me.btnregister.Name = "btnregister"
+        Me.btnregister.Size = New System.Drawing.Size(75, 23)
+        Me.btnregister.TabIndex = 5
+        Me.btnregister.Text = "Register"
+        '
+        'btncancel
+        '
+        Me.btncancel.Location = New System.Drawing.Point(474, 531)
+        Me.btncancel.Name = "btncancel"
+        Me.btncancel.Size = New System.Drawing.Size(75, 23)
+        Me.btncancel.TabIndex = 6
+        Me.btncancel.Text = "Cancel"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(34, 31)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(65, 13)
+        Me.Label10.TabIndex = 2
+        Me.Label10.Text = "Username"
+        '
+        'txtusername
+        '
+        Me.txtusername.Location = New System.Drawing.Point(147, 24)
+        Me.txtusername.Name = "txtusername"
+        Me.txtusername.Size = New System.Drawing.Size(188, 21)
+        Me.txtusername.TabIndex = 3
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(34, 71)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(61, 13)
+        Me.Label11.TabIndex = 4
+        Me.Label11.Text = "Password"
+        '
+        'txtpassword
+        '
+        Me.txtpassword.Location = New System.Drawing.Point(147, 64)
+        Me.txtpassword.Name = "txtpassword"
+        Me.txtpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtpassword.Size = New System.Drawing.Size(188, 21)
+        Me.txtpassword.TabIndex = 5
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(34, 106)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(111, 13)
+        Me.Label13.TabIndex = 6
+        Me.Label13.Text = "Confirm Password"
+        '
+        'txtcnfpassword
+        '
+        Me.txtcnfpassword.Location = New System.Drawing.Point(147, 99)
+        Me.txtcnfpassword.Name = "txtcnfpassword"
+        Me.txtcnfpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtcnfpassword.Size = New System.Drawing.Size(188, 21)
+        Me.txtcnfpassword.TabIndex = 7
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.txtcnfpassword)
+        Me.GroupBox3.Controls.Add(Me.Label13)
+        Me.GroupBox3.Controls.Add(Me.txtpassword)
+        Me.GroupBox3.Controls.Add(Me.Label11)
+        Me.GroupBox3.Controls.Add(Me.txtusername)
+        Me.GroupBox3.Controls.Add(Me.Label10)
+        Me.GroupBox3.ForeColor = System.Drawing.Color.White
+        Me.GroupBox3.Location = New System.Drawing.Point(437, 384)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(402, 137)
+        Me.GroupBox3.TabIndex = 4
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Login Details"
+        '
         'registration
         '
-        Me.AcceptButton = Me.btnregister
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer))
-        Me.CancelButton = Me.btncancel
         Me.ClientSize = New System.Drawing.Size(872, 572)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label24)
@@ -622,12 +617,12 @@ Partial Class registration
         Me.ShowIcon = False
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.ClarityTheme1.ResumeLayout(False)
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -651,17 +646,8 @@ Partial Class registration
     Friend WithEvents Label8 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents btnregister As Button
-    Friend WithEvents btncancel As Button
     Friend WithEvents txttelnumber As TextBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents txtcnfpassword As TextBox
-    Friend WithEvents Label13 As Label
-    Friend WithEvents txtpassword As TextBox
-    Friend WithEvents Label11 As Label
-    Friend WithEvents txtusername As TextBox
-    Friend WithEvents Label10 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents rbtnfemale As RadioButton
     Friend WithEvents rbtnmale As RadioButton
@@ -687,4 +673,13 @@ Partial Class registration
     Friend WithEvents Label22 As Label
     Friend WithEvents Label24 As Label
     Friend WithEvents ClarityTheme1 As ClarityTheme
+    Friend WithEvents btncancel As iClarityButton
+    Friend WithEvents btnregister As iClarityButton
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents txtcnfpassword As TextBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents txtpassword As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents txtusername As TextBox
+    Friend WithEvents Label10 As Label
 End Class

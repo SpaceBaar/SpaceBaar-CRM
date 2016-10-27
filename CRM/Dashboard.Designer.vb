@@ -107,8 +107,6 @@ Partial Class Dashboard
         Me.SplitContainer3 = New System.Windows.Forms.SplitContainer()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.ContactsBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CRMDataSet3 = New CRM.CRMDataSet3()
         Me.Panelcreate = New System.Windows.Forms.Panel()
         Me.btnconupdate1 = New System.Windows.Forms.Button()
         Me.btnconreset = New System.Windows.Forms.Button()
@@ -159,6 +157,8 @@ Partial Class Dashboard
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btncreatecontact = New System.Windows.Forms.Button()
         Me.btnviewcontacts = New System.Windows.Forms.Button()
+        Me.ContactsBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CRMDataSet3 = New CRM.CRMDataSet3()
         Me.ContactsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CRMDataSet2 = New CRM.CRMDataSet2()
         Me.CRMDataSet1 = New CRM.CRMDataSet1()
@@ -194,11 +194,11 @@ Partial Class Dashboard
         Me.SplitContainer3.Panel1.SuspendLayout()
         Me.SplitContainer3.Panel2.SuspendLayout()
         Me.SplitContainer3.SuspendLayout()
-        CType(Me.ContactsBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CRMDataSet3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panelcreate.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.ContactsBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CRMDataSet3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ContactsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CRMDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CRMDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -207,7 +207,7 @@ Partial Class Dashboard
         '
         'SplitContainer1
         '
-        Me.SplitContainer1.BackColor = System.Drawing.Color.White
+        Me.SplitContainer1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SplitContainer1.ForeColor = System.Drawing.SystemColors.Control
         Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
@@ -1116,25 +1116,12 @@ Partial Class Dashboard
         '
         'ListBox1
         '
-        Me.ListBox1.DataSource = Me.ContactsBindingSource1
-        Me.ListBox1.DisplayMember = "fname"
         Me.ListBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.Location = New System.Drawing.Point(0, 0)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(235, 673)
         Me.ListBox1.TabIndex = 0
-        Me.ListBox1.ValueMember = "fname"
-        '
-        'ContactsBindingSource1
-        '
-        Me.ContactsBindingSource1.DataMember = "Contacts"
-        Me.ContactsBindingSource1.DataSource = Me.CRMDataSet3
-        '
-        'CRMDataSet3
-        '
-        Me.CRMDataSet3.DataSetName = "CRMDataSet3"
-        Me.CRMDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Panelcreate
         '
@@ -1672,6 +1659,16 @@ Partial Class Dashboard
         Me.btnviewcontacts.Text = "View Contacts"
         Me.btnviewcontacts.UseVisualStyleBackColor = True
         '
+        'ContactsBindingSource1
+        '
+        Me.ContactsBindingSource1.DataMember = "Contacts"
+        Me.ContactsBindingSource1.DataSource = Me.CRMDataSet3
+        '
+        'CRMDataSet3
+        '
+        Me.CRMDataSet3.DataSetName = "CRMDataSet3"
+        Me.CRMDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'ContactsBindingSource
         '
         Me.ContactsBindingSource.DataMember = "Contacts"
@@ -1708,6 +1705,7 @@ Partial Class Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ClientSize = New System.Drawing.Size(1354, 733)
         Me.Controls.Add(Me.SplitContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -1751,14 +1749,14 @@ Partial Class Dashboard
         Me.SplitContainer3.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer3.ResumeLayout(False)
-        CType(Me.ContactsBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CRMDataSet3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panelcreate.ResumeLayout(False)
         Me.Panelcreate.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.ContactsBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CRMDataSet3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ContactsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CRMDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CRMDataSet1, System.ComponentModel.ISupportInitialize).EndInit()

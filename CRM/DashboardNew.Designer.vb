@@ -204,7 +204,9 @@ Partial Class DashboardNew
         '
         'SplitContainer1
         '
+        Me.SplitContainer1.IsSplitterFixed = True
         Me.SplitContainer1.Location = New System.Drawing.Point(12, 34)
+        Me.SplitContainer1.MaximumSize = New System.Drawing.Size(1338, 700)
         Me.SplitContainer1.Name = "SplitContainer1"
         '
         'SplitContainer1.Panel1
@@ -214,13 +216,14 @@ Partial Class DashboardNew
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.ClarityTabControl1)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1338, 659)
-        Me.SplitContainer1.SplitterDistance = 175
+        Me.SplitContainer1.Size = New System.Drawing.Size(1330, 659)
+        Me.SplitContainer1.SplitterDistance = 173
         Me.SplitContainer1.TabIndex = 5
         '
         'SplitContainer2
         '
         Me.SplitContainer2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer2.IsSplitterFixed = True
         Me.SplitContainer2.Location = New System.Drawing.Point(0, 0)
         Me.SplitContainer2.Name = "SplitContainer2"
         Me.SplitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal
@@ -228,7 +231,7 @@ Partial Class DashboardNew
         'SplitContainer2.Panel1
         '
         Me.SplitContainer2.Panel1.Controls.Add(Me.PictureBox1)
-        Me.SplitContainer2.Size = New System.Drawing.Size(175, 659)
+        Me.SplitContainer2.Size = New System.Drawing.Size(173, 659)
         Me.SplitContainer2.SplitterDistance = 164
         Me.SplitContainer2.TabIndex = 0
         '
@@ -237,7 +240,7 @@ Partial Class DashboardNew
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(175, 164)
+        Me.PictureBox1.Size = New System.Drawing.Size(173, 164)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
@@ -253,19 +256,22 @@ Partial Class DashboardNew
         Me.ClarityTabControl1.Controls.Add(Me.TabPage8)
         Me.ClarityTabControl1.Controls.Add(Me.TabPage9)
         Me.ClarityTabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ClarityTabControl1.ItemSize = New System.Drawing.Size(54, 30)
         Me.ClarityTabControl1.Location = New System.Drawing.Point(0, 0)
         Me.ClarityTabControl1.Name = "ClarityTabControl1"
+        Me.ClarityTabControl1.Padding = New System.Drawing.Point(10, 5)
         Me.ClarityTabControl1.SelectedIndex = 0
-        Me.ClarityTabControl1.Size = New System.Drawing.Size(1159, 659)
+        Me.ClarityTabControl1.Size = New System.Drawing.Size(1153, 659)
+        Me.ClarityTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight
         Me.ClarityTabControl1.TabIndex = 0
         '
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer))
-        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 34)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1151, 630)
+        Me.TabPage1.Size = New System.Drawing.Size(1145, 621)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Home"
         '
@@ -286,10 +292,10 @@ Partial Class DashboardNew
         Me.TabPage2.Controls.Add(Me.ClarityLabel18)
         Me.TabPage2.Controls.Add(Me.ClarityLabel17)
         Me.TabPage2.Controls.Add(Me.ClarityLabel16)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 34)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1151, 630)
+        Me.TabPage2.Size = New System.Drawing.Size(1145, 621)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Sales"
         '
@@ -1007,10 +1013,10 @@ Partial Class DashboardNew
         'TabPage3
         '
         Me.TabPage3.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer))
-        Me.TabPage3.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 34)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1151, 630)
+        Me.TabPage3.Size = New System.Drawing.Size(1145, 621)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "HRM"
         '
@@ -1018,10 +1024,10 @@ Partial Class DashboardNew
         '
         Me.TabPage4.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer))
         Me.TabPage4.Controls.Add(Me.SplitContainer3)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 34)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(1151, 630)
+        Me.TabPage4.Size = New System.Drawing.Size(1145, 621)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Products/Servives"
         '
@@ -1034,8 +1040,8 @@ Partial Class DashboardNew
         'SplitContainer3.Panel1
         '
         Me.SplitContainer3.Panel1.Controls.Add(Me.SplitContainer4)
-        Me.SplitContainer3.Size = New System.Drawing.Size(1145, 624)
-        Me.SplitContainer3.SplitterDistance = 255
+        Me.SplitContainer3.Size = New System.Drawing.Size(1139, 615)
+        Me.SplitContainer3.SplitterDistance = 253
         Me.SplitContainer3.TabIndex = 0
         '
         'SplitContainer4
@@ -1044,37 +1050,37 @@ Partial Class DashboardNew
         Me.SplitContainer4.Location = New System.Drawing.Point(0, 0)
         Me.SplitContainer4.Name = "SplitContainer4"
         Me.SplitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal
-        Me.SplitContainer4.Size = New System.Drawing.Size(255, 624)
-        Me.SplitContainer4.SplitterDistance = 118
+        Me.SplitContainer4.Size = New System.Drawing.Size(253, 615)
+        Me.SplitContainer4.SplitterDistance = 116
         Me.SplitContainer4.TabIndex = 0
         '
         'TabPage5
         '
         Me.TabPage5.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer))
-        Me.TabPage5.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage5.Location = New System.Drawing.Point(4, 34)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(1151, 630)
+        Me.TabPage5.Size = New System.Drawing.Size(1145, 621)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Purchase Order"
         '
         'TabPage6
         '
         Me.TabPage6.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer))
-        Me.TabPage6.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage6.Location = New System.Drawing.Point(4, 34)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage6.Size = New System.Drawing.Size(1151, 630)
+        Me.TabPage6.Size = New System.Drawing.Size(1145, 621)
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "Account"
         '
         'TabPage7
         '
         Me.TabPage7.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer))
-        Me.TabPage7.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage7.Location = New System.Drawing.Point(4, 34)
         Me.TabPage7.Name = "TabPage7"
         Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage7.Size = New System.Drawing.Size(1151, 630)
+        Me.TabPage7.Size = New System.Drawing.Size(1145, 621)
         Me.TabPage7.TabIndex = 6
         Me.TabPage7.Text = "Tools"
         '
@@ -1096,10 +1102,10 @@ Partial Class DashboardNew
         Me.TabPage8.Controls.Add(Me.Label3)
         Me.TabPage8.Controls.Add(Me.Label2)
         Me.TabPage8.Controls.Add(Me.Label1)
-        Me.TabPage8.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage8.Location = New System.Drawing.Point(4, 34)
         Me.TabPage8.Name = "TabPage8"
         Me.TabPage8.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage8.Size = New System.Drawing.Size(1151, 630)
+        Me.TabPage8.Size = New System.Drawing.Size(1145, 621)
         Me.TabPage8.TabIndex = 7
         Me.TabPage8.Text = "Contact Details"
         '
@@ -1654,10 +1660,10 @@ Partial Class DashboardNew
         'TabPage9
         '
         Me.TabPage9.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer))
-        Me.TabPage9.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage9.Location = New System.Drawing.Point(4, 34)
         Me.TabPage9.Name = "TabPage9"
         Me.TabPage9.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage9.Size = New System.Drawing.Size(1151, 630)
+        Me.TabPage9.Size = New System.Drawing.Size(1145, 621)
         Me.TabPage9.TabIndex = 8
         Me.TabPage9.Text = "Requirement"
         '

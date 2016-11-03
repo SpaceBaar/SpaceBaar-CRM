@@ -187,7 +187,7 @@ Partial Class Dashboard
         Me.RegiTableAdapter = New CRM.CRMDataSet1TableAdapters.regiTableAdapter()
         Me.ContactsTableAdapter = New CRM.CRMDataSet2TableAdapters.ContactsTableAdapter()
         Me.ContactsTableAdapter1 = New CRM.CRMDataSet3TableAdapters.ContactsTableAdapter()
-        Me.TabPage9 = New System.Windows.Forms.TabPage()
+        'Me.TabPage9 = New System.Windows.Forms.TabPage()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -373,12 +373,12 @@ Partial Class Dashboard
         'btnldupdate
         '
         Me.btnldupdate.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-<<<<<<< HEAD
+
         Me.btnldupdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnldupdate.Location = New System.Drawing.Point(385, 654)
-=======
+
         Me.btnldupdate.Location = New System.Drawing.Point(385, 648)
->>>>>>> 2d9ac44fcfbf838188d3f3e40d0173446d62c9fc
+
         Me.btnldupdate.Name = "btnldupdate"
         Me.btnldupdate.Size = New System.Drawing.Size(75, 23)
         Me.btnldupdate.TabIndex = 42
@@ -530,12 +530,12 @@ Partial Class Dashboard
         'btnldcancel
         '
         Me.btnldcancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-<<<<<<< HEAD
+
         Me.btnldcancel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnldcancel.Location = New System.Drawing.Point(593, 654)
-=======
+
         Me.btnldcancel.Location = New System.Drawing.Point(593, 648)
->>>>>>> 2d9ac44fcfbf838188d3f3e40d0173446d62c9fc
+
         Me.btnldcancel.Name = "btnldcancel"
         Me.btnldcancel.Size = New System.Drawing.Size(75, 23)
         Me.btnldcancel.TabIndex = 7
@@ -545,12 +545,12 @@ Partial Class Dashboard
         'btnldsave
         '
         Me.btnldsave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-<<<<<<< HEAD
+
         Me.btnldsave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnldsave.Location = New System.Drawing.Point(207, 654)
-=======
+
         Me.btnldsave.Location = New System.Drawing.Point(207, 648)
->>>>>>> 2d9ac44fcfbf838188d3f3e40d0173446d62c9fc
+
         Me.btnldsave.Name = "btnldsave"
         Me.btnldsave.Size = New System.Drawing.Size(75, 23)
         Me.btnldsave.TabIndex = 6
@@ -2211,7 +2211,7 @@ Partial Class Dashboard
     Friend WithEvents ContactsBindingSource1 As BindingSource
     Friend WithEvents ContactsTableAdapter1 As CRMDataSet3TableAdapters.ContactsTableAdapter
     Friend WithEvents TabPage9 As TabPage
-<<<<<<< HEAD
+
     Friend WithEvents Label8 As Label
     Friend WithEvents Label46 As Label
     Friend WithEvents Label37 As Label
@@ -2232,8 +2232,7 @@ Partial Class Dashboard
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label47 As Label
-=======
->>>>>>> 2d9ac44fcfbf838188d3f3e40d0173446d62c9fc
+
     'Friend WithEvents btnconupdate As Button
 
 End Class

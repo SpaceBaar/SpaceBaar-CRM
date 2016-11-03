@@ -155,11 +155,6 @@ Public Class Dashboard
     Private Sub btncanclead_Click(sender As Object, e As EventArgs)
         CrtLeads.Hide()
     End Sub
-
-    Private Sub Panelcreate_Paint(sender As Object, e As PaintEventArgs) Handles Panelcreate.Paint
-
-    End Sub
-
     'End of Lead Tab Coding
 
 

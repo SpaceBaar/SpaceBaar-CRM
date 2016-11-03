@@ -93,6 +93,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CRMDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CRMDataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMDataSetLeads.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMDataSetLeads.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.Designer.vb">
       <DependentUpon>Dashboard.vb</DependentUpon>
     </Compile>
@@ -204,6 +214,28 @@
     </None>
     <None Include="CRMDataSet3.xss">
       <DependentUpon>CRMDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="CRMDataSet4.xsc">
+      <DependentUpon>CRMDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="CRMDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMDataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMDataSet4.xss">
+      <DependentUpon>CRMDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="CRMDataSetLeads.xsc">
+      <DependentUpon>CRMDataSetLeads.xsd</DependentUpon>
+    </None>
+    <None Include="CRMDataSetLeads.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMDataSetLeads.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMDataSetLeads.xss">
+      <DependentUpon>CRMDataSetLeads.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

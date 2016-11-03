@@ -10,6 +10,10 @@ Public Class Dashboard
 
     'PageLoad
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'CRMDataSet4.Contacts' table. You can move, or remove it, as needed.
+        Me.ContactsTableAdapter2.Fill(Me.CRMDataSet4.Contacts)
+        'TODO: This line of code loads data into the 'CRMDataSetLeads.leads' table. You can move, or remove it, as needed.
+        Me.LeadsTableAdapter.Fill(Me.CRMDataSetLeads.leads)
         'TODO: This line of code loads data into the 'CRMDataSet3.Contacts' table. You can move, or remove it, as needed.
         'Me.ContactsTableAdapter1.Fill(Me.CRMDataSet3.Contacts)
         'TODO: This line of code loads data into the 'CRMDataSet2.Contacts' table. You can move, or remove it, as needed.
@@ -18,7 +22,6 @@ Public Class Dashboard
         'Me.RegiTableAdapter.Fill(Me.CRMDataSet1.regi)
         'Panelcreate.Hide()
         CrtLeads.Hide()
-        Leads.Hide()
         cmd.Connection = con
     End Sub
 
@@ -124,6 +127,31 @@ Public Class Dashboard
         End If
         con.Close()
     End Sub
+    Private Sub btnconupdate1_Click(sender As Object, e As EventArgs) Handles btnconupdate1.Click
+
+    End Sub
+    Private Sub btnconreset_Click(sender As Object, e As EventArgs) Handles btnconreset.Click
+        confirstname.Text = ""
+        conemail.Text = ""
+        constreet.Text = ""
+        concity.Text = ""
+        constate.Text = ""
+        concode.Text = ""
+        concountry.Text = ""
+        conphone.Text = ""
+        conmobile.Text = ""
+        txtaltstreet.Text = ""
+        txtaltcity.Text = ""
+        txtaltstate.Text = ""
+        txtaltpost.Text = ""
+        txtaltcountry.Text = ""
+        ComboBox1.SelectedIndex = -1
+        condesi.Text = ""
+        concomname.Text = ""
+        conadd.Text = ""
+        conweb.Text = ""
+
+    End Sub
 
     Private Sub btncondelete_Click(sender As Object, e As EventArgs) Handles btncondelete.Click
         cmd.Connection = con
@@ -139,12 +167,12 @@ Public Class Dashboard
 
 
     'Start of Lead Tab Coding
-    Private Sub btncleads_Click(sender As Object, e As EventArgs) Handles btncleads.Click
+    Private Sub btncleads_Click(sender As Object, e As EventArgs)
         CrtLeads.Show()
     End Sub
 
     Private Sub btnleads_Click(sender As Object, e As EventArgs) Handles btnleads.Click
-        Leads.Show()
+        CrtLeads.Show()
     End Sub
 
 
@@ -167,6 +195,17 @@ Public Class Dashboard
 
         con.Close()
     End Sub
+
+    Private Sub ldchkaltpadd_CheckedChanged(sender As Object, e As EventArgs) Handles ldchkaltpadd.CheckedChanged
+        ldaltaddstreet.Text = ldaddstreet.Text
+        ldaltcity.Text = ldcity.Text
+        ldaltstate.Text = ldstate.Text
+        ldaltposcode.Text = ldposcode.Text
+        ldaltcountry.Text = ldcountry.Text
+    End Sub
+
+
+
     'End of Lead Tab Coding
 
 

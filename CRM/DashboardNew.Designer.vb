@@ -193,7 +193,7 @@ Partial Class DashboardNew
         Me.ClarityTheme1.Name = "ClarityTheme1"
         Me.ClarityTheme1.NoRounding = False
         Me.ClarityTheme1.ShowIcon = True
-        Me.ClarityTheme1.Sizable = False
+        Me.ClarityTheme1.Sizable = True
         Me.ClarityTheme1.Size = New System.Drawing.Size(1354, 705)
         Me.ClarityTheme1.SmartBounds = True
         Me.ClarityTheme1.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation

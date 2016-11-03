@@ -155,6 +155,18 @@ Public Class Dashboard
     Private Sub btncanclead_Click(sender As Object, e As EventArgs)
         CrtLeads.Hide()
     End Sub
+
+    Private Sub btnldsave_Click(sender As Object, e As EventArgs) Handles btnldsave.Click
+        con.Open()
+        cmd.CommandText = "insert into leads(f_name,dept,website,p_addstreet,p_city,p_state,p_poscode,p_country,email,profession,designation,co_name,co_add,co_website,office_no,mob_no,a_addstreet,a_city,a_state,a_poscode,a_country,a_samepadd,lead_status,lead_source,emp_name,lead_desc,do_not_call) values('" & ldfname.Text & "','" & lddept.Text & "','" & ldwebsite.Text & "', '" & ldaddstreet.Text & "','" & ldcity.Text & "','" & ldstate.Text & "','" & ldposcode.Text & "',
+'" & ldcountry.Text & "','" & ldemail.Text & "','" & ldprofession.SelectedItem.ToString() & "','" & lddesign.Text & "','" & ldconm.Text & "','" & ldcoadd.Text & "','" & ldcowsite.Text & "',
+'" & ldoffno.Text & "','" & ldmobno.Text & "','" & ldaltaddstreet.Text & "','" & ldaltcity.Text & "','" & ldaltstate.Text & "','" & ldaltposcode.Text & "','" & ldaltcountry.Text & "','" & ldchkaltpadd.CheckState & "','" & ldstatus.SelectedItem.ToString() & "','" & ldsource.SelectedItem.ToString() & "','" & ldempnm.Text & "','" & lddesc.Text & "','" & ldchknotcall.CheckState & "')"
+
+        cmd.ExecuteNonQuery()
+        MsgBox("Contact Save Successfully")
+
+        con.Close()
+    End Sub
     'End of Lead Tab Coding
 
 

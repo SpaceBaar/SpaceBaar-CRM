@@ -43,7 +43,6 @@ Partial Class Dashboard
         Me.ldaltaddstreet = New System.Windows.Forms.TextBox()
         Me.ldmobno = New System.Windows.Forms.TextBox()
         Me.lddept = New System.Windows.Forms.TextBox()
-        Me.ldemail = New System.Windows.Forms.TextBox()
         Me.ldcountry = New System.Windows.Forms.TextBox()
         Me.ldposcode = New System.Windows.Forms.TextBox()
         Me.ldstate = New System.Windows.Forms.TextBox()
@@ -93,7 +92,6 @@ Partial Class Dashboard
         Me.Label38 = New System.Windows.Forms.Label()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.btncleads = New System.Windows.Forms.Button()
-        Me.btnvleads = New System.Windows.Forms.Button()
         Me.btnleads = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
@@ -163,20 +161,15 @@ Partial Class Dashboard
         Me.Label51 = New System.Windows.Forms.Label()
         Me.Label50 = New System.Windows.Forms.Label()
         Me.Label49 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.reqsspec = New System.Windows.Forms.TextBox()
+        Me.reqslocation = New System.Windows.Forms.TextBox()
         Me.Label48 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.reqsbudget = New System.Windows.Forms.TextBox()
         Me.Label47 = New System.Windows.Forms.Label()
         Me.Label46 = New System.Windows.Forms.Label()
         Me.Label37 = New System.Windows.Forms.Label()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.reqssub = New System.Windows.Forms.ComboBox()
+        Me.reqservice = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ContactsBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.CRMDataSet3 = New CRM.CRMDataSet3()
@@ -187,7 +180,13 @@ Partial Class Dashboard
         Me.RegiTableAdapter = New CRM.CRMDataSet1TableAdapters.regiTableAdapter()
         Me.ContactsTableAdapter = New CRM.CRMDataSet2TableAdapters.ContactsTableAdapter()
         Me.ContactsTableAdapter1 = New CRM.CRMDataSet3TableAdapters.ContactsTableAdapter()
-        'Me.TabPage9 = New System.Windows.Forms.TabPage()
+        Me.reqmanufact = New System.Windows.Forms.ComboBox()
+        Me.reqmsub = New System.Windows.Forms.ComboBox()
+        Me.reqmbudget = New System.Windows.Forms.TextBox()
+        Me.reqmlocation = New System.Windows.Forms.TextBox()
+        Me.reqmspec = New System.Windows.Forms.TextBox()
+        Me.ldemail = New System.Windows.Forms.TextBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -201,6 +200,7 @@ Partial Class Dashboard
         Me.LeadDetails.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
         Me.TabPage5.SuspendLayout()
         CType(Me.SplitContainer4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer4.Panel1.SuspendLayout()
@@ -226,6 +226,7 @@ Partial Class Dashboard
         CType(Me.CRMDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CRMDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RegiBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -303,9 +304,9 @@ Partial Class Dashboard
         '
         'Leads
         '
+        Me.Leads.Controls.Add(Me.DataGridView1)
         Me.Leads.Controls.Add(Me.CrtLeads)
         Me.Leads.Controls.Add(Me.btncleads)
-        Me.Leads.Controls.Add(Me.btnvleads)
         Me.Leads.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Leads.Location = New System.Drawing.Point(3, 3)
         Me.Leads.Name = "Leads"
@@ -315,8 +316,7 @@ Partial Class Dashboard
         'CrtLeads
         '
         Me.CrtLeads.Controls.Add(Me.Panel1)
-        Me.CrtLeads.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CrtLeads.Location = New System.Drawing.Point(0, 0)
+        Me.CrtLeads.Location = New System.Drawing.Point(540, 506)
         Me.CrtLeads.Name = "CrtLeads"
         Me.CrtLeads.Size = New System.Drawing.Size(1077, 695)
         Me.CrtLeads.TabIndex = 4
@@ -325,45 +325,25 @@ Partial Class Dashboard
         '
         Me.Panel1.AutoSize = True
         Me.Panel1.BackColor = System.Drawing.Color.LightGray
+        Me.Panel1.Controls.Add(Me.ldemail)
         Me.Panel1.Controls.Add(Me.btnldupdate)
         Me.Panel1.Controls.Add(Me.ldoffno)
         Me.Panel1.Controls.Add(Me.ldwebsite)
         Me.Panel1.Controls.Add(Me.Label45)
         Me.Panel1.Controls.Add(Me.Label44)
-        Me.Panel1.Controls.Add(Me.ldaltcountry)
-        Me.Panel1.Controls.Add(Me.ldaltposcode)
-        Me.Panel1.Controls.Add(Me.ldaltstate)
-        Me.Panel1.Controls.Add(Me.ldaltcity)
-        Me.Panel1.Controls.Add(Me.ldaltaddstreet)
         Me.Panel1.Controls.Add(Me.ldmobno)
         Me.Panel1.Controls.Add(Me.lddept)
-        Me.Panel1.Controls.Add(Me.ldemail)
-        Me.Panel1.Controls.Add(Me.ldcountry)
-        Me.Panel1.Controls.Add(Me.ldposcode)
-        Me.Panel1.Controls.Add(Me.ldstate)
-        Me.Panel1.Controls.Add(Me.ldcity)
         Me.Panel1.Controls.Add(Me.btnldcancel)
         Me.Panel1.Controls.Add(Me.btnldsave)
-        Me.Panel1.Controls.Add(Me.ldaddstreet)
         Me.Panel1.Controls.Add(Me.ldfname)
         Me.Panel1.Controls.Add(Me.LeadDetails)
         Me.Panel1.Controls.Add(Me.GroupBox4)
-        Me.Panel1.Controls.Add(Me.Label23)
-        Me.Panel1.Controls.Add(Me.Label24)
-        Me.Panel1.Controls.Add(Me.Label25)
-        Me.Panel1.Controls.Add(Me.Label26)
-        Me.Panel1.Controls.Add(Me.Label27)
-        Me.Panel1.Controls.Add(Me.GroupBox5)
         Me.Panel1.Controls.Add(Me.Label29)
         Me.Panel1.Controls.Add(Me.Label30)
         Me.Panel1.Controls.Add(Me.Label31)
-        Me.Panel1.Controls.Add(Me.Label32)
-        Me.Panel1.Controls.Add(Me.Label33)
-        Me.Panel1.Controls.Add(Me.Label34)
-        Me.Panel1.Controls.Add(Me.Label35)
-        Me.Panel1.Controls.Add(Me.Label36)
         Me.Panel1.Controls.Add(Me.Label38)
         Me.Panel1.Controls.Add(Me.GroupBox6)
+        Me.Panel1.Controls.Add(Me.GroupBox5)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
@@ -373,37 +353,33 @@ Partial Class Dashboard
         'btnldupdate
         '
         Me.btnldupdate.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-
         Me.btnldupdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnldupdate.Location = New System.Drawing.Point(385, 654)
-
-        Me.btnldupdate.Location = New System.Drawing.Point(385, 648)
-
+        Me.btnldupdate.Location = New System.Drawing.Point(490, 639)
         Me.btnldupdate.Name = "btnldupdate"
         Me.btnldupdate.Size = New System.Drawing.Size(75, 23)
-        Me.btnldupdate.TabIndex = 42
+        Me.btnldupdate.TabIndex = 28
         Me.btnldupdate.Text = "Update"
         Me.btnldupdate.UseVisualStyleBackColor = True
         '
         'ldoffno
         '
-        Me.ldoffno.Location = New System.Drawing.Point(567, 34)
+        Me.ldoffno.Location = New System.Drawing.Point(708, 27)
         Me.ldoffno.Name = "ldoffno"
         Me.ldoffno.Size = New System.Drawing.Size(201, 20)
-        Me.ldoffno.TabIndex = 41
+        Me.ldoffno.TabIndex = 3
         '
         'ldwebsite
         '
-        Me.ldwebsite.Location = New System.Drawing.Point(174, 112)
+        Me.ldwebsite.Location = New System.Drawing.Point(235, 105)
         Me.ldwebsite.Name = "ldwebsite"
         Me.ldwebsite.Size = New System.Drawing.Size(201, 20)
-        Me.ldwebsite.TabIndex = 40
+        Me.ldwebsite.TabIndex = 2
         '
         'Label45
         '
         Me.Label45.AutoSize = True
         Me.Label45.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label45.Location = New System.Drawing.Point(86, 119)
+        Me.Label45.Location = New System.Drawing.Point(146, 112)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(46, 13)
         Me.Label45.TabIndex = 39
@@ -413,7 +389,7 @@ Partial Class Dashboard
         '
         Me.Label44.AutoSize = True
         Me.Label44.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label44.Location = New System.Drawing.Point(480, 41)
+        Me.Label44.Location = New System.Drawing.Point(621, 34)
         Me.Label44.Name = "Label44"
         Me.Label44.Size = New System.Drawing.Size(75, 13)
         Me.Label44.TabIndex = 38
@@ -423,137 +399,120 @@ Partial Class Dashboard
         '
         Me.ldaltcountry.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldaltcountry.Location = New System.Drawing.Point(567, 308)
+        Me.ldaltcountry.Location = New System.Drawing.Point(93, 164)
         Me.ldaltcountry.Name = "ldaltcountry"
         Me.ldaltcountry.Size = New System.Drawing.Size(201, 20)
-        Me.ldaltcountry.TabIndex = 34
+        Me.ldaltcountry.TabIndex = 15
         '
         'ldaltposcode
         '
         Me.ldaltposcode.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldaltposcode.Location = New System.Drawing.Point(567, 270)
+        Me.ldaltposcode.Location = New System.Drawing.Point(93, 126)
         Me.ldaltposcode.Name = "ldaltposcode"
         Me.ldaltposcode.Size = New System.Drawing.Size(201, 20)
-        Me.ldaltposcode.TabIndex = 32
+        Me.ldaltposcode.TabIndex = 14
         '
         'ldaltstate
         '
         Me.ldaltstate.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldaltstate.Location = New System.Drawing.Point(567, 234)
+        Me.ldaltstate.Location = New System.Drawing.Point(93, 90)
         Me.ldaltstate.Name = "ldaltstate"
         Me.ldaltstate.Size = New System.Drawing.Size(201, 20)
-        Me.ldaltstate.TabIndex = 30
+        Me.ldaltstate.TabIndex = 13
         '
         'ldaltcity
         '
         Me.ldaltcity.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldaltcity.Location = New System.Drawing.Point(567, 199)
+        Me.ldaltcity.Location = New System.Drawing.Point(93, 55)
         Me.ldaltcity.Name = "ldaltcity"
         Me.ldaltcity.Size = New System.Drawing.Size(201, 20)
-        Me.ldaltcity.TabIndex = 28
+        Me.ldaltcity.TabIndex = 12
         '
         'ldaltaddstreet
         '
         Me.ldaltaddstreet.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldaltaddstreet.Location = New System.Drawing.Point(567, 163)
+        Me.ldaltaddstreet.Location = New System.Drawing.Point(93, 19)
         Me.ldaltaddstreet.Name = "ldaltaddstreet"
         Me.ldaltaddstreet.Size = New System.Drawing.Size(201, 20)
-        Me.ldaltaddstreet.TabIndex = 26
+        Me.ldaltaddstreet.TabIndex = 11
         '
         'ldmobno
         '
         Me.ldmobno.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldmobno.Location = New System.Drawing.Point(567, 73)
+        Me.ldmobno.Location = New System.Drawing.Point(708, 66)
         Me.ldmobno.Name = "ldmobno"
         Me.ldmobno.Size = New System.Drawing.Size(201, 20)
-        Me.ldmobno.TabIndex = 24
+        Me.ldmobno.TabIndex = 4
         '
         'lddept
         '
         Me.lddept.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.lddept.Location = New System.Drawing.Point(173, 73)
+        Me.lddept.Location = New System.Drawing.Point(235, 66)
         Me.lddept.Name = "lddept"
         Me.lddept.Size = New System.Drawing.Size(201, 20)
-        Me.lddept.TabIndex = 22
-        '
-        'ldemail
-        '
-        Me.ldemail.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldemail.Location = New System.Drawing.Point(173, 347)
-        Me.ldemail.Name = "ldemail"
-        Me.ldemail.Size = New System.Drawing.Size(201, 20)
-        Me.ldemail.TabIndex = 17
+        Me.lddept.TabIndex = 1
         '
         'ldcountry
         '
         Me.ldcountry.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldcountry.Location = New System.Drawing.Point(173, 308)
+        Me.ldcountry.Location = New System.Drawing.Point(94, 162)
         Me.ldcountry.Name = "ldcountry"
         Me.ldcountry.Size = New System.Drawing.Size(201, 20)
-        Me.ldcountry.TabIndex = 15
+        Me.ldcountry.TabIndex = 9
         '
         'ldposcode
         '
         Me.ldposcode.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldposcode.Location = New System.Drawing.Point(173, 270)
+        Me.ldposcode.Location = New System.Drawing.Point(94, 124)
         Me.ldposcode.Name = "ldposcode"
         Me.ldposcode.Size = New System.Drawing.Size(201, 20)
-        Me.ldposcode.TabIndex = 13
+        Me.ldposcode.TabIndex = 8
         '
         'ldstate
         '
         Me.ldstate.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldstate.Location = New System.Drawing.Point(173, 234)
+        Me.ldstate.Location = New System.Drawing.Point(94, 88)
         Me.ldstate.Name = "ldstate"
         Me.ldstate.Size = New System.Drawing.Size(201, 20)
-        Me.ldstate.TabIndex = 11
+        Me.ldstate.TabIndex = 7
         '
         'ldcity
         '
         Me.ldcity.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldcity.Location = New System.Drawing.Point(173, 199)
+        Me.ldcity.Location = New System.Drawing.Point(94, 53)
         Me.ldcity.Name = "ldcity"
         Me.ldcity.Size = New System.Drawing.Size(201, 20)
-        Me.ldcity.TabIndex = 9
+        Me.ldcity.TabIndex = 6
         '
         'btnldcancel
         '
         Me.btnldcancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-
         Me.btnldcancel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnldcancel.Location = New System.Drawing.Point(593, 654)
-
-        Me.btnldcancel.Location = New System.Drawing.Point(593, 648)
-
+        Me.btnldcancel.Location = New System.Drawing.Point(708, 639)
         Me.btnldcancel.Name = "btnldcancel"
         Me.btnldcancel.Size = New System.Drawing.Size(75, 23)
-        Me.btnldcancel.TabIndex = 7
+        Me.btnldcancel.TabIndex = 29
         Me.btnldcancel.Text = "Cancel"
         Me.btnldcancel.UseVisualStyleBackColor = True
         '
         'btnldsave
         '
         Me.btnldsave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-
         Me.btnldsave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnldsave.Location = New System.Drawing.Point(207, 654)
-
-        Me.btnldsave.Location = New System.Drawing.Point(207, 648)
-
+        Me.btnldsave.Location = New System.Drawing.Point(299, 639)
         Me.btnldsave.Name = "btnldsave"
         Me.btnldsave.Size = New System.Drawing.Size(75, 23)
-        Me.btnldsave.TabIndex = 6
+        Me.btnldsave.TabIndex = 27
         Me.btnldsave.Text = "Save"
         Me.btnldsave.UseVisualStyleBackColor = True
         '
@@ -561,7 +520,7 @@ Partial Class Dashboard
         '
         Me.ldaddstreet.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldaddstreet.Location = New System.Drawing.Point(173, 163)
+        Me.ldaddstreet.Location = New System.Drawing.Point(94, 19)
         Me.ldaddstreet.Name = "ldaddstreet"
         Me.ldaddstreet.Size = New System.Drawing.Size(201, 20)
         Me.ldaddstreet.TabIndex = 5
@@ -570,10 +529,10 @@ Partial Class Dashboard
         '
         Me.ldfname.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldfname.Location = New System.Drawing.Point(174, 34)
+        Me.ldfname.Location = New System.Drawing.Point(235, 27)
         Me.ldfname.Name = "ldfname"
         Me.ldfname.Size = New System.Drawing.Size(201, 20)
-        Me.ldfname.TabIndex = 1
+        Me.ldfname.TabIndex = 0
         '
         'LeadDetails
         '
@@ -589,9 +548,9 @@ Partial Class Dashboard
         Me.LeadDetails.Controls.Add(Me.Label40)
         Me.LeadDetails.Controls.Add(Me.Label39)
         Me.LeadDetails.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.LeadDetails.Location = New System.Drawing.Point(474, 405)
+        Me.LeadDetails.Location = New System.Drawing.Point(615, 395)
         Me.LeadDetails.Name = "LeadDetails"
-        Me.LeadDetails.Size = New System.Drawing.Size(304, 214)
+        Me.LeadDetails.Size = New System.Drawing.Size(304, 221)
         Me.LeadDetails.TabIndex = 37
         Me.LeadDetails.TabStop = False
         Me.LeadDetails.Text = "Lead Details"
@@ -602,7 +561,7 @@ Partial Class Dashboard
         Me.ldchknotcall.Location = New System.Drawing.Point(93, 197)
         Me.ldchknotcall.Name = "ldchknotcall"
         Me.ldchknotcall.Size = New System.Drawing.Size(15, 14)
-        Me.ldchknotcall.TabIndex = 9
+        Me.ldchknotcall.TabIndex = 26
         Me.ldchknotcall.UseVisualStyleBackColor = True
         '
         'lddesc
@@ -611,14 +570,14 @@ Partial Class Dashboard
         Me.lddesc.Multiline = True
         Me.lddesc.Name = "lddesc"
         Me.lddesc.Size = New System.Drawing.Size(201, 56)
-        Me.lddesc.TabIndex = 8
+        Me.lddesc.TabIndex = 25
         '
         'ldempnm
         '
         Me.ldempnm.Location = New System.Drawing.Point(93, 95)
         Me.ldempnm.Name = "ldempnm"
         Me.ldempnm.Size = New System.Drawing.Size(201, 20)
-        Me.ldempnm.TabIndex = 7
+        Me.ldempnm.TabIndex = 24
         '
         'ldsource
         '
@@ -627,7 +586,7 @@ Partial Class Dashboard
         Me.ldsource.Location = New System.Drawing.Point(93, 61)
         Me.ldsource.Name = "ldsource"
         Me.ldsource.Size = New System.Drawing.Size(201, 21)
-        Me.ldsource.TabIndex = 6
+        Me.ldsource.TabIndex = 23
         '
         'ldstatus
         '
@@ -636,7 +595,7 @@ Partial Class Dashboard
         Me.ldstatus.Location = New System.Drawing.Point(93, 24)
         Me.ldstatus.Name = "ldstatus"
         Me.ldstatus.Size = New System.Drawing.Size(201, 21)
-        Me.ldstatus.TabIndex = 5
+        Me.ldstatus.TabIndex = 22
         '
         'Label43
         '
@@ -701,9 +660,9 @@ Partial Class Dashboard
         Me.GroupBox4.Controls.Add(Me.Label21)
         Me.GroupBox4.Controls.Add(Me.Label22)
         Me.GroupBox4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.GroupBox4.Location = New System.Drawing.Point(80, 405)
+        Me.GroupBox4.Location = New System.Drawing.Point(140, 395)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(295, 190)
+        Me.GroupBox4.Size = New System.Drawing.Size(305, 221)
         Me.GroupBox4.TabIndex = 36
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Company Details"
@@ -712,45 +671,45 @@ Partial Class Dashboard
         '
         Me.ldprofession.FormattingEnabled = True
         Me.ldprofession.Items.AddRange(New Object() {"Salaried", "Self Employed(Professionals)", "Self Employed(Business)", "Student", "Retired", "House-Wife"})
-        Me.ldprofession.Location = New System.Drawing.Point(84, 24)
+        Me.ldprofession.Location = New System.Drawing.Point(95, 24)
         Me.ldprofession.Name = "ldprofession"
         Me.ldprofession.Size = New System.Drawing.Size(201, 21)
-        Me.ldprofession.TabIndex = 10
+        Me.ldprofession.TabIndex = 17
         '
         'ldcowsite
         '
-        Me.ldcowsite.Location = New System.Drawing.Point(84, 194)
+        Me.ldcowsite.Location = New System.Drawing.Point(95, 194)
         Me.ldcowsite.Name = "ldcowsite"
         Me.ldcowsite.Size = New System.Drawing.Size(201, 20)
-        Me.ldcowsite.TabIndex = 9
+        Me.ldcowsite.TabIndex = 21
         '
         'ldcoadd
         '
-        Me.ldcoadd.Location = New System.Drawing.Point(84, 132)
+        Me.ldcoadd.Location = New System.Drawing.Point(94, 128)
         Me.ldcoadd.Multiline = True
         Me.ldcoadd.Name = "ldcoadd"
         Me.ldcoadd.Size = New System.Drawing.Size(201, 52)
-        Me.ldcoadd.TabIndex = 8
+        Me.ldcoadd.TabIndex = 20
         '
         'lddesign
         '
-        Me.lddesign.Location = New System.Drawing.Point(84, 61)
+        Me.lddesign.Location = New System.Drawing.Point(95, 61)
         Me.lddesign.Name = "lddesign"
         Me.lddesign.Size = New System.Drawing.Size(201, 20)
-        Me.lddesign.TabIndex = 7
+        Me.lddesign.TabIndex = 18
         '
         'ldconm
         '
-        Me.ldconm.Location = New System.Drawing.Point(84, 95)
+        Me.ldconm.Location = New System.Drawing.Point(95, 95)
         Me.ldconm.Name = "ldconm"
         Me.ldconm.Size = New System.Drawing.Size(201, 20)
-        Me.ldconm.TabIndex = 6
+        Me.ldconm.TabIndex = 19
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label9.Location = New System.Drawing.Point(4, 168)
+        Me.Label9.Location = New System.Drawing.Point(6, 198)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(46, 13)
         Me.Label9.TabIndex = 4
@@ -803,7 +762,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label23.AutoSize = True
         Me.Label23.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label23.Location = New System.Drawing.Point(480, 315)
+        Me.Label23.Location = New System.Drawing.Point(6, 171)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(43, 13)
         Me.Label23.TabIndex = 33
@@ -816,7 +775,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label24.AutoSize = True
         Me.Label24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label24.Location = New System.Drawing.Point(480, 277)
+        Me.Label24.Location = New System.Drawing.Point(6, 133)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(64, 13)
         Me.Label24.TabIndex = 31
@@ -829,7 +788,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label25.AutoSize = True
         Me.Label25.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label25.Location = New System.Drawing.Point(480, 241)
+        Me.Label25.Location = New System.Drawing.Point(6, 97)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(32, 13)
         Me.Label25.TabIndex = 29
@@ -842,7 +801,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label26.AutoSize = True
         Me.Label26.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label26.Location = New System.Drawing.Point(480, 206)
+        Me.Label26.Location = New System.Drawing.Point(6, 62)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(24, 13)
         Me.Label26.TabIndex = 27
@@ -855,7 +814,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label27.AutoSize = True
         Me.Label27.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label27.Location = New System.Drawing.Point(480, 170)
+        Me.Label27.Location = New System.Drawing.Point(6, 26)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(76, 13)
         Me.Label27.TabIndex = 25
@@ -865,8 +824,18 @@ Partial Class Dashboard
         '
         Me.GroupBox5.Controls.Add(Me.ldchkaltpadd)
         Me.GroupBox5.Controls.Add(Me.Label28)
+        Me.GroupBox5.Controls.Add(Me.ldaltaddstreet)
+        Me.GroupBox5.Controls.Add(Me.ldaltcity)
+        Me.GroupBox5.Controls.Add(Me.ldaltstate)
+        Me.GroupBox5.Controls.Add(Me.ldaltcountry)
+        Me.GroupBox5.Controls.Add(Me.ldaltposcode)
+        Me.GroupBox5.Controls.Add(Me.Label27)
+        Me.GroupBox5.Controls.Add(Me.Label26)
+        Me.GroupBox5.Controls.Add(Me.Label25)
+        Me.GroupBox5.Controls.Add(Me.Label24)
+        Me.GroupBox5.Controls.Add(Me.Label23)
         Me.GroupBox5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.GroupBox5.Location = New System.Drawing.Point(474, 143)
+        Me.GroupBox5.Location = New System.Drawing.Point(615, 146)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(304, 224)
         Me.GroupBox5.TabIndex = 35
@@ -879,7 +848,7 @@ Partial Class Dashboard
         Me.ldchkaltpadd.Location = New System.Drawing.Point(149, 203)
         Me.ldchkaltpadd.Name = "ldchkaltpadd"
         Me.ldchkaltpadd.Size = New System.Drawing.Size(15, 14)
-        Me.ldchkaltpadd.TabIndex = 36
+        Me.ldchkaltpadd.TabIndex = 10
         Me.ldchkaltpadd.UseVisualStyleBackColor = True
         '
         'Label28
@@ -899,7 +868,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label29.AutoSize = True
         Me.Label29.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label29.Location = New System.Drawing.Point(480, 83)
+        Me.Label29.Location = New System.Drawing.Point(621, 76)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(38, 13)
         Me.Label29.TabIndex = 23
@@ -912,7 +881,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label30.AutoSize = True
         Me.Label30.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label30.Location = New System.Drawing.Point(84, 80)
+        Me.Label30.Location = New System.Drawing.Point(144, 73)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(62, 13)
         Me.Label30.TabIndex = 21
@@ -925,7 +894,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label31.AutoSize = True
         Me.Label31.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label31.Location = New System.Drawing.Point(86, 354)
+        Me.Label31.Location = New System.Drawing.Point(146, 357)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(46, 13)
         Me.Label31.TabIndex = 16
@@ -938,7 +907,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label32.AutoSize = True
         Me.Label32.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label32.Location = New System.Drawing.Point(86, 315)
+        Me.Label32.Location = New System.Drawing.Point(3, 169)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(43, 13)
         Me.Label32.TabIndex = 14
@@ -951,7 +920,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label33.AutoSize = True
         Me.Label33.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label33.Location = New System.Drawing.Point(86, 277)
+        Me.Label33.Location = New System.Drawing.Point(3, 131)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(64, 13)
         Me.Label33.TabIndex = 12
@@ -964,7 +933,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label34.AutoSize = True
         Me.Label34.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label34.Location = New System.Drawing.Point(86, 241)
+        Me.Label34.Location = New System.Drawing.Point(3, 95)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(32, 13)
         Me.Label34.TabIndex = 10
@@ -977,7 +946,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label35.AutoSize = True
         Me.Label35.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label35.Location = New System.Drawing.Point(86, 206)
+        Me.Label35.Location = New System.Drawing.Point(3, 60)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(24, 13)
         Me.Label35.TabIndex = 8
@@ -990,7 +959,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label36.AutoSize = True
         Me.Label36.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label36.Location = New System.Drawing.Point(86, 170)
+        Me.Label36.Location = New System.Drawing.Point(3, 26)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(76, 13)
         Me.Label36.TabIndex = 4
@@ -1004,39 +973,42 @@ Partial Class Dashboard
         Me.Label38.AutoSize = True
         Me.Label38.BackColor = System.Drawing.Color.Transparent
         Me.Label38.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label38.Location = New System.Drawing.Point(86, 41)
+        Me.Label38.Location = New System.Drawing.Point(146, 34)
         Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(57, 13)
+        Me.Label38.Size = New System.Drawing.Size(54, 13)
         Me.Label38.TabIndex = 0
-        Me.Label38.Text = "First Name"
+        Me.Label38.Text = "Full Name"
         '
         'GroupBox6
         '
+        Me.GroupBox6.Controls.Add(Me.ldaddstreet)
+        Me.GroupBox6.Controls.Add(Me.ldcity)
+        Me.GroupBox6.Controls.Add(Me.ldstate)
+        Me.GroupBox6.Controls.Add(Me.ldposcode)
+        Me.GroupBox6.Controls.Add(Me.ldcountry)
+        Me.GroupBox6.Controls.Add(Me.Label36)
+        Me.GroupBox6.Controls.Add(Me.Label35)
+        Me.GroupBox6.Controls.Add(Me.Label34)
+        Me.GroupBox6.Controls.Add(Me.Label33)
+        Me.GroupBox6.Controls.Add(Me.Label32)
         Me.GroupBox6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.GroupBox6.Location = New System.Drawing.Point(80, 143)
+        Me.GroupBox6.Location = New System.Drawing.Point(141, 144)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(304, 192)
+        Me.GroupBox6.Size = New System.Drawing.Size(304, 201)
         Me.GroupBox6.TabIndex = 18
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Primary Address"
         '
         'btncleads
         '
-        Me.btncleads.Location = New System.Drawing.Point(207, 99)
+        Me.btncleads.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btncleads.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btncleads.Location = New System.Drawing.Point(380, 50)
         Me.btncleads.Name = "btncleads"
-        Me.btncleads.Size = New System.Drawing.Size(106, 23)
+        Me.btncleads.Size = New System.Drawing.Size(310, 101)
         Me.btncleads.TabIndex = 3
         Me.btncleads.Text = "Create Leads"
         Me.btncleads.UseVisualStyleBackColor = True
-        '
-        'btnvleads
-        '
-        Me.btnvleads.Location = New System.Drawing.Point(469, 99)
-        Me.btnvleads.Name = "btnvleads"
-        Me.btnvleads.Size = New System.Drawing.Size(96, 23)
-        Me.btnvleads.TabIndex = 2
-        Me.btnvleads.Text = "View Leads"
-        Me.btnvleads.UseVisualStyleBackColor = True
         '
         'btnleads
         '
@@ -1237,6 +1209,7 @@ Partial Class Dashboard
         Me.Panelcreate.Controls.Add(Me.Label1)
         Me.Panelcreate.Controls.Add(Me.GroupBox1)
         Me.Panelcreate.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panelcreate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Panelcreate.Location = New System.Drawing.Point(0, 0)
         Me.Panelcreate.Name = "Panelcreate"
         Me.Panelcreate.Size = New System.Drawing.Size(841, 695)
@@ -1245,20 +1218,22 @@ Partial Class Dashboard
         'btnconupdate1
         '
         Me.btnconupdate1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnconupdate1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnconupdate1.Location = New System.Drawing.Point(367, 648)
         Me.btnconupdate1.Name = "btnconupdate1"
         Me.btnconupdate1.Size = New System.Drawing.Size(75, 23)
-        Me.btnconupdate1.TabIndex = 39
+        Me.btnconupdate1.TabIndex = 21
         Me.btnconupdate1.Text = "Update"
         Me.btnconupdate1.UseVisualStyleBackColor = True
         '
         'btnconreset
         '
         Me.btnconreset.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnconreset.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnconreset.Location = New System.Drawing.Point(474, 648)
         Me.btnconreset.Name = "btnconreset"
         Me.btnconreset.Size = New System.Drawing.Size(75, 23)
-        Me.btnconreset.TabIndex = 38
+        Me.btnconreset.TabIndex = 22
         Me.btnconreset.Text = "Reset"
         Me.btnconreset.UseVisualStyleBackColor = True
         '
@@ -1288,39 +1263,40 @@ Partial Class Dashboard
         Me.ComboBox1.Location = New System.Drawing.Point(84, 24)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(201, 21)
-        Me.ComboBox1.TabIndex = 10
+        Me.ComboBox1.TabIndex = 15
         '
         'conweb
         '
         Me.conweb.Location = New System.Drawing.Point(84, 161)
         Me.conweb.Name = "conweb"
         Me.conweb.Size = New System.Drawing.Size(201, 20)
-        Me.conweb.TabIndex = 9
+        Me.conweb.TabIndex = 19
         '
         'conadd
         '
         Me.conadd.Location = New System.Drawing.Point(84, 128)
         Me.conadd.Name = "conadd"
         Me.conadd.Size = New System.Drawing.Size(201, 20)
-        Me.conadd.TabIndex = 8
+        Me.conadd.TabIndex = 18
         '
         'condesi
         '
         Me.condesi.Location = New System.Drawing.Point(84, 61)
         Me.condesi.Name = "condesi"
         Me.condesi.Size = New System.Drawing.Size(201, 20)
-        Me.condesi.TabIndex = 7
+        Me.condesi.TabIndex = 16
         '
         'concomname
         '
         Me.concomname.Location = New System.Drawing.Point(84, 95)
         Me.concomname.Name = "concomname"
         Me.concomname.Size = New System.Drawing.Size(201, 20)
-        Me.concomname.TabIndex = 6
+        Me.concomname.TabIndex = 17
         '
         'Label18
         '
         Me.Label18.AutoSize = True
+        Me.Label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label18.Location = New System.Drawing.Point(4, 168)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(46, 13)
@@ -1330,6 +1306,7 @@ Partial Class Dashboard
         'Label15
         '
         Me.Label15.AutoSize = True
+        Me.Label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label15.Location = New System.Drawing.Point(4, 135)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(45, 13)
@@ -1339,6 +1316,7 @@ Partial Class Dashboard
         'Label14
         '
         Me.Label14.AutoSize = True
+        Me.Label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label14.Location = New System.Drawing.Point(4, 102)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(82, 13)
@@ -1348,6 +1326,7 @@ Partial Class Dashboard
         'Label13
         '
         Me.Label13.AutoSize = True
+        Me.Label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label13.Location = New System.Drawing.Point(4, 68)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(63, 13)
@@ -1357,6 +1336,7 @@ Partial Class Dashboard
         'Label12
         '
         Me.Label12.AutoSize = True
+        Me.Label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label12.Location = New System.Drawing.Point(4, 32)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(56, 13)
@@ -1370,7 +1350,7 @@ Partial Class Dashboard
         Me.txtaltcountry.Location = New System.Drawing.Point(567, 308)
         Me.txtaltcountry.Name = "txtaltcountry"
         Me.txtaltcountry.Size = New System.Drawing.Size(201, 20)
-        Me.txtaltcountry.TabIndex = 34
+        Me.txtaltcountry.TabIndex = 14
         '
         'lblaltcountry
         '
@@ -1378,6 +1358,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblaltcountry.AutoSize = True
+        Me.lblaltcountry.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblaltcountry.Location = New System.Drawing.Point(480, 315)
         Me.lblaltcountry.Name = "lblaltcountry"
         Me.lblaltcountry.Size = New System.Drawing.Size(43, 13)
@@ -1391,7 +1372,7 @@ Partial Class Dashboard
         Me.txtaltpost.Location = New System.Drawing.Point(567, 270)
         Me.txtaltpost.Name = "txtaltpost"
         Me.txtaltpost.Size = New System.Drawing.Size(201, 20)
-        Me.txtaltpost.TabIndex = 32
+        Me.txtaltpost.TabIndex = 13
         '
         'lblaltpost
         '
@@ -1399,6 +1380,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblaltpost.AutoSize = True
+        Me.lblaltpost.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblaltpost.Location = New System.Drawing.Point(480, 277)
         Me.lblaltpost.Name = "lblaltpost"
         Me.lblaltpost.Size = New System.Drawing.Size(64, 13)
@@ -1412,7 +1394,7 @@ Partial Class Dashboard
         Me.txtaltstate.Location = New System.Drawing.Point(567, 234)
         Me.txtaltstate.Name = "txtaltstate"
         Me.txtaltstate.Size = New System.Drawing.Size(201, 20)
-        Me.txtaltstate.TabIndex = 30
+        Me.txtaltstate.TabIndex = 12
         '
         'lblaltstate
         '
@@ -1420,6 +1402,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblaltstate.AutoSize = True
+        Me.lblaltstate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblaltstate.Location = New System.Drawing.Point(480, 241)
         Me.lblaltstate.Name = "lblaltstate"
         Me.lblaltstate.Size = New System.Drawing.Size(32, 13)
@@ -1433,7 +1416,7 @@ Partial Class Dashboard
         Me.txtaltcity.Location = New System.Drawing.Point(567, 199)
         Me.txtaltcity.Name = "txtaltcity"
         Me.txtaltcity.Size = New System.Drawing.Size(201, 20)
-        Me.txtaltcity.TabIndex = 28
+        Me.txtaltcity.TabIndex = 11
         '
         'lblaltcity
         '
@@ -1441,6 +1424,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblaltcity.AutoSize = True
+        Me.lblaltcity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblaltcity.Location = New System.Drawing.Point(480, 206)
         Me.lblaltcity.Name = "lblaltcity"
         Me.lblaltcity.Size = New System.Drawing.Size(24, 13)
@@ -1454,7 +1438,7 @@ Partial Class Dashboard
         Me.txtaltstreet.Location = New System.Drawing.Point(567, 163)
         Me.txtaltstreet.Name = "txtaltstreet"
         Me.txtaltstreet.Size = New System.Drawing.Size(201, 20)
-        Me.txtaltstreet.TabIndex = 26
+        Me.txtaltstreet.TabIndex = 10
         '
         'Label16
         '
@@ -1462,6 +1446,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label16.AutoSize = True
+        Me.Label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label16.Location = New System.Drawing.Point(480, 170)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(76, 13)
@@ -1485,12 +1470,13 @@ Partial Class Dashboard
         Me.chkalt.Location = New System.Drawing.Point(149, 203)
         Me.chkalt.Name = "chkalt"
         Me.chkalt.Size = New System.Drawing.Size(15, 14)
-        Me.chkalt.TabIndex = 36
+        Me.chkalt.TabIndex = 9
         Me.chkalt.UseVisualStyleBackColor = True
         '
         'Label17
         '
         Me.Label17.AutoSize = True
+        Me.Label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label17.Location = New System.Drawing.Point(6, 204)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(126, 13)
@@ -1504,7 +1490,7 @@ Partial Class Dashboard
         Me.conmobile.Location = New System.Drawing.Point(558, 94)
         Me.conmobile.Name = "conmobile"
         Me.conmobile.Size = New System.Drawing.Size(201, 20)
-        Me.conmobile.TabIndex = 24
+        Me.conmobile.TabIndex = 3
         '
         'Label11
         '
@@ -1512,6 +1498,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label11.AutoSize = True
+        Me.Label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label11.Location = New System.Drawing.Point(471, 101)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(38, 13)
@@ -1525,7 +1512,7 @@ Partial Class Dashboard
         Me.conphone.Location = New System.Drawing.Point(558, 58)
         Me.conphone.Name = "conphone"
         Me.conphone.Size = New System.Drawing.Size(201, 20)
-        Me.conphone.TabIndex = 22
+        Me.conphone.TabIndex = 2
         '
         'Label10
         '
@@ -1533,6 +1520,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label10.AutoSize = True
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label10.Location = New System.Drawing.Point(471, 65)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(69, 13)
@@ -1546,7 +1534,7 @@ Partial Class Dashboard
         Me.conemail.Location = New System.Drawing.Point(173, 98)
         Me.conemail.Name = "conemail"
         Me.conemail.Size = New System.Drawing.Size(201, 20)
-        Me.conemail.TabIndex = 17
+        Me.conemail.TabIndex = 1
         '
         'Label2
         '
@@ -1554,6 +1542,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label2.Location = New System.Drawing.Point(86, 105)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(46, 13)
@@ -1567,7 +1556,7 @@ Partial Class Dashboard
         Me.concountry.Location = New System.Drawing.Point(173, 308)
         Me.concountry.Name = "concountry"
         Me.concountry.Size = New System.Drawing.Size(201, 20)
-        Me.concountry.TabIndex = 15
+        Me.concountry.TabIndex = 8
         '
         'Label7
         '
@@ -1575,6 +1564,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label7.AutoSize = True
+        Me.Label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label7.Location = New System.Drawing.Point(86, 315)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(43, 13)
@@ -1588,7 +1578,7 @@ Partial Class Dashboard
         Me.concode.Location = New System.Drawing.Point(173, 270)
         Me.concode.Name = "concode"
         Me.concode.Size = New System.Drawing.Size(201, 20)
-        Me.concode.TabIndex = 13
+        Me.concode.TabIndex = 7
         '
         'Label6
         '
@@ -1596,6 +1586,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label6.AutoSize = True
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label6.Location = New System.Drawing.Point(86, 277)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(64, 13)
@@ -1609,7 +1600,7 @@ Partial Class Dashboard
         Me.constate.Location = New System.Drawing.Point(173, 234)
         Me.constate.Name = "constate"
         Me.constate.Size = New System.Drawing.Size(201, 20)
-        Me.constate.TabIndex = 11
+        Me.constate.TabIndex = 6
         '
         'Label5
         '
@@ -1617,6 +1608,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label5.Location = New System.Drawing.Point(86, 241)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(32, 13)
@@ -1630,7 +1622,7 @@ Partial Class Dashboard
         Me.concity.Location = New System.Drawing.Point(173, 199)
         Me.concity.Name = "concity"
         Me.concity.Size = New System.Drawing.Size(201, 20)
-        Me.concity.TabIndex = 9
+        Me.concity.TabIndex = 5
         '
         'Label4
         '
@@ -1638,6 +1630,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label4.Location = New System.Drawing.Point(86, 206)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(24, 13)
@@ -1647,20 +1640,22 @@ Partial Class Dashboard
         'btncondelete
         '
         Me.btncondelete.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btncondelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btncondelete.Location = New System.Drawing.Point(580, 648)
         Me.btncondelete.Name = "btncondelete"
         Me.btncondelete.Size = New System.Drawing.Size(75, 23)
-        Me.btncondelete.TabIndex = 7
+        Me.btncondelete.TabIndex = 23
         Me.btncondelete.Text = "Delete"
         Me.btncondelete.UseVisualStyleBackColor = True
         '
         'btnconsave
         '
         Me.btnconsave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnconsave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnconsave.Location = New System.Drawing.Point(253, 648)
         Me.btnconsave.Name = "btnconsave"
         Me.btnconsave.Size = New System.Drawing.Size(75, 23)
-        Me.btnconsave.TabIndex = 6
+        Me.btnconsave.TabIndex = 20
         Me.btnconsave.Text = "Save"
         Me.btnconsave.UseVisualStyleBackColor = True
         '
@@ -1671,7 +1666,7 @@ Partial Class Dashboard
         Me.constreet.Location = New System.Drawing.Point(173, 163)
         Me.constreet.Name = "constreet"
         Me.constreet.Size = New System.Drawing.Size(201, 20)
-        Me.constreet.TabIndex = 5
+        Me.constreet.TabIndex = 4
         '
         'Label3
         '
@@ -1679,6 +1674,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label3.Location = New System.Drawing.Point(86, 170)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(76, 13)
@@ -1692,7 +1688,7 @@ Partial Class Dashboard
         Me.confirstname.Location = New System.Drawing.Point(173, 58)
         Me.confirstname.Name = "confirstname"
         Me.confirstname.Size = New System.Drawing.Size(201, 20)
-        Me.confirstname.TabIndex = 1
+        Me.confirstname.TabIndex = 0
         '
         'Label1
         '
@@ -1700,6 +1696,7 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label1.Location = New System.Drawing.Point(86, 65)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(54, 13)
@@ -1735,39 +1732,39 @@ Partial Class Dashboard
         '
         'TabPage9
         '
+        Me.TabPage9.BackColor = System.Drawing.Color.LightGray
+        Me.TabPage9.Controls.Add(Me.reqmspec)
+        Me.TabPage9.Controls.Add(Me.reqmlocation)
+        Me.TabPage9.Controls.Add(Me.reqmbudget)
+        Me.TabPage9.Controls.Add(Me.reqmsub)
+        Me.TabPage9.Controls.Add(Me.reqmanufact)
         Me.TabPage9.Controls.Add(Me.Label53)
         Me.TabPage9.Controls.Add(Me.Label52)
         Me.TabPage9.Controls.Add(Me.Label51)
         Me.TabPage9.Controls.Add(Me.Label50)
         Me.TabPage9.Controls.Add(Me.Label49)
-        Me.TabPage9.Controls.Add(Me.TextBox7)
-        Me.TabPage9.Controls.Add(Me.TextBox6)
-        Me.TabPage9.Controls.Add(Me.TextBox5)
-        Me.TabPage9.Controls.Add(Me.TextBox4)
+        Me.TabPage9.Controls.Add(Me.reqsspec)
+        Me.TabPage9.Controls.Add(Me.reqslocation)
         Me.TabPage9.Controls.Add(Me.Label48)
-        Me.TabPage9.Controls.Add(Me.TextBox3)
-        Me.TabPage9.Controls.Add(Me.TextBox2)
+        Me.TabPage9.Controls.Add(Me.reqsbudget)
         Me.TabPage9.Controls.Add(Me.Label47)
         Me.TabPage9.Controls.Add(Me.Label46)
         Me.TabPage9.Controls.Add(Me.Label37)
-        Me.TabPage9.Controls.Add(Me.ComboBox5)
-        Me.TabPage9.Controls.Add(Me.ComboBox4)
-        Me.TabPage9.Controls.Add(Me.ComboBox3)
-        Me.TabPage9.Controls.Add(Me.ComboBox2)
+        Me.TabPage9.Controls.Add(Me.reqssub)
+        Me.TabPage9.Controls.Add(Me.reqservice)
         Me.TabPage9.Controls.Add(Me.Label8)
-        Me.TabPage9.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage9.Location = New System.Drawing.Point(4, 28)
         Me.TabPage9.Name = "TabPage9"
         Me.TabPage9.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage9.Size = New System.Drawing.Size(1083, 707)
+        Me.TabPage9.Size = New System.Drawing.Size(1083, 701)
         Me.TabPage9.TabIndex = 8
-        Me.TabPage9.Text = "Requirements"
-        Me.TabPage9.UseVisualStyleBackColor = True
+        Me.TabPage9.Text = "Requirement"
         '
         'Label53
         '
         Me.Label53.AutoSize = True
         Me.Label53.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label53.Location = New System.Drawing.Point(480, 73)
+        Me.Label53.Location = New System.Drawing.Point(592, 73)
         Me.Label53.Name = "Label53"
         Me.Label53.Size = New System.Drawing.Size(53, 13)
         Me.Label53.TabIndex = 19
@@ -1777,7 +1774,7 @@ Partial Class Dashboard
         '
         Me.Label52.AutoSize = True
         Me.Label52.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label52.Location = New System.Drawing.Point(52, 73)
+        Me.Label52.Location = New System.Drawing.Point(111, 73)
         Me.Label52.Name = "Label52"
         Me.Label52.Size = New System.Drawing.Size(53, 13)
         Me.Label52.TabIndex = 18
@@ -1787,7 +1784,7 @@ Partial Class Dashboard
         '
         Me.Label51.AutoSize = True
         Me.Label51.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label51.Location = New System.Drawing.Point(480, 190)
+        Me.Label51.Location = New System.Drawing.Point(592, 190)
         Me.Label51.Name = "Label51"
         Me.Label51.Size = New System.Drawing.Size(68, 13)
         Me.Label51.TabIndex = 17
@@ -1797,7 +1794,7 @@ Partial Class Dashboard
         '
         Me.Label50.AutoSize = True
         Me.Label50.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label50.Location = New System.Drawing.Point(480, 148)
+        Me.Label50.Location = New System.Drawing.Point(592, 152)
         Me.Label50.Name = "Label50"
         Me.Label50.Size = New System.Drawing.Size(48, 13)
         Me.Label50.TabIndex = 16
@@ -1807,70 +1804,49 @@ Partial Class Dashboard
         '
         Me.Label49.AutoSize = True
         Me.Label49.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label49.Location = New System.Drawing.Point(52, 190)
+        Me.Label49.Location = New System.Drawing.Point(111, 193)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(68, 13)
         Me.Label49.TabIndex = 15
         Me.Label49.Text = "Specification"
         '
-        'TextBox7
+        'reqsspec
         '
-        Me.TextBox7.Location = New System.Drawing.Point(610, 183)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox7.TabIndex = 14
+        Me.reqsspec.Location = New System.Drawing.Point(243, 190)
+        Me.reqsspec.Multiline = True
+        Me.reqsspec.Name = "reqsspec"
+        Me.reqsspec.Size = New System.Drawing.Size(210, 94)
+        Me.reqsspec.TabIndex = 4
         '
-        'TextBox6
+        'reqslocation
         '
-        Me.TextBox6.Location = New System.Drawing.Point(610, 145)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox6.TabIndex = 13
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(173, 183)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(210, 94)
-        Me.TextBox5.TabIndex = 12
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(173, 145)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(210, 20)
-        Me.TextBox4.TabIndex = 11
+        Me.reqslocation.Location = New System.Drawing.Point(243, 149)
+        Me.reqslocation.Name = "reqslocation"
+        Me.reqslocation.Size = New System.Drawing.Size(210, 20)
+        Me.reqslocation.TabIndex = 3
         '
         'Label48
         '
         Me.Label48.AutoSize = True
         Me.Label48.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label48.Location = New System.Drawing.Point(52, 152)
+        Me.Label48.Location = New System.Drawing.Point(111, 152)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(48, 13)
         Me.Label48.TabIndex = 10
         Me.Label48.Text = "Location"
         '
-        'TextBox3
+        'reqsbudget
         '
-        Me.TextBox3.Location = New System.Drawing.Point(610, 105)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 9
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(173, 105)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(210, 20)
-        Me.TextBox2.TabIndex = 8
+        Me.reqsbudget.Location = New System.Drawing.Point(243, 109)
+        Me.reqsbudget.Name = "reqsbudget"
+        Me.reqsbudget.Size = New System.Drawing.Size(210, 20)
+        Me.reqsbudget.TabIndex = 2
         '
         'Label47
         '
         Me.Label47.AutoSize = True
         Me.Label47.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label47.Location = New System.Drawing.Point(480, 112)
+        Me.Label47.Location = New System.Drawing.Point(592, 112)
         Me.Label47.Name = "Label47"
         Me.Label47.Size = New System.Drawing.Size(41, 13)
         Me.Label47.TabIndex = 7
@@ -1880,7 +1856,7 @@ Partial Class Dashboard
         '
         Me.Label46.AutoSize = True
         Me.Label46.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label46.Location = New System.Drawing.Point(52, 112)
+        Me.Label46.Location = New System.Drawing.Point(111, 116)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(41, 13)
         Me.Label46.TabIndex = 6
@@ -1890,49 +1866,33 @@ Partial Class Dashboard
         '
         Me.Label37.AutoSize = True
         Me.Label37.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label37.Location = New System.Drawing.Point(480, 32)
+        Me.Label37.Location = New System.Drawing.Point(592, 32)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(75, 13)
         Me.Label37.TabIndex = 5
         Me.Label37.Text = "Manufacturing"
         '
-        'ComboBox5
+        'reqssub
         '
-        Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Location = New System.Drawing.Point(610, 65)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox5.TabIndex = 4
+        Me.reqssub.FormattingEnabled = True
+        Me.reqssub.Location = New System.Drawing.Point(243, 68)
+        Me.reqssub.Name = "reqssub"
+        Me.reqssub.Size = New System.Drawing.Size(210, 21)
+        Me.reqssub.TabIndex = 1
         '
-        'ComboBox4
+        'reqservice
         '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(610, 24)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox4.TabIndex = 3
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(173, 65)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(210, 21)
-        Me.ComboBox3.TabIndex = 2
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(173, 27)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(210, 21)
-        Me.ComboBox2.TabIndex = 1
+        Me.reqservice.FormattingEnabled = True
+        Me.reqservice.Location = New System.Drawing.Point(243, 24)
+        Me.reqservice.Name = "reqservice"
+        Me.reqservice.Size = New System.Drawing.Size(210, 21)
+        Me.reqservice.TabIndex = 0
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label8.Location = New System.Drawing.Point(52, 35)
+        Me.Label8.Location = New System.Drawing.Point(111, 32)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(43, 13)
         Me.Label8.TabIndex = 0
@@ -1980,14 +1940,60 @@ Partial Class Dashboard
         '
         Me.ContactsTableAdapter1.ClearBeforeFill = True
         '
-        'TabPage9
+        'reqmanufact
         '
-        Me.TabPage9.Location = New System.Drawing.Point(4, 28)
-        Me.TabPage9.Name = "TabPage9"
-        Me.TabPage9.Size = New System.Drawing.Size(1083, 701)
-        Me.TabPage9.TabIndex = 8
-        Me.TabPage9.Text = "Requirement"
-        Me.TabPage9.UseVisualStyleBackColor = True
+        Me.reqmanufact.FormattingEnabled = True
+        Me.reqmanufact.Location = New System.Drawing.Point(722, 24)
+        Me.reqmanufact.Name = "reqmanufact"
+        Me.reqmanufact.Size = New System.Drawing.Size(210, 21)
+        Me.reqmanufact.TabIndex = 5
+        '
+        'reqmsub
+        '
+        Me.reqmsub.FormattingEnabled = True
+        Me.reqmsub.Location = New System.Drawing.Point(722, 70)
+        Me.reqmsub.Name = "reqmsub"
+        Me.reqmsub.Size = New System.Drawing.Size(210, 21)
+        Me.reqmsub.TabIndex = 6
+        '
+        'reqmbudget
+        '
+        Me.reqmbudget.Location = New System.Drawing.Point(722, 109)
+        Me.reqmbudget.Name = "reqmbudget"
+        Me.reqmbudget.Size = New System.Drawing.Size(210, 20)
+        Me.reqmbudget.TabIndex = 7
+        '
+        'reqmlocation
+        '
+        Me.reqmlocation.Location = New System.Drawing.Point(722, 149)
+        Me.reqmlocation.Name = "reqmlocation"
+        Me.reqmlocation.Size = New System.Drawing.Size(210, 20)
+        Me.reqmlocation.TabIndex = 8
+        '
+        'reqmspec
+        '
+        Me.reqmspec.Location = New System.Drawing.Point(722, 190)
+        Me.reqmspec.Multiline = True
+        Me.reqmspec.Name = "reqmspec"
+        Me.reqmspec.Size = New System.Drawing.Size(210, 94)
+        Me.reqmspec.TabIndex = 9
+        '
+        'ldemail
+        '
+        Me.ldemail.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ldemail.Location = New System.Drawing.Point(235, 354)
+        Me.ldemail.Name = "ldemail"
+        Me.ldemail.Size = New System.Drawing.Size(201, 20)
+        Me.ldemail.TabIndex = 16
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(140, 214)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
+        Me.DataGridView1.TabIndex = 5
         '
         'Dashboard
         '
@@ -2020,6 +2026,8 @@ Partial Class Dashboard
         Me.GroupBox4.PerformLayout()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
         Me.TabPage5.ResumeLayout(False)
         Me.SplitContainer4.Panel1.ResumeLayout(False)
         CType(Me.SplitContainer4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2051,6 +2059,7 @@ Partial Class Dashboard
         CType(Me.CRMDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CRMDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RegiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2121,7 +2130,6 @@ Partial Class Dashboard
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Leads As Panel
     Friend WithEvents btncleads As Button
-    Friend WithEvents btnvleads As Button
     Friend WithEvents CrtLeads As Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents GroupBox4 As GroupBox
@@ -2152,7 +2160,6 @@ Partial Class Dashboard
     Friend WithEvents Label29 As Label
     Friend WithEvents lddept As TextBox
     Friend WithEvents Label30 As Label
-    Friend WithEvents ldemail As TextBox
     Friend WithEvents Label31 As Label
     Friend WithEvents ldcountry As TextBox
     Friend WithEvents Label32 As Label
@@ -2215,23 +2222,25 @@ Partial Class Dashboard
     Friend WithEvents Label8 As Label
     Friend WithEvents Label46 As Label
     Friend WithEvents Label37 As Label
-    Friend WithEvents ComboBox5 As ComboBox
-    Friend WithEvents ComboBox4 As ComboBox
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents reqssub As ComboBox
+    Friend WithEvents reqservice As ComboBox
     Friend WithEvents Label53 As Label
     Friend WithEvents Label52 As Label
     Friend WithEvents Label51 As Label
     Friend WithEvents Label50 As Label
     Friend WithEvents Label49 As Label
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents reqsspec As TextBox
+    Friend WithEvents reqslocation As TextBox
     Friend WithEvents Label48 As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents reqsbudget As TextBox
     Friend WithEvents Label47 As Label
+    Friend WithEvents reqmspec As TextBox
+    Friend WithEvents reqmlocation As TextBox
+    Friend WithEvents reqmbudget As TextBox
+    Friend WithEvents reqmsub As ComboBox
+    Friend WithEvents reqmanufact As ComboBox
+    Friend WithEvents ldemail As TextBox
+    Friend WithEvents DataGridView1 As DataGridView
 
     'Friend WithEvents btnconupdate As Button
 

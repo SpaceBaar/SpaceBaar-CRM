@@ -2,7 +2,7 @@
 
 Public Class Login
 
-    Dim con As New SqlConnection("Data Source=SPACEBAAR\SERVER;Initial Catalog=CRM;Integrated Security=True")
+    Dim con As New SqlConnection("Data Source=TECHCHUMS;Initial Catalog=CRM;Integrated Security=True")
     Dim cmd As New SqlCommand
     Dim dr As SqlDataReader
 

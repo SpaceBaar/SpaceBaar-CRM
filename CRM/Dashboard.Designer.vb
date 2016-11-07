@@ -28,6 +28,76 @@ Partial Class Dashboard
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.CrtLeads = New System.Windows.Forms.Panel()
+        Me.SplitContainer6 = New System.Windows.Forms.SplitContainer()
+        Me.SplitContainer7 = New System.Windows.Forms.SplitContainer()
+        Me.ldsearch = New System.Windows.Forms.TextBox()
+        Me.ldlistbox = New System.Windows.Forms.ListBox()
+        Me.LeadsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CRMDataSetLeads = New CRM.CRMDataSetLeads()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnlddel = New System.Windows.Forms.Button()
+        Me.ldemail = New System.Windows.Forms.TextBox()
+        Me.btnldupdate = New System.Windows.Forms.Button()
+        Me.ldoffno = New System.Windows.Forms.TextBox()
+        Me.ldwebsite = New System.Windows.Forms.TextBox()
+        Me.Label45 = New System.Windows.Forms.Label()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.ldmobno = New System.Windows.Forms.TextBox()
+        Me.lddept = New System.Windows.Forms.TextBox()
+        Me.btnldcancel = New System.Windows.Forms.Button()
+        Me.btnldsave = New System.Windows.Forms.Button()
+        Me.ldfname = New System.Windows.Forms.TextBox()
+        Me.LeadDetails = New System.Windows.Forms.GroupBox()
+        Me.ldchknotcall = New System.Windows.Forms.CheckBox()
+        Me.lddesc = New System.Windows.Forms.TextBox()
+        Me.ldempnm = New System.Windows.Forms.TextBox()
+        Me.ldsource = New System.Windows.Forms.ComboBox()
+        Me.ldstatus = New System.Windows.Forms.ComboBox()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.ldprofession = New System.Windows.Forms.ComboBox()
+        Me.ldcowsite = New System.Windows.Forms.TextBox()
+        Me.ldcoadd = New System.Windows.Forms.TextBox()
+        Me.lddesign = New System.Windows.Forms.TextBox()
+        Me.ldconm = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.ldaddstreet = New System.Windows.Forms.TextBox()
+        Me.ldcity = New System.Windows.Forms.TextBox()
+        Me.ldstate = New System.Windows.Forms.TextBox()
+        Me.ldposcode = New System.Windows.Forms.TextBox()
+        Me.ldcountry = New System.Windows.Forms.TextBox()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.ldchkaltpadd = New System.Windows.Forms.CheckBox()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.ldaltaddstreet = New System.Windows.Forms.TextBox()
+        Me.ldaltcity = New System.Windows.Forms.TextBox()
+        Me.ldaltstate = New System.Windows.Forms.TextBox()
+        Me.ldaltcountry = New System.Windows.Forms.TextBox()
+        Me.ldaltposcode = New System.Windows.Forms.TextBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
         Me.btnleads = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
@@ -39,8 +109,10 @@ Partial Class Dashboard
         Me.TabPage8 = New System.Windows.Forms.TabPage()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
         Me.SplitContainer3 = New System.Windows.Forms.SplitContainer()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.txtconsearch = New System.Windows.Forms.TextBox()
+        Me.conlistbox = New System.Windows.Forms.ListBox()
+        Me.ContactsBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CRMDataSet4 = New CRM.CRMDataSet4()
         Me.Panelcreate = New System.Windows.Forms.Panel()
         Me.btnconupdate1 = New System.Windows.Forms.Button()
         Me.btnconreset = New System.Windows.Forms.Button()
@@ -92,6 +164,8 @@ Partial Class Dashboard
         Me.btncreatecontact = New System.Windows.Forms.Button()
         Me.btnviewcontacts = New System.Windows.Forms.Button()
         Me.TabPage9 = New System.Windows.Forms.TabPage()
+        Me.btnreqreset = New System.Windows.Forms.Button()
+        Me.btnreqsubmit = New System.Windows.Forms.Button()
         Me.reqmspec = New System.Windows.Forms.TextBox()
         Me.reqmlocation = New System.Windows.Forms.TextBox()
         Me.reqmbudget = New System.Windows.Forms.TextBox()
@@ -121,79 +195,7 @@ Partial Class Dashboard
         Me.RegiTableAdapter = New CRM.CRMDataSet1TableAdapters.regiTableAdapter()
         Me.ContactsTableAdapter = New CRM.CRMDataSet2TableAdapters.ContactsTableAdapter()
         Me.ContactsTableAdapter1 = New CRM.CRMDataSet3TableAdapters.ContactsTableAdapter()
-        Me.CRMDataSetLeads = New CRM.CRMDataSetLeads()
-        Me.LeadsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.LeadsTableAdapter = New CRM.CRMDataSetLeadsTableAdapters.leadsTableAdapter()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.ldaltposcode = New System.Windows.Forms.TextBox()
-        Me.ldaltcountry = New System.Windows.Forms.TextBox()
-        Me.ldaltstate = New System.Windows.Forms.TextBox()
-        Me.ldaltcity = New System.Windows.Forms.TextBox()
-        Me.ldaltaddstreet = New System.Windows.Forms.TextBox()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.ldchkaltpadd = New System.Windows.Forms.CheckBox()
-        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
-        Me.Label32 = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.ldcountry = New System.Windows.Forms.TextBox()
-        Me.ldposcode = New System.Windows.Forms.TextBox()
-        Me.ldstate = New System.Windows.Forms.TextBox()
-        Me.ldcity = New System.Windows.Forms.TextBox()
-        Me.ldaddstreet = New System.Windows.Forms.TextBox()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.ldconm = New System.Windows.Forms.TextBox()
-        Me.lddesign = New System.Windows.Forms.TextBox()
-        Me.ldcoadd = New System.Windows.Forms.TextBox()
-        Me.ldcowsite = New System.Windows.Forms.TextBox()
-        Me.ldprofession = New System.Windows.Forms.ComboBox()
-        Me.LeadDetails = New System.Windows.Forms.GroupBox()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.Label43 = New System.Windows.Forms.Label()
-        Me.ldstatus = New System.Windows.Forms.ComboBox()
-        Me.ldsource = New System.Windows.Forms.ComboBox()
-        Me.ldempnm = New System.Windows.Forms.TextBox()
-        Me.lddesc = New System.Windows.Forms.TextBox()
-        Me.ldchknotcall = New System.Windows.Forms.CheckBox()
-        Me.ldfname = New System.Windows.Forms.TextBox()
-        Me.btnldsave = New System.Windows.Forms.Button()
-        Me.btnldcancel = New System.Windows.Forms.Button()
-        Me.lddept = New System.Windows.Forms.TextBox()
-        Me.ldmobno = New System.Windows.Forms.TextBox()
-        Me.Label44 = New System.Windows.Forms.Label()
-        Me.Label45 = New System.Windows.Forms.Label()
-        Me.ldwebsite = New System.Windows.Forms.TextBox()
-        Me.ldoffno = New System.Windows.Forms.TextBox()
-        Me.btnldupdate = New System.Windows.Forms.Button()
-        Me.ldemail = New System.Windows.Forms.TextBox()
-        Me.CrtLeads = New System.Windows.Forms.Panel()
-        Me.SplitContainer6 = New System.Windows.Forms.SplitContainer()
-        Me.SplitContainer7 = New System.Windows.Forms.SplitContainer()
-        Me.ldsearch = New System.Windows.Forms.TextBox()
-        Me.ldlistbox = New System.Windows.Forms.ListBox()
-        Me.btnlddel = New System.Windows.Forms.Button()
-        Me.CRMDataSet4 = New CRM.CRMDataSet4()
-        Me.ContactsBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ContactsTableAdapter2 = New CRM.CRMDataSet4TableAdapters.ContactsTableAdapter()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
@@ -202,6 +204,22 @@ Partial Class Dashboard
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.CrtLeads.SuspendLayout()
+        CType(Me.SplitContainer6, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer6.Panel1.SuspendLayout()
+        Me.SplitContainer6.Panel2.SuspendLayout()
+        Me.SplitContainer6.SuspendLayout()
+        CType(Me.SplitContainer7, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer7.Panel1.SuspendLayout()
+        Me.SplitContainer7.Panel2.SuspendLayout()
+        Me.SplitContainer7.SuspendLayout()
+        CType(Me.LeadsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CRMDataSetLeads, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        Me.LeadDetails.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         Me.TabPage5.SuspendLayout()
         CType(Me.SplitContainer4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer4.Panel1.SuspendLayout()
@@ -217,6 +235,8 @@ Partial Class Dashboard
         Me.SplitContainer3.Panel1.SuspendLayout()
         Me.SplitContainer3.Panel2.SuspendLayout()
         Me.SplitContainer3.SuspendLayout()
+        CType(Me.ContactsBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CRMDataSet4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panelcreate.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -227,24 +247,6 @@ Partial Class Dashboard
         CType(Me.CRMDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CRMDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RegiBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CRMDataSetLeads, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LeadsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
-        Me.GroupBox5.SuspendLayout()
-        Me.GroupBox6.SuspendLayout()
-        Me.GroupBox4.SuspendLayout()
-        Me.LeadDetails.SuspendLayout()
-        Me.CrtLeads.SuspendLayout()
-        CType(Me.SplitContainer6, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SplitContainer6.Panel1.SuspendLayout()
-        Me.SplitContainer6.Panel2.SuspendLayout()
-        Me.SplitContainer6.SuspendLayout()
-        CType(Me.SplitContainer7, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SplitContainer7.Panel1.SuspendLayout()
-        Me.SplitContainer7.Panel2.SuspendLayout()
-        Me.SplitContainer7.SuspendLayout()
-        CType(Me.CRMDataSet4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ContactsBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -319,6 +321,785 @@ Partial Class Dashboard
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Sales"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'CrtLeads
+        '
+        Me.CrtLeads.Controls.Add(Me.SplitContainer6)
+        Me.CrtLeads.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CrtLeads.Location = New System.Drawing.Point(3, 3)
+        Me.CrtLeads.Name = "CrtLeads"
+        Me.CrtLeads.Size = New System.Drawing.Size(1077, 695)
+        Me.CrtLeads.TabIndex = 4
+        '
+        'SplitContainer6
+        '
+        Me.SplitContainer6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer6.IsSplitterFixed = True
+        Me.SplitContainer6.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer6.Name = "SplitContainer6"
+        '
+        'SplitContainer6.Panel1
+        '
+        Me.SplitContainer6.Panel1.Controls.Add(Me.SplitContainer7)
+        '
+        'SplitContainer6.Panel2
+        '
+        Me.SplitContainer6.Panel2.Controls.Add(Me.Panel1)
+        Me.SplitContainer6.Size = New System.Drawing.Size(1077, 695)
+        Me.SplitContainer6.SplitterDistance = 235
+        Me.SplitContainer6.SplitterWidth = 1
+        Me.SplitContainer6.TabIndex = 40
+        '
+        'SplitContainer7
+        '
+        Me.SplitContainer7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer7.IsSplitterFixed = True
+        Me.SplitContainer7.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer7.Name = "SplitContainer7"
+        Me.SplitContainer7.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'SplitContainer7.Panel1
+        '
+        Me.SplitContainer7.Panel1.Controls.Add(Me.ldsearch)
+        '
+        'SplitContainer7.Panel2
+        '
+        Me.SplitContainer7.Panel2.Controls.Add(Me.ldlistbox)
+        Me.SplitContainer7.Size = New System.Drawing.Size(235, 695)
+        Me.SplitContainer7.SplitterDistance = 25
+        Me.SplitContainer7.SplitterWidth = 1
+        Me.SplitContainer7.TabIndex = 0
+        '
+        'ldsearch
+        '
+        Me.ldsearch.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.ldsearch.Location = New System.Drawing.Point(0, 5)
+        Me.ldsearch.Name = "ldsearch"
+        Me.ldsearch.Size = New System.Drawing.Size(235, 20)
+        Me.ldsearch.TabIndex = 0
+        '
+        'ldlistbox
+        '
+        Me.ldlistbox.DataSource = Me.LeadsBindingSource
+        Me.ldlistbox.DisplayMember = "f_name"
+        Me.ldlistbox.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ldlistbox.FormattingEnabled = True
+        Me.ldlistbox.Location = New System.Drawing.Point(0, 0)
+        Me.ldlistbox.Name = "ldlistbox"
+        Me.ldlistbox.Size = New System.Drawing.Size(235, 669)
+        Me.ldlistbox.TabIndex = 0
+        Me.ldlistbox.ValueMember = "f_name"
+        '
+        'LeadsBindingSource
+        '
+        Me.LeadsBindingSource.DataMember = "leads"
+        Me.LeadsBindingSource.DataSource = Me.CRMDataSetLeads
+        '
+        'CRMDataSetLeads
+        '
+        Me.CRMDataSetLeads.DataSetName = "CRMDataSetLeads"
+        Me.CRMDataSetLeads.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Panel1
+        '
+        Me.Panel1.AutoSize = True
+        Me.Panel1.BackColor = System.Drawing.Color.LightGray
+        Me.Panel1.Controls.Add(Me.btnlddel)
+        Me.Panel1.Controls.Add(Me.ldemail)
+        Me.Panel1.Controls.Add(Me.btnldupdate)
+        Me.Panel1.Controls.Add(Me.ldoffno)
+        Me.Panel1.Controls.Add(Me.ldwebsite)
+        Me.Panel1.Controls.Add(Me.Label45)
+        Me.Panel1.Controls.Add(Me.Label44)
+        Me.Panel1.Controls.Add(Me.ldmobno)
+        Me.Panel1.Controls.Add(Me.lddept)
+        Me.Panel1.Controls.Add(Me.btnldcancel)
+        Me.Panel1.Controls.Add(Me.btnldsave)
+        Me.Panel1.Controls.Add(Me.ldfname)
+        Me.Panel1.Controls.Add(Me.LeadDetails)
+        Me.Panel1.Controls.Add(Me.GroupBox4)
+        Me.Panel1.Controls.Add(Me.Label29)
+        Me.Panel1.Controls.Add(Me.Label30)
+        Me.Panel1.Controls.Add(Me.Label31)
+        Me.Panel1.Controls.Add(Me.Label38)
+        Me.Panel1.Controls.Add(Me.GroupBox6)
+        Me.Panel1.Controls.Add(Me.GroupBox5)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(841, 695)
+        Me.Panel1.TabIndex = 1
+        '
+        'btnlddel
+        '
+        Me.btnlddel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnlddel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnlddel.Location = New System.Drawing.Point(502, 639)
+        Me.btnlddel.Name = "btnlddel"
+        Me.btnlddel.Size = New System.Drawing.Size(75, 23)
+        Me.btnlddel.TabIndex = 40
+        Me.btnlddel.Text = "Delete"
+        Me.btnlddel.UseVisualStyleBackColor = True
+        '
+        'ldemail
+        '
+        Me.ldemail.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ldemail.Location = New System.Drawing.Point(163, 346)
+        Me.ldemail.Name = "ldemail"
+        Me.ldemail.Size = New System.Drawing.Size(201, 20)
+        Me.ldemail.TabIndex = 16
+        '
+        'btnldupdate
+        '
+        Me.btnldupdate.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnldupdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnldupdate.Location = New System.Drawing.Point(367, 639)
+        Me.btnldupdate.Name = "btnldupdate"
+        Me.btnldupdate.Size = New System.Drawing.Size(75, 23)
+        Me.btnldupdate.TabIndex = 28
+        Me.btnldupdate.Text = "Update"
+        Me.btnldupdate.UseVisualStyleBackColor = True
+        '
+        'ldoffno
+        '
+        Me.ldoffno.Location = New System.Drawing.Point(550, 19)
+        Me.ldoffno.Name = "ldoffno"
+        Me.ldoffno.Size = New System.Drawing.Size(201, 20)
+        Me.ldoffno.TabIndex = 3
+        '
+        'ldwebsite
+        '
+        Me.ldwebsite.Location = New System.Drawing.Point(163, 97)
+        Me.ldwebsite.Name = "ldwebsite"
+        Me.ldwebsite.Size = New System.Drawing.Size(201, 20)
+        Me.ldwebsite.TabIndex = 2
+        Me.ldwebsite.Text = "http://"
+        '
+        'Label45
+        '
+        Me.Label45.AutoSize = True
+        Me.Label45.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label45.Location = New System.Drawing.Point(74, 104)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(46, 13)
+        Me.Label45.TabIndex = 39
+        Me.Label45.Text = "Website"
+        '
+        'Label44
+        '
+        Me.Label44.AutoSize = True
+        Me.Label44.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label44.Location = New System.Drawing.Point(463, 22)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(75, 13)
+        Me.Label44.TabIndex = 38
+        Me.Label44.Text = "Office Number"
+        '
+        'ldmobno
+        '
+        Me.ldmobno.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ldmobno.Location = New System.Drawing.Point(550, 62)
+        Me.ldmobno.Name = "ldmobno"
+        Me.ldmobno.Size = New System.Drawing.Size(201, 20)
+        Me.ldmobno.TabIndex = 4
+        '
+        'lddept
+        '
+        Me.lddept.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lddept.Location = New System.Drawing.Point(163, 58)
+        Me.lddept.Name = "lddept"
+        Me.lddept.Size = New System.Drawing.Size(201, 20)
+        Me.lddept.TabIndex = 1
+        '
+        'btnldcancel
+        '
+        Me.btnldcancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnldcancel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnldcancel.Location = New System.Drawing.Point(639, 639)
+        Me.btnldcancel.Name = "btnldcancel"
+        Me.btnldcancel.Size = New System.Drawing.Size(75, 23)
+        Me.btnldcancel.TabIndex = 29
+        Me.btnldcancel.Text = "Cancel"
+        Me.btnldcancel.UseVisualStyleBackColor = True
+        '
+        'btnldsave
+        '
+        Me.btnldsave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnldsave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnldsave.Location = New System.Drawing.Point(225, 639)
+        Me.btnldsave.Name = "btnldsave"
+        Me.btnldsave.Size = New System.Drawing.Size(75, 23)
+        Me.btnldsave.TabIndex = 27
+        Me.btnldsave.Text = "Save"
+        Me.btnldsave.UseVisualStyleBackColor = True
+        '
+        'ldfname
+        '
+        Me.ldfname.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ldfname.Location = New System.Drawing.Point(163, 19)
+        Me.ldfname.Name = "ldfname"
+        Me.ldfname.Size = New System.Drawing.Size(201, 20)
+        Me.ldfname.TabIndex = 0
+        '
+        'LeadDetails
+        '
+        Me.LeadDetails.BackColor = System.Drawing.Color.LightGray
+        Me.LeadDetails.Controls.Add(Me.ldchknotcall)
+        Me.LeadDetails.Controls.Add(Me.lddesc)
+        Me.LeadDetails.Controls.Add(Me.ldempnm)
+        Me.LeadDetails.Controls.Add(Me.ldsource)
+        Me.LeadDetails.Controls.Add(Me.ldstatus)
+        Me.LeadDetails.Controls.Add(Me.Label43)
+        Me.LeadDetails.Controls.Add(Me.Label42)
+        Me.LeadDetails.Controls.Add(Me.Label41)
+        Me.LeadDetails.Controls.Add(Me.Label40)
+        Me.LeadDetails.Controls.Add(Me.Label39)
+        Me.LeadDetails.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.LeadDetails.Location = New System.Drawing.Point(457, 383)
+        Me.LeadDetails.Name = "LeadDetails"
+        Me.LeadDetails.Size = New System.Drawing.Size(304, 221)
+        Me.LeadDetails.TabIndex = 37
+        Me.LeadDetails.TabStop = False
+        Me.LeadDetails.Text = "Lead Details"
+        '
+        'ldchknotcall
+        '
+        Me.ldchknotcall.AutoSize = True
+        Me.ldchknotcall.Location = New System.Drawing.Point(93, 197)
+        Me.ldchknotcall.Name = "ldchknotcall"
+        Me.ldchknotcall.Size = New System.Drawing.Size(15, 14)
+        Me.ldchknotcall.TabIndex = 26
+        Me.ldchknotcall.UseVisualStyleBackColor = True
+        '
+        'lddesc
+        '
+        Me.lddesc.Location = New System.Drawing.Point(93, 128)
+        Me.lddesc.Multiline = True
+        Me.lddesc.Name = "lddesc"
+        Me.lddesc.Size = New System.Drawing.Size(201, 56)
+        Me.lddesc.TabIndex = 25
+        '
+        'ldempnm
+        '
+        Me.ldempnm.Location = New System.Drawing.Point(93, 95)
+        Me.ldempnm.Name = "ldempnm"
+        Me.ldempnm.Size = New System.Drawing.Size(201, 20)
+        Me.ldempnm.TabIndex = 24
+        '
+        'ldsource
+        '
+        Me.ldsource.FormattingEnabled = True
+        Me.ldsource.Items.AddRange(New Object() {"Cold Call", "Existing Cutomer", "Self Generated", "Employee", "Partner", "Public Relations", "Direct Mail", "Conference", "Trade Show", "Website", "Email", "Campaign", "Other"})
+        Me.ldsource.Location = New System.Drawing.Point(93, 61)
+        Me.ldsource.Name = "ldsource"
+        Me.ldsource.Size = New System.Drawing.Size(201, 21)
+        Me.ldsource.TabIndex = 23
+        '
+        'ldstatus
+        '
+        Me.ldstatus.FormattingEnabled = True
+        Me.ldstatus.Items.AddRange(New Object() {"New", "Assigned", "In Process", "Converted", "Recycled", "Dead"})
+        Me.ldstatus.Location = New System.Drawing.Point(93, 24)
+        Me.ldstatus.Name = "ldstatus"
+        Me.ldstatus.Size = New System.Drawing.Size(201, 21)
+        Me.ldstatus.TabIndex = 22
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label43.Location = New System.Drawing.Point(6, 102)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(53, 13)
+        Me.Label43.TabIndex = 4
+        Me.Label43.Text = "Employee"
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label42.Location = New System.Drawing.Point(6, 197)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(61, 13)
+        Me.Label42.TabIndex = 3
+        Me.Label42.Text = "Do Not Call"
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label41.Location = New System.Drawing.Point(6, 135)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(60, 13)
+        Me.Label41.TabIndex = 2
+        Me.Label41.Text = "Description"
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label40.Location = New System.Drawing.Point(6, 64)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(68, 13)
+        Me.Label40.TabIndex = 1
+        Me.Label40.Text = "Lead Source"
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label39.Location = New System.Drawing.Point(6, 32)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(37, 13)
+        Me.Label39.TabIndex = 0
+        Me.Label39.Text = "Status"
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.ldprofession)
+        Me.GroupBox4.Controls.Add(Me.ldcowsite)
+        Me.GroupBox4.Controls.Add(Me.ldcoadd)
+        Me.GroupBox4.Controls.Add(Me.lddesign)
+        Me.GroupBox4.Controls.Add(Me.ldconm)
+        Me.GroupBox4.Controls.Add(Me.Label9)
+        Me.GroupBox4.Controls.Add(Me.Label19)
+        Me.GroupBox4.Controls.Add(Me.Label20)
+        Me.GroupBox4.Controls.Add(Me.Label21)
+        Me.GroupBox4.Controls.Add(Me.Label22)
+        Me.GroupBox4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.GroupBox4.Location = New System.Drawing.Point(68, 387)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(305, 221)
+        Me.GroupBox4.TabIndex = 36
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Company Details"
+        '
+        'ldprofession
+        '
+        Me.ldprofession.FormattingEnabled = True
+        Me.ldprofession.Items.AddRange(New Object() {"Salaried", "Self Employed(Professionals)", "Self Employed(Business)", "Student", "Retired", "House-Wife"})
+        Me.ldprofession.Location = New System.Drawing.Point(95, 24)
+        Me.ldprofession.Name = "ldprofession"
+        Me.ldprofession.Size = New System.Drawing.Size(201, 21)
+        Me.ldprofession.TabIndex = 17
+        '
+        'ldcowsite
+        '
+        Me.ldcowsite.Location = New System.Drawing.Point(95, 194)
+        Me.ldcowsite.Name = "ldcowsite"
+        Me.ldcowsite.Size = New System.Drawing.Size(201, 20)
+        Me.ldcowsite.TabIndex = 21
+        Me.ldcowsite.Text = "http://"
+        '
+        'ldcoadd
+        '
+        Me.ldcoadd.Location = New System.Drawing.Point(94, 128)
+        Me.ldcoadd.Multiline = True
+        Me.ldcoadd.Name = "ldcoadd"
+        Me.ldcoadd.Size = New System.Drawing.Size(201, 52)
+        Me.ldcoadd.TabIndex = 20
+        '
+        'lddesign
+        '
+        Me.lddesign.Location = New System.Drawing.Point(95, 61)
+        Me.lddesign.Name = "lddesign"
+        Me.lddesign.Size = New System.Drawing.Size(201, 20)
+        Me.lddesign.TabIndex = 18
+        '
+        'ldconm
+        '
+        Me.ldconm.Location = New System.Drawing.Point(95, 95)
+        Me.ldconm.Name = "ldconm"
+        Me.ldconm.Size = New System.Drawing.Size(201, 20)
+        Me.ldconm.TabIndex = 19
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label9.Location = New System.Drawing.Point(6, 198)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(46, 13)
+        Me.Label9.TabIndex = 4
+        Me.Label9.Text = "Website"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label19.Location = New System.Drawing.Point(4, 135)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(45, 13)
+        Me.Label19.TabIndex = 3
+        Me.Label19.Text = "Address"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label20.Location = New System.Drawing.Point(4, 102)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(82, 13)
+        Me.Label20.TabIndex = 2
+        Me.Label20.Text = "Company Name"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label21.Location = New System.Drawing.Point(4, 68)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(63, 13)
+        Me.Label21.TabIndex = 1
+        Me.Label21.Text = "Designation"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label22.Location = New System.Drawing.Point(4, 32)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(56, 13)
+        Me.Label22.TabIndex = 0
+        Me.Label22.Text = "Profession"
+        '
+        'Label29
+        '
+        Me.Label29.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label29.AutoSize = True
+        Me.Label29.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label29.Location = New System.Drawing.Point(463, 64)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(38, 13)
+        Me.Label29.TabIndex = 23
+        Me.Label29.Text = "Mobile"
+        '
+        'Label30
+        '
+        Me.Label30.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label30.AutoSize = True
+        Me.Label30.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label30.Location = New System.Drawing.Point(72, 65)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(62, 13)
+        Me.Label30.TabIndex = 21
+        Me.Label30.Text = "Department"
+        '
+        'Label31
+        '
+        Me.Label31.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label31.AutoSize = True
+        Me.Label31.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label31.Location = New System.Drawing.Point(74, 349)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(46, 13)
+        Me.Label31.TabIndex = 16
+        Me.Label31.Text = "Email ID"
+        '
+        'Label38
+        '
+        Me.Label38.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label38.AutoSize = True
+        Me.Label38.BackColor = System.Drawing.Color.Transparent
+        Me.Label38.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label38.Location = New System.Drawing.Point(74, 26)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(54, 13)
+        Me.Label38.TabIndex = 0
+        Me.Label38.Text = "Full Name"
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.ldaddstreet)
+        Me.GroupBox6.Controls.Add(Me.ldcity)
+        Me.GroupBox6.Controls.Add(Me.ldstate)
+        Me.GroupBox6.Controls.Add(Me.ldposcode)
+        Me.GroupBox6.Controls.Add(Me.ldcountry)
+        Me.GroupBox6.Controls.Add(Me.Label36)
+        Me.GroupBox6.Controls.Add(Me.Label35)
+        Me.GroupBox6.Controls.Add(Me.Label34)
+        Me.GroupBox6.Controls.Add(Me.Label33)
+        Me.GroupBox6.Controls.Add(Me.Label32)
+        Me.GroupBox6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.GroupBox6.Location = New System.Drawing.Point(69, 136)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(304, 201)
+        Me.GroupBox6.TabIndex = 18
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "Primary Address"
+        '
+        'ldaddstreet
+        '
+        Me.ldaddstreet.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ldaddstreet.Location = New System.Drawing.Point(94, 19)
+        Me.ldaddstreet.Name = "ldaddstreet"
+        Me.ldaddstreet.Size = New System.Drawing.Size(201, 20)
+        Me.ldaddstreet.TabIndex = 5
+        '
+        'ldcity
+        '
+        Me.ldcity.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ldcity.Location = New System.Drawing.Point(94, 53)
+        Me.ldcity.Name = "ldcity"
+        Me.ldcity.Size = New System.Drawing.Size(201, 20)
+        Me.ldcity.TabIndex = 6
+        '
+        'ldstate
+        '
+        Me.ldstate.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ldstate.Location = New System.Drawing.Point(94, 88)
+        Me.ldstate.Name = "ldstate"
+        Me.ldstate.Size = New System.Drawing.Size(201, 20)
+        Me.ldstate.TabIndex = 7
+        '
+        'ldposcode
+        '
+        Me.ldposcode.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ldposcode.Location = New System.Drawing.Point(94, 124)
+        Me.ldposcode.Name = "ldposcode"
+        Me.ldposcode.Size = New System.Drawing.Size(201, 20)
+        Me.ldposcode.TabIndex = 8
+        '
+        'ldcountry
+        '
+        Me.ldcountry.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ldcountry.Location = New System.Drawing.Point(94, 162)
+        Me.ldcountry.Name = "ldcountry"
+        Me.ldcountry.Size = New System.Drawing.Size(201, 20)
+        Me.ldcountry.TabIndex = 9
+        '
+        'Label36
+        '
+        Me.Label36.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label36.AutoSize = True
+        Me.Label36.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label36.Location = New System.Drawing.Point(3, 26)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(76, 13)
+        Me.Label36.TabIndex = 4
+        Me.Label36.Text = "Address Street"
+        '
+        'Label35
+        '
+        Me.Label35.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label35.AutoSize = True
+        Me.Label35.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label35.Location = New System.Drawing.Point(3, 60)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(24, 13)
+        Me.Label35.TabIndex = 8
+        Me.Label35.Text = "City"
+        '
+        'Label34
+        '
+        Me.Label34.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label34.AutoSize = True
+        Me.Label34.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label34.Location = New System.Drawing.Point(3, 95)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(32, 13)
+        Me.Label34.TabIndex = 10
+        Me.Label34.Text = "State"
+        '
+        'Label33
+        '
+        Me.Label33.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label33.AutoSize = True
+        Me.Label33.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label33.Location = New System.Drawing.Point(3, 131)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(64, 13)
+        Me.Label33.TabIndex = 12
+        Me.Label33.Text = "Postal Code"
+        '
+        'Label32
+        '
+        Me.Label32.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label32.AutoSize = True
+        Me.Label32.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label32.Location = New System.Drawing.Point(3, 169)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(43, 13)
+        Me.Label32.TabIndex = 14
+        Me.Label32.Text = "Country"
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.ldchkaltpadd)
+        Me.GroupBox5.Controls.Add(Me.Label28)
+        Me.GroupBox5.Controls.Add(Me.ldaltaddstreet)
+        Me.GroupBox5.Controls.Add(Me.ldaltcity)
+        Me.GroupBox5.Controls.Add(Me.ldaltstate)
+        Me.GroupBox5.Controls.Add(Me.ldaltcountry)
+        Me.GroupBox5.Controls.Add(Me.ldaltposcode)
+        Me.GroupBox5.Controls.Add(Me.Label27)
+        Me.GroupBox5.Controls.Add(Me.Label26)
+        Me.GroupBox5.Controls.Add(Me.Label25)
+        Me.GroupBox5.Controls.Add(Me.Label24)
+        Me.GroupBox5.Controls.Add(Me.Label23)
+        Me.GroupBox5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.GroupBox5.Location = New System.Drawing.Point(457, 134)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(304, 224)
+        Me.GroupBox5.TabIndex = 35
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Alternate Address"
+        '
+        'ldchkaltpadd
+        '
+        Me.ldchkaltpadd.AutoSize = True
+        Me.ldchkaltpadd.Location = New System.Drawing.Point(149, 203)
+        Me.ldchkaltpadd.Name = "ldchkaltpadd"
+        Me.ldchkaltpadd.Size = New System.Drawing.Size(15, 14)
+        Me.ldchkaltpadd.TabIndex = 10
+        Me.ldchkaltpadd.UseVisualStyleBackColor = True
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label28.Location = New System.Drawing.Point(6, 204)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(126, 13)
+        Me.Label28.TabIndex = 36
+        Me.Label28.Text = "Same as Primary Address"
+        '
+        'ldaltaddstreet
+        '
+        Me.ldaltaddstreet.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ldaltaddstreet.Location = New System.Drawing.Point(93, 19)
+        Me.ldaltaddstreet.Name = "ldaltaddstreet"
+        Me.ldaltaddstreet.Size = New System.Drawing.Size(201, 20)
+        Me.ldaltaddstreet.TabIndex = 11
+        '
+        'ldaltcity
+        '
+        Me.ldaltcity.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ldaltcity.Location = New System.Drawing.Point(93, 55)
+        Me.ldaltcity.Name = "ldaltcity"
+        Me.ldaltcity.Size = New System.Drawing.Size(201, 20)
+        Me.ldaltcity.TabIndex = 12
+        '
+        'ldaltstate
+        '
+        Me.ldaltstate.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ldaltstate.Location = New System.Drawing.Point(93, 90)
+        Me.ldaltstate.Name = "ldaltstate"
+        Me.ldaltstate.Size = New System.Drawing.Size(201, 20)
+        Me.ldaltstate.TabIndex = 13
+        '
+        'ldaltcountry
+        '
+        Me.ldaltcountry.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ldaltcountry.Location = New System.Drawing.Point(93, 164)
+        Me.ldaltcountry.Name = "ldaltcountry"
+        Me.ldaltcountry.Size = New System.Drawing.Size(201, 20)
+        Me.ldaltcountry.TabIndex = 15
+        '
+        'ldaltposcode
+        '
+        Me.ldaltposcode.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ldaltposcode.Location = New System.Drawing.Point(93, 126)
+        Me.ldaltposcode.Name = "ldaltposcode"
+        Me.ldaltposcode.Size = New System.Drawing.Size(201, 20)
+        Me.ldaltposcode.TabIndex = 14
+        '
+        'Label27
+        '
+        Me.Label27.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label27.AutoSize = True
+        Me.Label27.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label27.Location = New System.Drawing.Point(6, 26)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(76, 13)
+        Me.Label27.TabIndex = 25
+        Me.Label27.Text = "Address Street"
+        '
+        'Label26
+        '
+        Me.Label26.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label26.AutoSize = True
+        Me.Label26.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label26.Location = New System.Drawing.Point(6, 62)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(24, 13)
+        Me.Label26.TabIndex = 27
+        Me.Label26.Text = "City"
+        '
+        'Label25
+        '
+        Me.Label25.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label25.AutoSize = True
+        Me.Label25.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label25.Location = New System.Drawing.Point(6, 97)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(32, 13)
+        Me.Label25.TabIndex = 29
+        Me.Label25.Text = "State"
+        '
+        'Label24
+        '
+        Me.Label24.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label24.AutoSize = True
+        Me.Label24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label24.Location = New System.Drawing.Point(6, 133)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(64, 13)
+        Me.Label24.TabIndex = 31
+        Me.Label24.Text = "Postal Code"
+        '
+        'Label23
+        '
+        Me.Label23.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label23.AutoSize = True
+        Me.Label23.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label23.Location = New System.Drawing.Point(6, 171)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(43, 13)
+        Me.Label23.TabIndex = 33
+        Me.Label23.Text = "Country"
         '
         'btnleads
         '
@@ -452,36 +1233,46 @@ Partial Class Dashboard
         '
         'SplitContainer3.Panel1
         '
-        Me.SplitContainer3.Panel1.Controls.Add(Me.TextBox1)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.txtconsearch)
         Me.SplitContainer3.Panel1MinSize = 10
         '
         'SplitContainer3.Panel2
         '
-        Me.SplitContainer3.Panel2.Controls.Add(Me.ListBox1)
+        Me.SplitContainer3.Panel2.Controls.Add(Me.conlistbox)
         Me.SplitContainer3.Size = New System.Drawing.Size(235, 695)
         Me.SplitContainer3.SplitterDistance = 26
         Me.SplitContainer3.SplitterWidth = 1
         Me.SplitContainer3.TabIndex = 0
         '
-        'TextBox1
+        'txtconsearch
         '
-        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TextBox1.Location = New System.Drawing.Point(0, 6)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(235, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.txtconsearch.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.txtconsearch.Location = New System.Drawing.Point(0, 6)
+        Me.txtconsearch.Name = "txtconsearch"
+        Me.txtconsearch.Size = New System.Drawing.Size(235, 20)
+        Me.txtconsearch.TabIndex = 0
         '
-        'ListBox1
+        'conlistbox
         '
-        Me.ListBox1.DataSource = Me.ContactsBindingSource2
-        Me.ListBox1.DisplayMember = "fname"
-        Me.ListBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(0, 0)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(235, 668)
-        Me.ListBox1.TabIndex = 0
-        Me.ListBox1.ValueMember = "fname"
+        Me.conlistbox.DataSource = Me.ContactsBindingSource2
+        Me.conlistbox.DisplayMember = "fname"
+        Me.conlistbox.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.conlistbox.FormattingEnabled = True
+        Me.conlistbox.Location = New System.Drawing.Point(0, 0)
+        Me.conlistbox.Name = "conlistbox"
+        Me.conlistbox.Size = New System.Drawing.Size(235, 668)
+        Me.conlistbox.TabIndex = 0
+        Me.conlistbox.ValueMember = "fname"
+        '
+        'ContactsBindingSource2
+        '
+        Me.ContactsBindingSource2.DataMember = "Contacts"
+        Me.ContactsBindingSource2.DataSource = Me.CRMDataSet4
+        '
+        'CRMDataSet4
+        '
+        Me.CRMDataSet4.DataSetName = "CRMDataSet4"
+        Me.CRMDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Panelcreate
         '
@@ -1048,6 +1839,8 @@ Partial Class Dashboard
         'TabPage9
         '
         Me.TabPage9.BackColor = System.Drawing.Color.LightGray
+        Me.TabPage9.Controls.Add(Me.btnreqreset)
+        Me.TabPage9.Controls.Add(Me.btnreqsubmit)
         Me.TabPage9.Controls.Add(Me.reqmspec)
         Me.TabPage9.Controls.Add(Me.reqmlocation)
         Me.TabPage9.Controls.Add(Me.reqmbudget)
@@ -1074,6 +1867,26 @@ Partial Class Dashboard
         Me.TabPage9.Size = New System.Drawing.Size(1083, 701)
         Me.TabPage9.TabIndex = 8
         Me.TabPage9.Text = "Requirement"
+        '
+        'btnreqreset
+        '
+        Me.btnreqreset.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnreqreset.Location = New System.Drawing.Point(595, 352)
+        Me.btnreqreset.Name = "btnreqreset"
+        Me.btnreqreset.Size = New System.Drawing.Size(75, 23)
+        Me.btnreqreset.TabIndex = 21
+        Me.btnreqreset.Text = "Reset"
+        Me.btnreqreset.UseVisualStyleBackColor = True
+        '
+        'btnreqsubmit
+        '
+        Me.btnreqsubmit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnreqsubmit.Location = New System.Drawing.Point(378, 352)
+        Me.btnreqsubmit.Name = "btnreqsubmit"
+        Me.btnreqsubmit.Size = New System.Drawing.Size(75, 23)
+        Me.btnreqsubmit.TabIndex = 20
+        Me.btnreqsubmit.Text = "Submit"
+        Me.btnreqsubmit.UseVisualStyleBackColor = True
         '
         'reqmspec
         '
@@ -1293,798 +2106,9 @@ Partial Class Dashboard
         '
         Me.ContactsTableAdapter1.ClearBeforeFill = True
         '
-        'CRMDataSetLeads
-        '
-        Me.CRMDataSetLeads.DataSetName = "CRMDataSetLeads"
-        Me.CRMDataSetLeads.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'LeadsBindingSource
-        '
-        Me.LeadsBindingSource.DataMember = "leads"
-        Me.LeadsBindingSource.DataSource = Me.CRMDataSetLeads
-        '
         'LeadsTableAdapter
         '
         Me.LeadsTableAdapter.ClearBeforeFill = True
-        '
-        'Panel1
-        '
-        Me.Panel1.AutoSize = True
-        Me.Panel1.BackColor = System.Drawing.Color.LightGray
-        Me.Panel1.Controls.Add(Me.btnlddel)
-        Me.Panel1.Controls.Add(Me.ldemail)
-        Me.Panel1.Controls.Add(Me.btnldupdate)
-        Me.Panel1.Controls.Add(Me.ldoffno)
-        Me.Panel1.Controls.Add(Me.ldwebsite)
-        Me.Panel1.Controls.Add(Me.Label45)
-        Me.Panel1.Controls.Add(Me.Label44)
-        Me.Panel1.Controls.Add(Me.ldmobno)
-        Me.Panel1.Controls.Add(Me.lddept)
-        Me.Panel1.Controls.Add(Me.btnldcancel)
-        Me.Panel1.Controls.Add(Me.btnldsave)
-        Me.Panel1.Controls.Add(Me.ldfname)
-        Me.Panel1.Controls.Add(Me.LeadDetails)
-        Me.Panel1.Controls.Add(Me.GroupBox4)
-        Me.Panel1.Controls.Add(Me.Label29)
-        Me.Panel1.Controls.Add(Me.Label30)
-        Me.Panel1.Controls.Add(Me.Label31)
-        Me.Panel1.Controls.Add(Me.Label38)
-        Me.Panel1.Controls.Add(Me.GroupBox6)
-        Me.Panel1.Controls.Add(Me.GroupBox5)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(841, 695)
-        Me.Panel1.TabIndex = 1
-        '
-        'GroupBox5
-        '
-        Me.GroupBox5.Controls.Add(Me.ldchkaltpadd)
-        Me.GroupBox5.Controls.Add(Me.Label28)
-        Me.GroupBox5.Controls.Add(Me.ldaltaddstreet)
-        Me.GroupBox5.Controls.Add(Me.ldaltcity)
-        Me.GroupBox5.Controls.Add(Me.ldaltstate)
-        Me.GroupBox5.Controls.Add(Me.ldaltcountry)
-        Me.GroupBox5.Controls.Add(Me.ldaltposcode)
-        Me.GroupBox5.Controls.Add(Me.Label27)
-        Me.GroupBox5.Controls.Add(Me.Label26)
-        Me.GroupBox5.Controls.Add(Me.Label25)
-        Me.GroupBox5.Controls.Add(Me.Label24)
-        Me.GroupBox5.Controls.Add(Me.Label23)
-        Me.GroupBox5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.GroupBox5.Location = New System.Drawing.Point(457, 134)
-        Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(304, 224)
-        Me.GroupBox5.TabIndex = 35
-        Me.GroupBox5.TabStop = False
-        Me.GroupBox5.Text = "Alternate Address"
-        '
-        'Label23
-        '
-        Me.Label23.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label23.AutoSize = True
-        Me.Label23.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label23.Location = New System.Drawing.Point(6, 171)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(43, 13)
-        Me.Label23.TabIndex = 33
-        Me.Label23.Text = "Country"
-        '
-        'Label24
-        '
-        Me.Label24.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label24.AutoSize = True
-        Me.Label24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label24.Location = New System.Drawing.Point(6, 133)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(64, 13)
-        Me.Label24.TabIndex = 31
-        Me.Label24.Text = "Postal Code"
-        '
-        'Label25
-        '
-        Me.Label25.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label25.AutoSize = True
-        Me.Label25.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label25.Location = New System.Drawing.Point(6, 97)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(32, 13)
-        Me.Label25.TabIndex = 29
-        Me.Label25.Text = "State"
-        '
-        'Label26
-        '
-        Me.Label26.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label26.AutoSize = True
-        Me.Label26.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label26.Location = New System.Drawing.Point(6, 62)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(24, 13)
-        Me.Label26.TabIndex = 27
-        Me.Label26.Text = "City"
-        '
-        'Label27
-        '
-        Me.Label27.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label27.AutoSize = True
-        Me.Label27.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label27.Location = New System.Drawing.Point(6, 26)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(76, 13)
-        Me.Label27.TabIndex = 25
-        Me.Label27.Text = "Address Street"
-        '
-        'ldaltposcode
-        '
-        Me.ldaltposcode.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldaltposcode.Location = New System.Drawing.Point(93, 126)
-        Me.ldaltposcode.Name = "ldaltposcode"
-        Me.ldaltposcode.Size = New System.Drawing.Size(201, 20)
-        Me.ldaltposcode.TabIndex = 14
-        '
-        'ldaltcountry
-        '
-        Me.ldaltcountry.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldaltcountry.Location = New System.Drawing.Point(93, 164)
-        Me.ldaltcountry.Name = "ldaltcountry"
-        Me.ldaltcountry.Size = New System.Drawing.Size(201, 20)
-        Me.ldaltcountry.TabIndex = 15
-        '
-        'ldaltstate
-        '
-        Me.ldaltstate.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldaltstate.Location = New System.Drawing.Point(93, 90)
-        Me.ldaltstate.Name = "ldaltstate"
-        Me.ldaltstate.Size = New System.Drawing.Size(201, 20)
-        Me.ldaltstate.TabIndex = 13
-        '
-        'ldaltcity
-        '
-        Me.ldaltcity.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldaltcity.Location = New System.Drawing.Point(93, 55)
-        Me.ldaltcity.Name = "ldaltcity"
-        Me.ldaltcity.Size = New System.Drawing.Size(201, 20)
-        Me.ldaltcity.TabIndex = 12
-        '
-        'ldaltaddstreet
-        '
-        Me.ldaltaddstreet.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldaltaddstreet.Location = New System.Drawing.Point(93, 19)
-        Me.ldaltaddstreet.Name = "ldaltaddstreet"
-        Me.ldaltaddstreet.Size = New System.Drawing.Size(201, 20)
-        Me.ldaltaddstreet.TabIndex = 11
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label28.Location = New System.Drawing.Point(6, 204)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(126, 13)
-        Me.Label28.TabIndex = 36
-        Me.Label28.Text = "Same as Primary Address"
-        '
-        'ldchkaltpadd
-        '
-        Me.ldchkaltpadd.AutoSize = True
-        Me.ldchkaltpadd.Location = New System.Drawing.Point(149, 203)
-        Me.ldchkaltpadd.Name = "ldchkaltpadd"
-        Me.ldchkaltpadd.Size = New System.Drawing.Size(15, 14)
-        Me.ldchkaltpadd.TabIndex = 10
-        Me.ldchkaltpadd.UseVisualStyleBackColor = True
-        '
-        'GroupBox6
-        '
-        Me.GroupBox6.Controls.Add(Me.ldaddstreet)
-        Me.GroupBox6.Controls.Add(Me.ldcity)
-        Me.GroupBox6.Controls.Add(Me.ldstate)
-        Me.GroupBox6.Controls.Add(Me.ldposcode)
-        Me.GroupBox6.Controls.Add(Me.ldcountry)
-        Me.GroupBox6.Controls.Add(Me.Label36)
-        Me.GroupBox6.Controls.Add(Me.Label35)
-        Me.GroupBox6.Controls.Add(Me.Label34)
-        Me.GroupBox6.Controls.Add(Me.Label33)
-        Me.GroupBox6.Controls.Add(Me.Label32)
-        Me.GroupBox6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.GroupBox6.Location = New System.Drawing.Point(69, 136)
-        Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(304, 201)
-        Me.GroupBox6.TabIndex = 18
-        Me.GroupBox6.TabStop = False
-        Me.GroupBox6.Text = "Primary Address"
-        '
-        'Label32
-        '
-        Me.Label32.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label32.AutoSize = True
-        Me.Label32.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label32.Location = New System.Drawing.Point(3, 169)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(43, 13)
-        Me.Label32.TabIndex = 14
-        Me.Label32.Text = "Country"
-        '
-        'Label33
-        '
-        Me.Label33.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label33.AutoSize = True
-        Me.Label33.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label33.Location = New System.Drawing.Point(3, 131)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(64, 13)
-        Me.Label33.TabIndex = 12
-        Me.Label33.Text = "Postal Code"
-        '
-        'Label34
-        '
-        Me.Label34.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label34.AutoSize = True
-        Me.Label34.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label34.Location = New System.Drawing.Point(3, 95)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(32, 13)
-        Me.Label34.TabIndex = 10
-        Me.Label34.Text = "State"
-        '
-        'Label35
-        '
-        Me.Label35.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label35.AutoSize = True
-        Me.Label35.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label35.Location = New System.Drawing.Point(3, 60)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(24, 13)
-        Me.Label35.TabIndex = 8
-        Me.Label35.Text = "City"
-        '
-        'Label36
-        '
-        Me.Label36.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label36.AutoSize = True
-        Me.Label36.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label36.Location = New System.Drawing.Point(3, 26)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(76, 13)
-        Me.Label36.TabIndex = 4
-        Me.Label36.Text = "Address Street"
-        '
-        'ldcountry
-        '
-        Me.ldcountry.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldcountry.Location = New System.Drawing.Point(94, 162)
-        Me.ldcountry.Name = "ldcountry"
-        Me.ldcountry.Size = New System.Drawing.Size(201, 20)
-        Me.ldcountry.TabIndex = 9
-        '
-        'ldposcode
-        '
-        Me.ldposcode.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldposcode.Location = New System.Drawing.Point(94, 124)
-        Me.ldposcode.Name = "ldposcode"
-        Me.ldposcode.Size = New System.Drawing.Size(201, 20)
-        Me.ldposcode.TabIndex = 8
-        '
-        'ldstate
-        '
-        Me.ldstate.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldstate.Location = New System.Drawing.Point(94, 88)
-        Me.ldstate.Name = "ldstate"
-        Me.ldstate.Size = New System.Drawing.Size(201, 20)
-        Me.ldstate.TabIndex = 7
-        '
-        'ldcity
-        '
-        Me.ldcity.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldcity.Location = New System.Drawing.Point(94, 53)
-        Me.ldcity.Name = "ldcity"
-        Me.ldcity.Size = New System.Drawing.Size(201, 20)
-        Me.ldcity.TabIndex = 6
-        '
-        'ldaddstreet
-        '
-        Me.ldaddstreet.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldaddstreet.Location = New System.Drawing.Point(94, 19)
-        Me.ldaddstreet.Name = "ldaddstreet"
-        Me.ldaddstreet.Size = New System.Drawing.Size(201, 20)
-        Me.ldaddstreet.TabIndex = 5
-        '
-        'Label38
-        '
-        Me.Label38.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label38.AutoSize = True
-        Me.Label38.BackColor = System.Drawing.Color.Transparent
-        Me.Label38.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label38.Location = New System.Drawing.Point(74, 26)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(54, 13)
-        Me.Label38.TabIndex = 0
-        Me.Label38.Text = "Full Name"
-        '
-        'Label31
-        '
-        Me.Label31.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label31.AutoSize = True
-        Me.Label31.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label31.Location = New System.Drawing.Point(74, 349)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(46, 13)
-        Me.Label31.TabIndex = 16
-        Me.Label31.Text = "Email ID"
-        '
-        'Label30
-        '
-        Me.Label30.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label30.AutoSize = True
-        Me.Label30.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label30.Location = New System.Drawing.Point(72, 65)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(62, 13)
-        Me.Label30.TabIndex = 21
-        Me.Label30.Text = "Department"
-        '
-        'Label29
-        '
-        Me.Label29.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label29.AutoSize = True
-        Me.Label29.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label29.Location = New System.Drawing.Point(463, 64)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(38, 13)
-        Me.Label29.TabIndex = 23
-        Me.Label29.Text = "Mobile"
-        '
-        'GroupBox4
-        '
-        Me.GroupBox4.Controls.Add(Me.ldprofession)
-        Me.GroupBox4.Controls.Add(Me.ldcowsite)
-        Me.GroupBox4.Controls.Add(Me.ldcoadd)
-        Me.GroupBox4.Controls.Add(Me.lddesign)
-        Me.GroupBox4.Controls.Add(Me.ldconm)
-        Me.GroupBox4.Controls.Add(Me.Label9)
-        Me.GroupBox4.Controls.Add(Me.Label19)
-        Me.GroupBox4.Controls.Add(Me.Label20)
-        Me.GroupBox4.Controls.Add(Me.Label21)
-        Me.GroupBox4.Controls.Add(Me.Label22)
-        Me.GroupBox4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.GroupBox4.Location = New System.Drawing.Point(68, 387)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(305, 221)
-        Me.GroupBox4.TabIndex = 36
-        Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "Company Details"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label22.Location = New System.Drawing.Point(4, 32)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(56, 13)
-        Me.Label22.TabIndex = 0
-        Me.Label22.Text = "Profession"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label21.Location = New System.Drawing.Point(4, 68)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(63, 13)
-        Me.Label21.TabIndex = 1
-        Me.Label21.Text = "Designation"
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label20.Location = New System.Drawing.Point(4, 102)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(82, 13)
-        Me.Label20.TabIndex = 2
-        Me.Label20.Text = "Company Name"
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label19.Location = New System.Drawing.Point(4, 135)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(45, 13)
-        Me.Label19.TabIndex = 3
-        Me.Label19.Text = "Address"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label9.Location = New System.Drawing.Point(6, 198)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(46, 13)
-        Me.Label9.TabIndex = 4
-        Me.Label9.Text = "Website"
-        '
-        'ldconm
-        '
-        Me.ldconm.Location = New System.Drawing.Point(95, 95)
-        Me.ldconm.Name = "ldconm"
-        Me.ldconm.Size = New System.Drawing.Size(201, 20)
-        Me.ldconm.TabIndex = 19
-        '
-        'lddesign
-        '
-        Me.lddesign.Location = New System.Drawing.Point(95, 61)
-        Me.lddesign.Name = "lddesign"
-        Me.lddesign.Size = New System.Drawing.Size(201, 20)
-        Me.lddesign.TabIndex = 18
-        '
-        'ldcoadd
-        '
-        Me.ldcoadd.Location = New System.Drawing.Point(94, 128)
-        Me.ldcoadd.Multiline = True
-        Me.ldcoadd.Name = "ldcoadd"
-        Me.ldcoadd.Size = New System.Drawing.Size(201, 52)
-        Me.ldcoadd.TabIndex = 20
-        '
-        'ldcowsite
-        '
-        Me.ldcowsite.Location = New System.Drawing.Point(95, 194)
-        Me.ldcowsite.Name = "ldcowsite"
-        Me.ldcowsite.Size = New System.Drawing.Size(201, 20)
-        Me.ldcowsite.TabIndex = 21
-        Me.ldcowsite.Text = "http://"
-        '
-        'ldprofession
-        '
-        Me.ldprofession.FormattingEnabled = True
-        Me.ldprofession.Items.AddRange(New Object() {"Salaried", "Self Employed(Professionals)", "Self Employed(Business)", "Student", "Retired", "House-Wife"})
-        Me.ldprofession.Location = New System.Drawing.Point(95, 24)
-        Me.ldprofession.Name = "ldprofession"
-        Me.ldprofession.Size = New System.Drawing.Size(201, 21)
-        Me.ldprofession.TabIndex = 17
-        '
-        'LeadDetails
-        '
-        Me.LeadDetails.BackColor = System.Drawing.Color.LightGray
-        Me.LeadDetails.Controls.Add(Me.ldchknotcall)
-        Me.LeadDetails.Controls.Add(Me.lddesc)
-        Me.LeadDetails.Controls.Add(Me.ldempnm)
-        Me.LeadDetails.Controls.Add(Me.ldsource)
-        Me.LeadDetails.Controls.Add(Me.ldstatus)
-        Me.LeadDetails.Controls.Add(Me.Label43)
-        Me.LeadDetails.Controls.Add(Me.Label42)
-        Me.LeadDetails.Controls.Add(Me.Label41)
-        Me.LeadDetails.Controls.Add(Me.Label40)
-        Me.LeadDetails.Controls.Add(Me.Label39)
-        Me.LeadDetails.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.LeadDetails.Location = New System.Drawing.Point(457, 383)
-        Me.LeadDetails.Name = "LeadDetails"
-        Me.LeadDetails.Size = New System.Drawing.Size(304, 221)
-        Me.LeadDetails.TabIndex = 37
-        Me.LeadDetails.TabStop = False
-        Me.LeadDetails.Text = "Lead Details"
-        '
-        'Label39
-        '
-        Me.Label39.AutoSize = True
-        Me.Label39.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label39.Location = New System.Drawing.Point(6, 32)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(37, 13)
-        Me.Label39.TabIndex = 0
-        Me.Label39.Text = "Status"
-        '
-        'Label40
-        '
-        Me.Label40.AutoSize = True
-        Me.Label40.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label40.Location = New System.Drawing.Point(6, 64)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(68, 13)
-        Me.Label40.TabIndex = 1
-        Me.Label40.Text = "Lead Source"
-        '
-        'Label41
-        '
-        Me.Label41.AutoSize = True
-        Me.Label41.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label41.Location = New System.Drawing.Point(6, 135)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(60, 13)
-        Me.Label41.TabIndex = 2
-        Me.Label41.Text = "Description"
-        '
-        'Label42
-        '
-        Me.Label42.AutoSize = True
-        Me.Label42.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label42.Location = New System.Drawing.Point(6, 197)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(61, 13)
-        Me.Label42.TabIndex = 3
-        Me.Label42.Text = "Do Not Call"
-        '
-        'Label43
-        '
-        Me.Label43.AutoSize = True
-        Me.Label43.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label43.Location = New System.Drawing.Point(6, 102)
-        Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(53, 13)
-        Me.Label43.TabIndex = 4
-        Me.Label43.Text = "Employee"
-        '
-        'ldstatus
-        '
-        Me.ldstatus.FormattingEnabled = True
-        Me.ldstatus.Items.AddRange(New Object() {"New", "Assigned", "In Process", "Converted", "Recycled", "Dead"})
-        Me.ldstatus.Location = New System.Drawing.Point(93, 24)
-        Me.ldstatus.Name = "ldstatus"
-        Me.ldstatus.Size = New System.Drawing.Size(201, 21)
-        Me.ldstatus.TabIndex = 22
-        '
-        'ldsource
-        '
-        Me.ldsource.FormattingEnabled = True
-        Me.ldsource.Items.AddRange(New Object() {"Cold Call", "Existing Cutomer", "Self Generated", "Employee", "Partner", "Public Relations", "Direct Mail", "Conference", "Trade Show", "Website", "Email", "Campaign", "Other"})
-        Me.ldsource.Location = New System.Drawing.Point(93, 61)
-        Me.ldsource.Name = "ldsource"
-        Me.ldsource.Size = New System.Drawing.Size(201, 21)
-        Me.ldsource.TabIndex = 23
-        '
-        'ldempnm
-        '
-        Me.ldempnm.Location = New System.Drawing.Point(93, 95)
-        Me.ldempnm.Name = "ldempnm"
-        Me.ldempnm.Size = New System.Drawing.Size(201, 20)
-        Me.ldempnm.TabIndex = 24
-        '
-        'lddesc
-        '
-        Me.lddesc.Location = New System.Drawing.Point(93, 128)
-        Me.lddesc.Multiline = True
-        Me.lddesc.Name = "lddesc"
-        Me.lddesc.Size = New System.Drawing.Size(201, 56)
-        Me.lddesc.TabIndex = 25
-        '
-        'ldchknotcall
-        '
-        Me.ldchknotcall.AutoSize = True
-        Me.ldchknotcall.Location = New System.Drawing.Point(93, 197)
-        Me.ldchknotcall.Name = "ldchknotcall"
-        Me.ldchknotcall.Size = New System.Drawing.Size(15, 14)
-        Me.ldchknotcall.TabIndex = 26
-        Me.ldchknotcall.UseVisualStyleBackColor = True
-        '
-        'ldfname
-        '
-        Me.ldfname.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldfname.Location = New System.Drawing.Point(163, 19)
-        Me.ldfname.Name = "ldfname"
-        Me.ldfname.Size = New System.Drawing.Size(201, 20)
-        Me.ldfname.TabIndex = 0
-        '
-        'btnldsave
-        '
-        Me.btnldsave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnldsave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnldsave.Location = New System.Drawing.Point(225, 639)
-        Me.btnldsave.Name = "btnldsave"
-        Me.btnldsave.Size = New System.Drawing.Size(75, 23)
-        Me.btnldsave.TabIndex = 27
-        Me.btnldsave.Text = "Save"
-        Me.btnldsave.UseVisualStyleBackColor = True
-        '
-        'btnldcancel
-        '
-        Me.btnldcancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnldcancel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnldcancel.Location = New System.Drawing.Point(639, 639)
-        Me.btnldcancel.Name = "btnldcancel"
-        Me.btnldcancel.Size = New System.Drawing.Size(75, 23)
-        Me.btnldcancel.TabIndex = 29
-        Me.btnldcancel.Text = "Cancel"
-        Me.btnldcancel.UseVisualStyleBackColor = True
-        '
-        'lddept
-        '
-        Me.lddept.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.lddept.Location = New System.Drawing.Point(163, 58)
-        Me.lddept.Name = "lddept"
-        Me.lddept.Size = New System.Drawing.Size(201, 20)
-        Me.lddept.TabIndex = 1
-        '
-        'ldmobno
-        '
-        Me.ldmobno.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldmobno.Location = New System.Drawing.Point(550, 62)
-        Me.ldmobno.Name = "ldmobno"
-        Me.ldmobno.Size = New System.Drawing.Size(201, 20)
-        Me.ldmobno.TabIndex = 4
-        '
-        'Label44
-        '
-        Me.Label44.AutoSize = True
-        Me.Label44.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label44.Location = New System.Drawing.Point(463, 22)
-        Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(75, 13)
-        Me.Label44.TabIndex = 38
-        Me.Label44.Text = "Office Number"
-        '
-        'Label45
-        '
-        Me.Label45.AutoSize = True
-        Me.Label45.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label45.Location = New System.Drawing.Point(74, 104)
-        Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(46, 13)
-        Me.Label45.TabIndex = 39
-        Me.Label45.Text = "Website"
-        '
-        'ldwebsite
-        '
-        Me.ldwebsite.Location = New System.Drawing.Point(163, 97)
-        Me.ldwebsite.Name = "ldwebsite"
-        Me.ldwebsite.Size = New System.Drawing.Size(201, 20)
-        Me.ldwebsite.TabIndex = 2
-        Me.ldwebsite.Text = "http://"
-        '
-        'ldoffno
-        '
-        Me.ldoffno.Location = New System.Drawing.Point(550, 19)
-        Me.ldoffno.Name = "ldoffno"
-        Me.ldoffno.Size = New System.Drawing.Size(201, 20)
-        Me.ldoffno.TabIndex = 3
-        '
-        'btnldupdate
-        '
-        Me.btnldupdate.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnldupdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnldupdate.Location = New System.Drawing.Point(367, 639)
-        Me.btnldupdate.Name = "btnldupdate"
-        Me.btnldupdate.Size = New System.Drawing.Size(75, 23)
-        Me.btnldupdate.TabIndex = 28
-        Me.btnldupdate.Text = "Update"
-        Me.btnldupdate.UseVisualStyleBackColor = True
-        '
-        'ldemail
-        '
-        Me.ldemail.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ldemail.Location = New System.Drawing.Point(163, 346)
-        Me.ldemail.Name = "ldemail"
-        Me.ldemail.Size = New System.Drawing.Size(201, 20)
-        Me.ldemail.TabIndex = 16
-        '
-        'CrtLeads
-        '
-        Me.CrtLeads.Controls.Add(Me.SplitContainer6)
-        Me.CrtLeads.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CrtLeads.Location = New System.Drawing.Point(3, 3)
-        Me.CrtLeads.Name = "CrtLeads"
-        Me.CrtLeads.Size = New System.Drawing.Size(1077, 695)
-        Me.CrtLeads.TabIndex = 4
-        '
-        'SplitContainer6
-        '
-        Me.SplitContainer6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer6.IsSplitterFixed = True
-        Me.SplitContainer6.Location = New System.Drawing.Point(0, 0)
-        Me.SplitContainer6.Name = "SplitContainer6"
-        '
-        'SplitContainer6.Panel1
-        '
-        Me.SplitContainer6.Panel1.Controls.Add(Me.SplitContainer7)
-        '
-        'SplitContainer6.Panel2
-        '
-        Me.SplitContainer6.Panel2.Controls.Add(Me.Panel1)
-        Me.SplitContainer6.Size = New System.Drawing.Size(1077, 695)
-        Me.SplitContainer6.SplitterDistance = 235
-        Me.SplitContainer6.SplitterWidth = 1
-        Me.SplitContainer6.TabIndex = 40
-        '
-        'SplitContainer7
-        '
-        Me.SplitContainer7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer7.IsSplitterFixed = True
-        Me.SplitContainer7.Location = New System.Drawing.Point(0, 0)
-        Me.SplitContainer7.Name = "SplitContainer7"
-        Me.SplitContainer7.Orientation = System.Windows.Forms.Orientation.Horizontal
-        '
-        'SplitContainer7.Panel1
-        '
-        Me.SplitContainer7.Panel1.Controls.Add(Me.ldsearch)
-        '
-        'SplitContainer7.Panel2
-        '
-        Me.SplitContainer7.Panel2.Controls.Add(Me.ldlistbox)
-        Me.SplitContainer7.Size = New System.Drawing.Size(235, 695)
-        Me.SplitContainer7.SplitterDistance = 25
-        Me.SplitContainer7.SplitterWidth = 1
-        Me.SplitContainer7.TabIndex = 0
-        '
-        'ldsearch
-        '
-        Me.ldsearch.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ldsearch.Location = New System.Drawing.Point(0, 5)
-        Me.ldsearch.Name = "ldsearch"
-        Me.ldsearch.Size = New System.Drawing.Size(235, 20)
-        Me.ldsearch.TabIndex = 0
-        '
-        'ldlistbox
-        '
-        Me.ldlistbox.DataSource = Me.LeadsBindingSource
-        Me.ldlistbox.DisplayMember = "f_name"
-        Me.ldlistbox.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ldlistbox.FormattingEnabled = True
-        Me.ldlistbox.Location = New System.Drawing.Point(0, 0)
-        Me.ldlistbox.Name = "ldlistbox"
-        Me.ldlistbox.Size = New System.Drawing.Size(235, 669)
-        Me.ldlistbox.TabIndex = 0
-        Me.ldlistbox.ValueMember = "f_name"
-        '
-        'btnlddel
-        '
-        Me.btnlddel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnlddel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnlddel.Location = New System.Drawing.Point(502, 639)
-        Me.btnlddel.Name = "btnlddel"
-        Me.btnlddel.Size = New System.Drawing.Size(75, 23)
-        Me.btnlddel.TabIndex = 40
-        Me.btnlddel.Text = "Delete"
-        Me.btnlddel.UseVisualStyleBackColor = True
-        '
-        'CRMDataSet4
-        '
-        Me.CRMDataSet4.DataSetName = "CRMDataSet4"
-        Me.CRMDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ContactsBindingSource2
-        '
-        Me.ContactsBindingSource2.DataMember = "Contacts"
-        Me.ContactsBindingSource2.DataSource = Me.CRMDataSet4
         '
         'ContactsTableAdapter2
         '
@@ -2110,6 +2134,29 @@ Partial Class Dashboard
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
+        Me.CrtLeads.ResumeLayout(False)
+        Me.SplitContainer6.Panel1.ResumeLayout(False)
+        Me.SplitContainer6.Panel2.ResumeLayout(False)
+        Me.SplitContainer6.Panel2.PerformLayout()
+        CType(Me.SplitContainer6, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer6.ResumeLayout(False)
+        Me.SplitContainer7.Panel1.ResumeLayout(False)
+        Me.SplitContainer7.Panel1.PerformLayout()
+        Me.SplitContainer7.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer7, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer7.ResumeLayout(False)
+        CType(Me.LeadsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CRMDataSetLeads, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.LeadDetails.ResumeLayout(False)
+        Me.LeadDetails.PerformLayout()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
         Me.TabPage5.ResumeLayout(False)
         Me.SplitContainer4.Panel1.ResumeLayout(False)
         CType(Me.SplitContainer4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2127,6 +2174,8 @@ Partial Class Dashboard
         Me.SplitContainer3.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer3.ResumeLayout(False)
+        CType(Me.ContactsBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CRMDataSet4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panelcreate.ResumeLayout(False)
         Me.Panelcreate.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -2141,31 +2190,6 @@ Partial Class Dashboard
         CType(Me.CRMDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CRMDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RegiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CRMDataSetLeads, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LeadsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.GroupBox5.ResumeLayout(False)
-        Me.GroupBox5.PerformLayout()
-        Me.GroupBox6.ResumeLayout(False)
-        Me.GroupBox6.PerformLayout()
-        Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox4.PerformLayout()
-        Me.LeadDetails.ResumeLayout(False)
-        Me.LeadDetails.PerformLayout()
-        Me.CrtLeads.ResumeLayout(False)
-        Me.SplitContainer6.Panel1.ResumeLayout(False)
-        Me.SplitContainer6.Panel2.ResumeLayout(False)
-        Me.SplitContainer6.Panel2.PerformLayout()
-        CType(Me.SplitContainer6, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SplitContainer6.ResumeLayout(False)
-        Me.SplitContainer7.Panel1.ResumeLayout(False)
-        Me.SplitContainer7.Panel1.PerformLayout()
-        Me.SplitContainer7.Panel2.ResumeLayout(False)
-        CType(Me.SplitContainer7, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SplitContainer7.ResumeLayout(False)
-        CType(Me.CRMDataSet4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ContactsBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2186,8 +2210,8 @@ Partial Class Dashboard
 
     Friend WithEvents btnleads As Button
     Friend WithEvents SplitContainer3 As SplitContainer
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents txtconsearch As TextBox
+    Friend WithEvents conlistbox As ListBox
     Friend WithEvents Panelcreate As Panel
     Friend WithEvents btnviewcontacts As Button
     Friend WithEvents btncreatecontact As Button
@@ -2352,6 +2376,8 @@ Partial Class Dashboard
     Friend WithEvents CRMDataSet4 As CRMDataSet4
     Friend WithEvents ContactsBindingSource2 As BindingSource
     Friend WithEvents ContactsTableAdapter2 As CRMDataSet4TableAdapters.ContactsTableAdapter
+    Friend WithEvents btnreqreset As Button
+    Friend WithEvents btnreqsubmit As Button
 
     'Friend WithEvents btnconupdate As Button
 

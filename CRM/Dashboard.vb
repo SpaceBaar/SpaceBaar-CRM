@@ -97,10 +97,10 @@ Public Class Dashboard
         con.Close()
     End Sub
 
-    Private Sub ListBox1_SelectedValueChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedValueChanged
+    Private Sub ListBox1_SelectedValueChanged(sender As Object, e As EventArgs) Handles conlistbox.SelectedValueChanged
         cmd.Connection = con
         con.Open()
-        cmd.CommandText = "select * from Contacts where fname='" & ListBox1.SelectedValue & "'"
+        cmd.CommandText = "select * from Contacts where fname='" & conlistbox.SelectedValue & "'"
         dr = cmd.ExecuteReader()
         If dr.HasRows() Then
             dr.Read()
@@ -156,7 +156,7 @@ Public Class Dashboard
     Private Sub btncondelete_Click(sender As Object, e As EventArgs) Handles btncondelete.Click
         cmd.Connection = con
         con.Open()
-        cmd.CommandText = "delete from Contacts where fname='" & ListBox1.SelectedValue & "'"
+        cmd.CommandText = "delete from Contacts where fname='" & conlistbox.SelectedValue & "'"
         cmd.ExecuteNonQuery()
         MsgBox("Contact Deleted.")
 
@@ -203,9 +203,6 @@ Public Class Dashboard
         ldaltposcode.Text = ldposcode.Text
         ldaltcountry.Text = ldcountry.Text
     End Sub
-
-
-
     'End of Lead Tab Coding
 
 

@@ -97,7 +97,7 @@ Public Class Dashboard
         con.Close()
     End Sub
 
-    Private Sub ListBox1_SelectedValueChanged(sender As Object, e As EventArgs) Handles conlistbox.SelectedValueChanged
+    Private Sub conlistbox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles conlistbox.SelectedIndexChanged
         cmd.Connection = con
         con.Open()
         cmd.CommandText = "select * from Contacts where fname='" & conlistbox.SelectedValue & "'"
@@ -127,9 +127,11 @@ Public Class Dashboard
         End If
         con.Close()
     End Sub
+
     Private Sub btnconupdate1_Click(sender As Object, e As EventArgs) Handles btnconupdate1.Click
 
     End Sub
+
     Private Sub btnconreset_Click(sender As Object, e As EventArgs) Handles btnconreset.Click
         confirstname.Text = ""
         conemail.Text = ""

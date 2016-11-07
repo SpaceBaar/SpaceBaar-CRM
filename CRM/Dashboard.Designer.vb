@@ -109,8 +109,8 @@ Partial Class Dashboard
         Me.TabPage8 = New System.Windows.Forms.TabPage()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
         Me.SplitContainer3 = New System.Windows.Forms.SplitContainer()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.txtconsearch = New System.Windows.Forms.TextBox()
+        Me.conlistbox = New System.Windows.Forms.ListBox()
         Me.ContactsBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.CRMDataSet4 = New CRM.CRMDataSet4()
         Me.Panelcreate = New System.Windows.Forms.Panel()
@@ -164,6 +164,8 @@ Partial Class Dashboard
         Me.btncreatecontact = New System.Windows.Forms.Button()
         Me.btnviewcontacts = New System.Windows.Forms.Button()
         Me.TabPage9 = New System.Windows.Forms.TabPage()
+        Me.btnreqreset = New System.Windows.Forms.Button()
+        Me.btnreqsubmit = New System.Windows.Forms.Button()
         Me.reqmspec = New System.Windows.Forms.TextBox()
         Me.reqmlocation = New System.Windows.Forms.TextBox()
         Me.reqmbudget = New System.Windows.Forms.TextBox()
@@ -1231,36 +1233,36 @@ Partial Class Dashboard
         '
         'SplitContainer3.Panel1
         '
-        Me.SplitContainer3.Panel1.Controls.Add(Me.TextBox1)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.txtconsearch)
         Me.SplitContainer3.Panel1MinSize = 10
         '
         'SplitContainer3.Panel2
         '
-        Me.SplitContainer3.Panel2.Controls.Add(Me.ListBox1)
+        Me.SplitContainer3.Panel2.Controls.Add(Me.conlistbox)
         Me.SplitContainer3.Size = New System.Drawing.Size(235, 695)
         Me.SplitContainer3.SplitterDistance = 26
         Me.SplitContainer3.SplitterWidth = 1
         Me.SplitContainer3.TabIndex = 0
         '
-        'TextBox1
+        'txtconsearch
         '
-        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TextBox1.Location = New System.Drawing.Point(0, 6)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(235, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.txtconsearch.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.txtconsearch.Location = New System.Drawing.Point(0, 6)
+        Me.txtconsearch.Name = "txtconsearch"
+        Me.txtconsearch.Size = New System.Drawing.Size(235, 20)
+        Me.txtconsearch.TabIndex = 0
         '
-        'ListBox1
+        'conlistbox
         '
-        Me.ListBox1.DataSource = Me.ContactsBindingSource2
-        Me.ListBox1.DisplayMember = "fname"
-        Me.ListBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(0, 0)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(235, 668)
-        Me.ListBox1.TabIndex = 0
-        Me.ListBox1.ValueMember = "fname"
+        Me.conlistbox.DataSource = Me.ContactsBindingSource2
+        Me.conlistbox.DisplayMember = "fname"
+        Me.conlistbox.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.conlistbox.FormattingEnabled = True
+        Me.conlistbox.Location = New System.Drawing.Point(0, 0)
+        Me.conlistbox.Name = "conlistbox"
+        Me.conlistbox.Size = New System.Drawing.Size(235, 668)
+        Me.conlistbox.TabIndex = 0
+        Me.conlistbox.ValueMember = "fname"
         '
         'ContactsBindingSource2
         '
@@ -1837,6 +1839,8 @@ Partial Class Dashboard
         'TabPage9
         '
         Me.TabPage9.BackColor = System.Drawing.Color.LightGray
+        Me.TabPage9.Controls.Add(Me.btnreqreset)
+        Me.TabPage9.Controls.Add(Me.btnreqsubmit)
         Me.TabPage9.Controls.Add(Me.reqmspec)
         Me.TabPage9.Controls.Add(Me.reqmlocation)
         Me.TabPage9.Controls.Add(Me.reqmbudget)
@@ -1863,6 +1867,26 @@ Partial Class Dashboard
         Me.TabPage9.Size = New System.Drawing.Size(1083, 701)
         Me.TabPage9.TabIndex = 8
         Me.TabPage9.Text = "Requirement"
+        '
+        'btnreqreset
+        '
+        Me.btnreqreset.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnreqreset.Location = New System.Drawing.Point(595, 352)
+        Me.btnreqreset.Name = "btnreqreset"
+        Me.btnreqreset.Size = New System.Drawing.Size(75, 23)
+        Me.btnreqreset.TabIndex = 21
+        Me.btnreqreset.Text = "Reset"
+        Me.btnreqreset.UseVisualStyleBackColor = True
+        '
+        'btnreqsubmit
+        '
+        Me.btnreqsubmit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnreqsubmit.Location = New System.Drawing.Point(378, 352)
+        Me.btnreqsubmit.Name = "btnreqsubmit"
+        Me.btnreqsubmit.Size = New System.Drawing.Size(75, 23)
+        Me.btnreqsubmit.TabIndex = 20
+        Me.btnreqsubmit.Text = "Submit"
+        Me.btnreqsubmit.UseVisualStyleBackColor = True
         '
         'reqmspec
         '
@@ -2186,8 +2210,8 @@ Partial Class Dashboard
 
     Friend WithEvents btnleads As Button
     Friend WithEvents SplitContainer3 As SplitContainer
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents txtconsearch As TextBox
+    Friend WithEvents conlistbox As ListBox
     Friend WithEvents Panelcreate As Panel
     Friend WithEvents btnviewcontacts As Button
     Friend WithEvents btncreatecontact As Button
@@ -2352,6 +2376,8 @@ Partial Class Dashboard
     Friend WithEvents CRMDataSet4 As CRMDataSet4
     Friend WithEvents ContactsBindingSource2 As BindingSource
     Friend WithEvents ContactsTableAdapter2 As CRMDataSet4TableAdapters.ContactsTableAdapter
+    Friend WithEvents btnreqreset As Button
+    Friend WithEvents btnreqsubmit As Button
 
     'Friend WithEvents btnconupdate As Button
 

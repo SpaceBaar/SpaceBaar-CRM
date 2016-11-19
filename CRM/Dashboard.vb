@@ -258,8 +258,8 @@ Public Class Dashboard
             ldaltposcode.Text = dr.Item("a_poscode")
             ldaltcountry.Text = dr.Item("a_country")
             'ldchkaltpadd.CheckState = dr.Item("a_samepadd")
-            ldstatus.Text = dr.Item("lead_status")
-            ldsource.Text = dr.Item("lead_source")
+            ldstatus.SelectedItem = dr.Item("lead_status")
+            ldsource.SelectedItem = dr.Item("lead_source")
             ldempnm.Text = dr.Item("emp_name")
             lddesc.Text = dr.Item("lead_desc")
             'ldchknotcall.CheckState = dr.Item("do_not_call")
@@ -294,6 +294,16 @@ Public Class Dashboard
         ldsource.SelectedIndex = -1
         ldempnm.Text = ""
         lddesc.Text = ""
+    End Sub
+
+    Private Sub btnlddel_Click(sender As Object, e As EventArgs) Handles btnlddel.Click
+        cmd.Connection = con
+        con.Open()
+        cmd.CommandText = "delete from leads where f_name='" & conlistbox.SelectedValue & "'"
+        cmd.ExecuteNonQuery()
+        MsgBox("Contact Deleted.")
+
+        con.Close()
     End Sub
     'End of Lead Tab Coding
 

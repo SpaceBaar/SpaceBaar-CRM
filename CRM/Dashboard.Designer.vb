@@ -197,6 +197,7 @@ Partial Class Dashboard
         Me.ContactsTableAdapter1 = New CRM.CRMDataSet3TableAdapters.ContactsTableAdapter()
         Me.LeadsTableAdapter = New CRM.CRMDataSetLeadsTableAdapters.leadsTableAdapter()
         Me.ContactsTableAdapter2 = New CRM.CRMDataSet4TableAdapters.ContactsTableAdapter()
+        Me.btnreset = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -254,6 +255,7 @@ Partial Class Dashboard
         Me.SplitContainer1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SplitContainer1.ForeColor = System.Drawing.SystemColors.Control
+        Me.SplitContainer1.IsSplitterFixed = True
         Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
         Me.SplitContainer1.Name = "SplitContainer1"
         '
@@ -271,9 +273,9 @@ Partial Class Dashboard
         '
         'PictureBox1
         '
-        Me.PictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.PictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PictureBox1.Image = Global.CRM.My.Resources.Resources.spacebaar_editographyblak
+        Me.PictureBox1.Image = Global.CRM.My.Resources.Resources.TechChums
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(259, 103)
@@ -404,6 +406,7 @@ Partial Class Dashboard
         '
         Me.Panel1.AutoSize = True
         Me.Panel1.BackColor = System.Drawing.Color.LightGray
+        Me.Panel1.Controls.Add(Me.btnreset)
         Me.Panel1.Controls.Add(Me.btnlddel)
         Me.Panel1.Controls.Add(Me.ldemail)
         Me.Panel1.Controls.Add(Me.btnldupdate)
@@ -434,7 +437,7 @@ Partial Class Dashboard
         '
         Me.btnlddel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnlddel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnlddel.Location = New System.Drawing.Point(502, 639)
+        Me.btnlddel.Location = New System.Drawing.Point(546, 639)
         Me.btnlddel.Name = "btnlddel"
         Me.btnlddel.Size = New System.Drawing.Size(75, 23)
         Me.btnlddel.TabIndex = 40
@@ -454,7 +457,7 @@ Partial Class Dashboard
         '
         Me.btnldupdate.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnldupdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnldupdate.Location = New System.Drawing.Point(367, 639)
+        Me.btnldupdate.Location = New System.Drawing.Point(298, 639)
         Me.btnldupdate.Name = "btnldupdate"
         Me.btnldupdate.Size = New System.Drawing.Size(75, 23)
         Me.btnldupdate.TabIndex = 28
@@ -518,7 +521,7 @@ Partial Class Dashboard
         '
         Me.btnldcancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnldcancel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnldcancel.Location = New System.Drawing.Point(639, 639)
+        Me.btnldcancel.Location = New System.Drawing.Point(676, 639)
         Me.btnldcancel.Name = "btnldcancel"
         Me.btnldcancel.Size = New System.Drawing.Size(75, 23)
         Me.btnldcancel.TabIndex = 29
@@ -529,7 +532,7 @@ Partial Class Dashboard
         '
         Me.btnldsave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnldsave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnldsave.Location = New System.Drawing.Point(225, 639)
+        Me.btnldsave.Location = New System.Drawing.Point(162, 639)
         Me.btnldsave.Name = "btnldsave"
         Me.btnldsave.Size = New System.Drawing.Size(75, 23)
         Me.btnldsave.TabIndex = 27
@@ -1135,6 +1138,7 @@ Partial Class Dashboard
         'SplitContainer4
         '
         Me.SplitContainer4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer4.IsSplitterFixed = True
         Me.SplitContainer4.Location = New System.Drawing.Point(3, 3)
         Me.SplitContainer4.Name = "SplitContainer4"
         '
@@ -1154,6 +1158,7 @@ Partial Class Dashboard
         'SplitContainer5
         '
         Me.SplitContainer5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer5.IsSplitterFixed = True
         Me.SplitContainer5.Location = New System.Drawing.Point(0, 0)
         Me.SplitContainer5.Name = "SplitContainer5"
         Me.SplitContainer5.Orientation = System.Windows.Forms.Orientation.Horizontal
@@ -2114,6 +2119,17 @@ Partial Class Dashboard
         '
         Me.ContactsTableAdapter2.ClearBeforeFill = True
         '
+        'btnreset
+        '
+        Me.btnreset.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnreset.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnreset.Location = New System.Drawing.Point(420, 639)
+        Me.btnreset.Name = "btnreset"
+        Me.btnreset.Size = New System.Drawing.Size(75, 23)
+        Me.btnreset.TabIndex = 41
+        Me.btnreset.Text = "Reset"
+        Me.btnreset.UseVisualStyleBackColor = True
+        '
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2378,6 +2394,7 @@ Partial Class Dashboard
     Friend WithEvents ContactsTableAdapter2 As CRMDataSet4TableAdapters.ContactsTableAdapter
     Friend WithEvents btnreqreset As Button
     Friend WithEvents btnreqsubmit As Button
+    Friend WithEvents btnreset As Button
 
     'Friend WithEvents btnconupdate As Button
 

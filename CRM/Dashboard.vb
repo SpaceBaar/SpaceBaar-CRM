@@ -31,9 +31,6 @@ Public Class Dashboard
         Panelcreate.Show()
     End Sub
 
-
-
-
     Private Sub chkalt_CheckedChanged(sender As Object, e As EventArgs) Handles chkalt.CheckedChanged
         If chkalt.Checked = True Then
             txtaltcity.Text = concity.Text
@@ -50,6 +47,7 @@ Public Class Dashboard
             txtaltstreet.Text = ""
         End If
     End Sub
+
     Private Sub btnconsave_Click(sender As Object, e As EventArgs) Handles btnconsave.Click
         Dim num As New Regex("^([+][9][1]|[9][1]|[0]){0,1}([7-9]{1})([0-9]{9})$")
         Dim email As New Regex("^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$")
@@ -84,7 +82,7 @@ Public Class Dashboard
                     condesi.Text = ""
                     concomname.Text = ""
                     conadd.Text = ""
-                    conweb.Text = ""
+                    conweb.Text = "http://"
 
                 Else
                     MsgBox("Invalid Mobile Number")
@@ -118,7 +116,7 @@ Public Class Dashboard
             txtaltstate.Text = dr.Item("altstate")
             txtaltpost.Text = dr.Item("altcode")
             txtaltcountry.Text = dr.Item("altcountry")
-            ComboBox1.SelectedText = dr.Item("profession")
+            ComboBox1.SelectedItem = dr.Item("profession")
             condesi.Text = dr.Item("designation")
             concomname.Text = dr.Item("cname")
             conadd.Text = dr.Item("cadd")
@@ -151,7 +149,7 @@ Public Class Dashboard
         condesi.Text = ""
         concomname.Text = ""
         conadd.Text = ""
-        conweb.Text = ""
+        conweb.Text = "http://"
 
     End Sub
 
@@ -185,7 +183,7 @@ Public Class Dashboard
     Private Sub btncanclead_Click(sender As Object, e As EventArgs)
         CrtLeads.Hide()
     End Sub
-
+    'Save Leads
     Private Sub btnldsave_Click(sender As Object, e As EventArgs) Handles btnldsave.Click
         con.Open()
         cmd.CommandText = "insert into leads(f_name,dept,website,p_addstreet,p_city,p_state,p_poscode,p_country,email,profession,designation,co_name,co_add,co_website,office_no,mob_no,a_addstreet,a_city,a_state,a_poscode,a_country,a_samepadd,lead_status,lead_source,emp_name,lead_desc,do_not_call) values('" & ldfname.Text & "','" & lddept.Text & "','" & ldwebsite.Text & "', '" & ldaddstreet.Text & "','" & ldcity.Text & "','" & ldstate.Text & "','" & ldposcode.Text & "',
@@ -193,7 +191,32 @@ Public Class Dashboard
 '" & ldoffno.Text & "','" & ldmobno.Text & "','" & ldaltaddstreet.Text & "','" & ldaltcity.Text & "','" & ldaltstate.Text & "','" & ldaltposcode.Text & "','" & ldaltcountry.Text & "','" & ldchkaltpadd.CheckState & "','" & ldstatus.SelectedItem.ToString() & "','" & ldsource.SelectedItem.ToString() & "','" & ldempnm.Text & "','" & lddesc.Text & "','" & ldchknotcall.CheckState & "')"
 
         cmd.ExecuteNonQuery()
-        MsgBox("Contact Save Successfully")
+        MsgBox("Lead Saved Successfully")
+        ldfname.Text = ""
+        lddept.Text = ""
+        ldwebsite.Text = "http://"
+        ldaddstreet.Text = ""
+        ldcity.Text = ""
+        ldstate.Text = ""
+        ldposcode.Text = ""
+        ldcountry.Text = ""
+        ldemail.Text = ""
+        ldprofession.SelectedIndex = -1
+        lddesign.Text = ""
+        ldconm.Text = ""
+        ldcoadd.Text = ""
+        ldcowsite.Text = "http://"
+        ldoffno.Text = ""
+        ldmobno.Text = ""
+        ldaltaddstreet.Text = ""
+        ldaltcity.Text = ""
+        ldaltstate.Text = ""
+        ldaltposcode.Text = ""
+        ldaltcountry.Text = ""
+        ldstatus.SelectedIndex = -1
+        ldsource.SelectedIndex = -1
+        ldempnm.Text = ""
+        lddesc.Text = ""
 
         con.Close()
     End Sub
@@ -204,6 +227,73 @@ Public Class Dashboard
         ldaltstate.Text = ldstate.Text
         ldaltposcode.Text = ldposcode.Text
         ldaltcountry.Text = ldcountry.Text
+    End Sub
+    'List of all Leads
+    Private Sub ldlistbox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ldlistbox.SelectedIndexChanged
+        cmd.Connection = con
+        con.Open()
+        cmd.CommandText = "select * from leads where f_name='" & conlistbox.SelectedValue & "'"
+        dr = cmd.ExecuteReader()
+        If dr.HasRows() Then
+            dr.Read()
+            ldfname.Text = dr.Item("f_name")
+            lddept.Text = dr.Item("dept")
+            ldwebsite.Text = dr.Item("website")
+            ldaddstreet.Text = dr.Item("p_addstreet")
+            ldcity.Text = dr.Item("p_city")
+            ldstate.Text = dr.Item("p_state")
+            ldposcode.Text = dr.Item("p_poscode")
+            ldcountry.Text = dr.Item("p_country")
+            ldemail.Text = dr.Item("email")
+            ldprofession.SelectedItem = dr.Item("profession")
+            lddesign.Text = dr.Item("designation")
+            ldconm.Text = dr.Item("co_name")
+            ldcoadd.Text = dr.Item("co_add")
+            ldcowsite.Text = dr.Item("co_website")
+            ldoffno.Text = dr.Item("office_no")
+            ldmobno.Text = dr.Item("mob_no")
+            ldaltaddstreet.Text = dr.Item("a_addstreet")
+            ldaltcity.Text = dr.Item("a_city")
+            ldaltstate.Text = dr.Item("a_state")
+            ldaltposcode.Text = dr.Item("a_poscode")
+            ldaltcountry.Text = dr.Item("a_country")
+            'ldchkaltpadd.CheckState = dr.Item("a_samepadd")
+            ldstatus.Text = dr.Item("lead_status")
+            ldsource.Text = dr.Item("lead_source")
+            ldempnm.Text = dr.Item("emp_name")
+            lddesc.Text = dr.Item("lead_desc")
+            'ldchknotcall.CheckState = dr.Item("do_not_call")
+            dr.Close()
+        End If
+        con.Close()
+    End Sub
+    'Reset Leads
+    Private Sub btnreset_Click(sender As Object, e As EventArgs) Handles btnreset.Click
+        ldfname.Text = ""
+        lddept.Text = ""
+        ldwebsite.Text = "http://"
+        ldaddstreet.Text = ""
+        ldcity.Text = ""
+        ldstate.Text = ""
+        ldposcode.Text = ""
+        ldcountry.Text = ""
+        ldemail.Text = ""
+        ldprofession.SelectedIndex = -1
+        lddesign.Text = ""
+        ldconm.Text = ""
+        ldcoadd.Text = ""
+        ldcowsite.Text = "http://"
+        ldoffno.Text = ""
+        ldmobno.Text = ""
+        ldaltaddstreet.Text = ""
+        ldaltcity.Text = ""
+        ldaltstate.Text = ""
+        ldaltposcode.Text = ""
+        ldaltcountry.Text = ""
+        ldstatus.SelectedIndex = -1
+        ldsource.SelectedIndex = -1
+        ldempnm.Text = ""
+        lddesc.Text = ""
     End Sub
     'End of Lead Tab Coding
 

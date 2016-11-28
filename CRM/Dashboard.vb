@@ -353,6 +353,21 @@ Public Class Dashboard
         lddesc.Text = ""
         con.Close()
     End Sub
+
+    Private Sub btnldupdate_Click(sender As Object, e As EventArgs) Handles btnldupdate.Click
+        cmd.Connection = con
+        con.Open()
+        cmd.CommandText = "UPDATE leads SET f_name= '" & ldfname.Text & "', dept = '" & lddept.Text & "', website = '" & ldwebsite.Text & "', p_addstreet='" & ldaddstreet.Text & "', p_city = '" & ldcity.Text & "', p_state = '" & ldstate.Text & "', p_poscode = '" & ldposcode.Text & "', p_country = '" & ldcountry.Text & "', email = '" & ldemail.Text & "', profession = '" & ldprofession.Text & "', designation = '" & lddesign.Text & "', co_name = '" & ldconm.Text & "', co_add = '" & ldcoadd.Text & "', co_website = '" & ldcowsite.Text & "', office_no = '" & ldoffno.Text & "', mob_no = '" & ldmobno.Text & "', a_addstreet = '" & ldaltaddstreet.Text & "', a_city = '" & ldaltcity.Text & "', a_state = '" & ldaltstate.Text & "', a_poscode = '" & ldaltposcode.Text & "', a_country = '" & ldaltcountry.Text & "', lead_status = '" & ldstatus.Text & "', lead_source = '" & ldsource.Text & "', emp_name = '" & ldempnm.Text & "', lead_desc = '" & lddesc.Text & "' WHERE f_name = '" & ldlistbox.SelectedValue & "'"
+        cmd.ExecuteNonQuery()
+        MsgBox("Lead Updated Successfully.")
+
+        CRMDataSetLeads.Clear()
+        LeadsTableAdapter.Fill(CRMDataSetLeads.leads)
+        ldlistbox.DataSource = CRMDataSetLeads.leads
+        ldlistbox.DisplayMember = "f_name"
+        ldlistbox.ValueMember = "f_name"
+
+    End Sub
     'End of Lead Tab Coding
 
 

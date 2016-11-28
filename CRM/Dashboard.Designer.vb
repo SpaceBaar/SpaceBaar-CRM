@@ -36,6 +36,7 @@ Partial Class Dashboard
         Me.LeadsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CRMDataSetLeads = New CRM.CRMDataSetLeads()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnreset = New System.Windows.Forms.Button()
         Me.btnlddel = New System.Windows.Forms.Button()
         Me.ldemail = New System.Windows.Forms.TextBox()
         Me.btnldupdate = New System.Windows.Forms.Button()
@@ -197,7 +198,6 @@ Partial Class Dashboard
         Me.ContactsTableAdapter1 = New CRM.CRMDataSet3TableAdapters.ContactsTableAdapter()
         Me.LeadsTableAdapter = New CRM.CRMDataSetLeadsTableAdapters.leadsTableAdapter()
         Me.ContactsTableAdapter2 = New CRM.CRMDataSet4TableAdapters.ContactsTableAdapter()
-        Me.btnreset = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -432,6 +432,17 @@ Partial Class Dashboard
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(841, 695)
         Me.Panel1.TabIndex = 1
+        '
+        'btnreset
+        '
+        Me.btnreset.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnreset.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnreset.Location = New System.Drawing.Point(420, 639)
+        Me.btnreset.Name = "btnreset"
+        Me.btnreset.Size = New System.Drawing.Size(75, 23)
+        Me.btnreset.TabIndex = 41
+        Me.btnreset.Text = "Reset"
+        Me.btnreset.UseVisualStyleBackColor = True
         '
         'btnlddel
         '
@@ -2118,17 +2129,6 @@ Partial Class Dashboard
         'ContactsTableAdapter2
         '
         Me.ContactsTableAdapter2.ClearBeforeFill = True
-        '
-        'btnreset
-        '
-        Me.btnreset.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnreset.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnreset.Location = New System.Drawing.Point(420, 639)
-        Me.btnreset.Name = "btnreset"
-        Me.btnreset.Size = New System.Drawing.Size(75, 23)
-        Me.btnreset.TabIndex = 41
-        Me.btnreset.Text = "Reset"
-        Me.btnreset.UseVisualStyleBackColor = True
         '
         'Dashboard
         '

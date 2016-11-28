@@ -62,8 +62,9 @@ Public Class Dashboard
 '" & conphone.Text & "','" & conmobile.Text & "','" & txtaltstreet.Text & "','" & txtaltcity.Text & "','" & txtaltstate.Text & "','" & txtaltpost.Text & "','" & txtaltcountry.Text & "',
 '" & ComboBox1.SelectedText.ToString() & "','" & condesi.Text & "','" & concomname.Text & "','" & conadd.Text & "','" & conweb.Text & "')"
 
+
                     cmd.ExecuteNonQuery()
-                    MsgBox("Contact Save Successfully")
+                    MsgBox("Contact Saved Successfully")
                     confirstname.Text = ""
                     conemail.Text = ""
                     constreet.Text = ""
@@ -186,12 +187,19 @@ Public Class Dashboard
     'Save Leads
     Private Sub btnldsave_Click(sender As Object, e As EventArgs) Handles btnldsave.Click
         con.Open()
-        cmd.CommandText = "insert into leads(f_name,dept,website,p_addstreet,p_city,p_state,p_poscode,p_country,email,profession,designation,co_name,co_add,co_website,office_no,mob_no,a_addstreet,a_city,a_state,a_poscode,a_country,a_samepadd,lead_status,lead_source,emp_name,lead_desc,do_not_call) values('" & ldfname.Text & "','" & lddept.Text & "','" & ldwebsite.Text & "', '" & ldaddstreet.Text & "','" & ldcity.Text & "','" & ldstate.Text & "','" & ldposcode.Text & "',
+        cmd.CommandText = "insert into leads(f_name,dept,website,p_addstreet,p_city,p_state,p_poscode,p_country,email,profession,designation,co_name,co_add,co_website,office_no,mob_no,a_addstreet,a_city,a_state,a_poscode,a_country,lead_status,lead_source,emp_name,lead_desc) values('" & ldfname.Text & "','" & lddept.Text & "','" & ldwebsite.Text & "', '" & ldaddstreet.Text & "','" & ldcity.Text & "','" & ldstate.Text & "','" & ldposcode.Text & "',
 '" & ldcountry.Text & "','" & ldemail.Text & "','" & ldprofession.SelectedItem.ToString() & "','" & lddesign.Text & "','" & ldconm.Text & "','" & ldcoadd.Text & "','" & ldcowsite.Text & "',
-'" & ldoffno.Text & "','" & ldmobno.Text & "','" & ldaltaddstreet.Text & "','" & ldaltcity.Text & "','" & ldaltstate.Text & "','" & ldaltposcode.Text & "','" & ldaltcountry.Text & "','" & ldchkaltpadd.CheckState & "','" & ldstatus.SelectedItem.ToString() & "','" & ldsource.SelectedItem.ToString() & "','" & ldempnm.Text & "','" & lddesc.Text & "','" & ldchknotcall.CheckState & "')"
+'" & ldoffno.Text & "','" & ldmobno.Text & "','" & ldaltaddstreet.Text & "','" & ldaltcity.Text & "','" & ldaltstate.Text & "','" & ldaltposcode.Text & "','" & ldaltcountry.Text & "','" & ldstatus.SelectedItem.ToString() & "','" & ldsource.SelectedItem.ToString() & "','" & ldempnm.Text & "','" & lddesc.Text & "')"
 
         cmd.ExecuteNonQuery()
         MsgBox("Lead Saved Successfully")
+
+        CRMDataSetLeads.Clear()
+        LeadsTableAdapter.Fill(CRMDataSetLeads.leads)
+        ldlistbox.DataSource = CRMDataSetLeads.leads
+        ldlistbox.DisplayMember = "f_name"
+        ldlistbox.ValueMember = "f_name"
+
         ldfname.Text = ""
         lddept.Text = ""
         ldwebsite.Text = "http://"
@@ -230,42 +238,45 @@ Public Class Dashboard
     End Sub
     'List of all Leads
     Private Sub ldlistbox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ldlistbox.SelectedIndexChanged
-        cmd.Connection = con
-        con.Open()
-        cmd.CommandText = "select * from leads where f_name='" & conlistbox.SelectedValue & "'"
-        dr = cmd.ExecuteReader()
-        If dr.HasRows() Then
-            dr.Read()
-            ldfname.Text = dr.Item("f_name")
-            lddept.Text = dr.Item("dept")
-            ldwebsite.Text = dr.Item("website")
-            ldaddstreet.Text = dr.Item("p_addstreet")
-            ldcity.Text = dr.Item("p_city")
-            ldstate.Text = dr.Item("p_state")
-            ldposcode.Text = dr.Item("p_poscode")
-            ldcountry.Text = dr.Item("p_country")
-            ldemail.Text = dr.Item("email")
-            ldprofession.SelectedItem = dr.Item("profession")
-            lddesign.Text = dr.Item("designation")
-            ldconm.Text = dr.Item("co_name")
-            ldcoadd.Text = dr.Item("co_add")
-            ldcowsite.Text = dr.Item("co_website")
-            ldoffno.Text = dr.Item("office_no")
-            ldmobno.Text = dr.Item("mob_no")
-            ldaltaddstreet.Text = dr.Item("a_addstreet")
-            ldaltcity.Text = dr.Item("a_city")
-            ldaltstate.Text = dr.Item("a_state")
-            ldaltposcode.Text = dr.Item("a_poscode")
-            ldaltcountry.Text = dr.Item("a_country")
-            'ldchkaltpadd.CheckState = dr.Item("a_samepadd")
-            ldstatus.SelectedItem = dr.Item("lead_status")
-            ldsource.SelectedItem = dr.Item("lead_source")
-            ldempnm.Text = dr.Item("emp_name")
-            lddesc.Text = dr.Item("lead_desc")
-            'ldchknotcall.CheckState = dr.Item("do_not_call")
-            dr.Close()
-        End If
-        con.Close()
+
+        Try
+            cmd.Connection = con
+            con.Open()
+            cmd.CommandText = "select * from leads where f_name='" & ldlistbox.SelectedValue & "'"
+            dr = cmd.ExecuteReader()
+            If dr.HasRows() Then
+                dr.Read()
+                ldfname.Text = dr.Item("f_name")
+                lddept.Text = dr.Item("dept")
+                ldwebsite.Text = dr.Item("website")
+                ldaddstreet.Text = dr.Item("p_addstreet")
+                ldcity.Text = dr.Item("p_city")
+                ldstate.Text = dr.Item("p_state")
+                ldposcode.Text = dr.Item("p_poscode")
+                ldcountry.Text = dr.Item("p_country")
+                ldemail.Text = dr.Item("email")
+                ldprofession.SelectedItem = dr.Item("profession")
+                lddesign.Text = dr.Item("designation")
+                ldconm.Text = dr.Item("co_name")
+                ldcoadd.Text = dr.Item("co_add")
+                ldcowsite.Text = dr.Item("co_website")
+                ldoffno.Text = dr.Item("office_no")
+                ldmobno.Text = dr.Item("mob_no")
+                ldaltaddstreet.Text = dr.Item("a_addstreet")
+                ldaltcity.Text = dr.Item("a_city")
+                ldaltstate.Text = dr.Item("a_state")
+                ldaltposcode.Text = dr.Item("a_poscode")
+                ldaltcountry.Text = dr.Item("a_country")
+                ldstatus.SelectedItem = dr.Item("lead_status")
+                ldsource.SelectedItem = dr.Item("lead_source")
+                ldempnm.Text = dr.Item("emp_name")
+                lddesc.Text = dr.Item("lead_desc")
+                dr.Close()
+            End If
+            con.Close()
+        Catch
+            con.Close()
+        End Try
     End Sub
     'Reset Leads
     Private Sub btnreset_Click(sender As Object, e As EventArgs) Handles btnreset.Click
@@ -294,15 +305,52 @@ Public Class Dashboard
         ldsource.SelectedIndex = -1
         ldempnm.Text = ""
         lddesc.Text = ""
+
+        CRMDataSetLeads.Clear()
+        LeadsTableAdapter.Fill(CRMDataSetLeads.leads)
+        ldlistbox.DataSource = CRMDataSetLeads.leads
+        ldlistbox.DisplayMember = "f_name"
+        ldlistbox.ValueMember = "f_name"
     End Sub
 
     Private Sub btnlddel_Click(sender As Object, e As EventArgs) Handles btnlddel.Click
         cmd.Connection = con
         con.Open()
-        cmd.CommandText = "delete from leads where f_name='" & conlistbox.SelectedValue & "'"
+        cmd.CommandText = "delete from leads where f_name='" & ldlistbox.SelectedValue & "'"
         cmd.ExecuteNonQuery()
-        MsgBox("Contact Deleted.")
+        MsgBox("Lead Deleted.")
 
+        CRMDataSetLeads.Clear()
+        LeadsTableAdapter.Fill(CRMDataSetLeads.leads)
+        ldlistbox.DataSource = CRMDataSetLeads.leads
+        ldlistbox.DisplayMember = "f_name"
+        ldlistbox.ValueMember = "f_name"
+
+        ldfname.Text = ""
+        lddept.Text = ""
+        ldwebsite.Text = "http://"
+        ldaddstreet.Text = ""
+        ldcity.Text = ""
+        ldstate.Text = ""
+        ldposcode.Text = ""
+        ldcountry.Text = ""
+        ldemail.Text = ""
+        ldprofession.SelectedIndex = -1
+        lddesign.Text = ""
+        ldconm.Text = ""
+        ldcoadd.Text = ""
+        ldcowsite.Text = "http://"
+        ldoffno.Text = ""
+        ldmobno.Text = ""
+        ldaltaddstreet.Text = ""
+        ldaltcity.Text = ""
+        ldaltstate.Text = ""
+        ldaltposcode.Text = ""
+        ldaltcountry.Text = ""
+        ldstatus.SelectedIndex = -1
+        ldsource.SelectedIndex = -1
+        ldempnm.Text = ""
+        lddesc.Text = ""
         con.Close()
     End Sub
     'End of Lead Tab Coding

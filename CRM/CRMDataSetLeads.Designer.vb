@@ -315,8 +315,6 @@ Partial Public Class CRMDataSetLeads
         
         Private columna_country As Global.System.Data.DataColumn
         
-        Private columna_samepadd As Global.System.Data.DataColumn
-        
         Private columnemail As Global.System.Data.DataColumn
         
         Private columnprofession As Global.System.Data.DataColumn
@@ -336,8 +334,6 @@ Partial Public Class CRMDataSetLeads
         Private columnemp_name As Global.System.Data.DataColumn
         
         Private columnlead_desc As Global.System.Data.DataColumn
-        
-        Private columndo_not_call As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -504,14 +500,6 @@ Partial Public Class CRMDataSetLeads
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property a_samepaddColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columna_samepadd
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property emailColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnemail
@@ -591,14 +579,6 @@ Partial Public Class CRMDataSetLeads
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property do_not_callColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columndo_not_call
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -651,7 +631,6 @@ Partial Public Class CRMDataSetLeads
                     ByVal a_state As String,  _
                     ByVal a_poscode As String,  _
                     ByVal a_country As String,  _
-                    ByVal a_samepadd As Boolean,  _
                     ByVal email As String,  _
                     ByVal profession As String,  _
                     ByVal designation As String,  _
@@ -661,10 +640,9 @@ Partial Public Class CRMDataSetLeads
                     ByVal lead_status As String,  _
                     ByVal lead_source As String,  _
                     ByVal emp_name As String,  _
-                    ByVal lead_desc As String,  _
-                    ByVal do_not_call As Boolean) As leadsRow
+                    ByVal lead_desc As String) As leadsRow
             Dim rowleadsRow As leadsRow = CType(Me.NewRow,leadsRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, f_name, office_no, mob_no, dept, website, p_addstreet, p_city, p_state, p_poscode, p_country, a_addstreet, a_city, a_state, a_poscode, a_country, a_samepadd, email, profession, designation, co_name, co_add, co_website, lead_status, lead_source, emp_name, lead_desc, do_not_call}
+            Dim columnValuesArray() As Object = New Object() {Nothing, f_name, office_no, mob_no, dept, website, p_addstreet, p_city, p_state, p_poscode, p_country, a_addstreet, a_city, a_state, a_poscode, a_country, email, profession, designation, co_name, co_add, co_website, lead_status, lead_source, emp_name, lead_desc}
             rowleadsRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowleadsRow)
             Return rowleadsRow
@@ -703,7 +681,6 @@ Partial Public Class CRMDataSetLeads
             Me.columna_state = MyBase.Columns("a_state")
             Me.columna_poscode = MyBase.Columns("a_poscode")
             Me.columna_country = MyBase.Columns("a_country")
-            Me.columna_samepadd = MyBase.Columns("a_samepadd")
             Me.columnemail = MyBase.Columns("email")
             Me.columnprofession = MyBase.Columns("profession")
             Me.columndesignation = MyBase.Columns("designation")
@@ -714,7 +691,6 @@ Partial Public Class CRMDataSetLeads
             Me.columnlead_source = MyBase.Columns("lead_source")
             Me.columnemp_name = MyBase.Columns("emp_name")
             Me.columnlead_desc = MyBase.Columns("lead_desc")
-            Me.columndo_not_call = MyBase.Columns("do_not_call")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -752,8 +728,6 @@ Partial Public Class CRMDataSetLeads
             MyBase.Columns.Add(Me.columna_poscode)
             Me.columna_country = New Global.System.Data.DataColumn("a_country", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columna_country)
-            Me.columna_samepadd = New Global.System.Data.DataColumn("a_samepadd", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columna_samepadd)
             Me.columnemail = New Global.System.Data.DataColumn("email", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnemail)
             Me.columnprofession = New Global.System.Data.DataColumn("profession", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -774,8 +748,6 @@ Partial Public Class CRMDataSetLeads
             MyBase.Columns.Add(Me.columnemp_name)
             Me.columnlead_desc = New Global.System.Data.DataColumn("lead_desc", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnlead_desc)
-            Me.columndo_not_call = New Global.System.Data.DataColumn("do_not_call", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columndo_not_call)
             Me.columnid.AutoIncrement = true
             Me.columnid.AutoIncrementSeed = -1
             Me.columnid.AutoIncrementStep = -1
@@ -1188,21 +1160,6 @@ Partial Public Class CRMDataSetLeads
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property a_samepadd() As Boolean
-            Get
-                Try 
-                    Return CType(Me(Me.tableleads.a_samepaddColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'a_samepadd' in table 'leads' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableleads.a_samepaddColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property email() As String
             Get
                 Try 
@@ -1348,21 +1305,6 @@ Partial Public Class CRMDataSetLeads
             End Get
             Set
                 Me(Me.tableleads.lead_descColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property do_not_call() As Boolean
-            Get
-                Try 
-                    Return CType(Me(Me.tableleads.do_not_callColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'do_not_call' in table 'leads' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableleads.do_not_callColumn) = value
             End Set
         End Property
         
@@ -1548,18 +1490,6 @@ Partial Public Class CRMDataSetLeads
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isa_samepaddNull() As Boolean
-            Return Me.IsNull(Me.tableleads.a_samepaddColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Seta_samepaddNull()
-            Me(Me.tableleads.a_samepaddColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsemailNull() As Boolean
             Return Me.IsNull(Me.tableleads.emailColumn)
         End Function
@@ -1676,18 +1606,6 @@ Partial Public Class CRMDataSetLeads
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub Setlead_descNull()
             Me(Me.tableleads.lead_descColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isdo_not_callNull() As Boolean
-            Return Me.IsNull(Me.tableleads.do_not_callColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setdo_not_callNull()
-            Me(Me.tableleads.do_not_callColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -1873,7 +1791,6 @@ Namespace CRMDataSetLeadsTableAdapters
             tableMapping.ColumnMappings.Add("a_state", "a_state")
             tableMapping.ColumnMappings.Add("a_poscode", "a_poscode")
             tableMapping.ColumnMappings.Add("a_country", "a_country")
-            tableMapping.ColumnMappings.Add("a_samepadd", "a_samepadd")
             tableMapping.ColumnMappings.Add("email", "email")
             tableMapping.ColumnMappings.Add("profession", "profession")
             tableMapping.ColumnMappings.Add("designation", "designation")
@@ -1884,19 +1801,17 @@ Namespace CRMDataSetLeadsTableAdapters
             tableMapping.ColumnMappings.Add("lead_source", "lead_source")
             tableMapping.ColumnMappings.Add("emp_name", "emp_name")
             tableMapping.ColumnMappings.Add("lead_desc", "lead_desc")
-            tableMapping.ColumnMappings.Add("do_not_call", "do_not_call")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[leads] ([f_name], [office_no], [mob_no], [dept], [website], [p"& _ 
-                "_addstreet], [p_city], [p_state], [p_poscode], [p_country], [a_addstreet], [a_ci"& _ 
-                "ty], [a_state], [a_poscode], [a_country], [a_samepadd], [email], [profession], ["& _ 
-                "designation], [co_name], [co_add], [co_website], [lead_status], [lead_source], ["& _ 
-                "emp_name], [lead_desc], [do_not_call]) VALUES (@f_name, @office_no, @mob_no, @de"& _ 
-                "pt, @website, @p_addstreet, @p_city, @p_state, @p_poscode, @p_country, @a_addstr"& _ 
-                "eet, @a_city, @a_state, @a_poscode, @a_country, @a_samepadd, @email, @profession"& _ 
-                ", @designation, @co_name, @co_add, @co_website, @lead_status, @lead_source, @emp"& _ 
-                "_name, @lead_desc, @do_not_call)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [leads] ([f_name], [office_no], [mob_no], [dept], [website], [p_addst"& _ 
+                "reet], [p_city], [p_state], [p_poscode], [p_country], [a_addstreet], [a_city], ["& _ 
+                "a_state], [a_poscode], [a_country], [email], [profession], [designation], [co_na"& _ 
+                "me], [co_add], [co_website], [lead_status], [lead_source], [emp_name], [lead_des"& _ 
+                "c]) VALUES (@f_name, @office_no, @mob_no, @dept, @website, @p_addstreet, @p_city"& _ 
+                ", @p_state, @p_poscode, @p_country, @a_addstreet, @a_city, @a_state, @a_poscode,"& _ 
+                " @a_country, @email, @profession, @designation, @co_name, @co_add, @co_website, "& _ 
+                "@lead_status, @lead_source, @emp_name, @lead_desc)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@f_name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "f_name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@office_no", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "office_no", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -1913,7 +1828,6 @@ Namespace CRMDataSetLeadsTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@a_state", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "a_state", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@a_poscode", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "a_poscode", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@a_country", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "a_country", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@a_samepadd", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "a_samepadd", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@email", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "email", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@profession", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "profession", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@designation", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "designation", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -1924,7 +1838,6 @@ Namespace CRMDataSetLeadsTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lead_source", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "lead_source", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@emp_name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "emp_name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lead_desc", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "lead_desc", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@do_not_call", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "do_not_call", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1941,9 +1854,9 @@ Namespace CRMDataSetLeadsTableAdapters
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT id, f_name, office_no, mob_no, dept, website, p_addstreet, p_city, p_state"& _ 
-                ", p_poscode, p_country, a_addstreet, a_city, a_state, a_poscode, a_country, a_sa"& _ 
-                "mepadd, email, profession, designation, co_name, co_add, co_website, lead_status"& _ 
-                ", lead_source, emp_name, lead_desc, do_not_call FROM dbo.leads"
+                ", p_poscode, p_country, a_addstreet, a_city, a_state, a_poscode, a_country, emai"& _ 
+                "l, profession, designation, co_name, co_add, co_website, lead_status, lead_sourc"& _ 
+                "e, emp_name, lead_desc FROM leads"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -2019,7 +1932,6 @@ Namespace CRMDataSetLeadsTableAdapters
                     ByVal a_state As String,  _
                     ByVal a_poscode As String,  _
                     ByVal a_country As String,  _
-                    ByVal a_samepadd As Global.System.Nullable(Of Boolean),  _
                     ByVal email As String,  _
                     ByVal profession As String,  _
                     ByVal designation As String,  _
@@ -2029,8 +1941,7 @@ Namespace CRMDataSetLeadsTableAdapters
                     ByVal lead_status As String,  _
                     ByVal lead_source As String,  _
                     ByVal emp_name As String,  _
-                    ByVal lead_desc As String,  _
-                    ByVal do_not_call As Global.System.Nullable(Of Boolean)) As Integer
+                    ByVal lead_desc As String) As Integer
             If (f_name Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -2106,65 +2017,55 @@ Namespace CRMDataSetLeadsTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(14).Value = CType(a_country,String)
             End If
-            If (a_samepadd.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(15).Value = CType(a_samepadd.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(15).Value = Global.System.DBNull.Value
-            End If
             If (email Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(16).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(15).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(16).Value = CType(email,String)
+                Me.Adapter.InsertCommand.Parameters(15).Value = CType(email,String)
             End If
             If (profession Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(17).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(16).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(17).Value = CType(profession,String)
+                Me.Adapter.InsertCommand.Parameters(16).Value = CType(profession,String)
             End If
             If (designation Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(18).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(17).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(18).Value = CType(designation,String)
+                Me.Adapter.InsertCommand.Parameters(17).Value = CType(designation,String)
             End If
             If (co_name Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(19).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(18).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(19).Value = CType(co_name,String)
+                Me.Adapter.InsertCommand.Parameters(18).Value = CType(co_name,String)
             End If
             If (co_add Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(20).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(19).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(20).Value = CType(co_add,String)
+                Me.Adapter.InsertCommand.Parameters(19).Value = CType(co_add,String)
             End If
             If (co_website Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(21).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(20).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(21).Value = CType(co_website,String)
+                Me.Adapter.InsertCommand.Parameters(20).Value = CType(co_website,String)
             End If
             If (lead_status Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(22).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(21).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(22).Value = CType(lead_status,String)
+                Me.Adapter.InsertCommand.Parameters(21).Value = CType(lead_status,String)
             End If
             If (lead_source Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(23).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(22).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(23).Value = CType(lead_source,String)
+                Me.Adapter.InsertCommand.Parameters(22).Value = CType(lead_source,String)
             End If
             If (emp_name Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(24).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(23).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(24).Value = CType(emp_name,String)
+                Me.Adapter.InsertCommand.Parameters(23).Value = CType(emp_name,String)
             End If
             If (lead_desc Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(25).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(24).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(25).Value = CType(lead_desc,String)
-            End If
-            If (do_not_call.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(26).Value = CType(do_not_call.Value,Boolean)
-            Else
-                Me.Adapter.InsertCommand.Parameters(26).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(24).Value = CType(lead_desc,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _

@@ -65,6 +65,13 @@ Public Class Dashboard
 
                     cmd.ExecuteNonQuery()
                     MsgBox("Contact Saved Successfully")
+
+                    CRMDataSet4.Clear()
+                    ContactsTableAdapter2.Fill(CRMDataSet4.Contacts)
+                    ldlistbox.DataSource = CRMDataSet4.Contacts
+                    ldlistbox.DisplayMember = "fname"
+                    ldlistbox.ValueMember = "fname"
+
                     confirstname.Text = ""
                     conemail.Text = ""
                     constreet.Text = ""
@@ -97,41 +104,63 @@ Public Class Dashboard
     End Sub
 
     Private Sub conlistbox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles conlistbox.SelectedIndexChanged
-        cmd.Connection = con
-        con.Open()
-        cmd.CommandText = "select * from Contacts where fname='" & conlistbox.SelectedValue & "'"
-        dr = cmd.ExecuteReader()
-        If dr.HasRows() Then
-            dr.Read()
-            confirstname.Text = dr.Item("fname")
-            conemail.Text = dr.Item("email")
-            constreet.Text = dr.Item("street")
-            concity.Text = dr.Item("city")
-            constate.Text = dr.Item("state")
-            concode.Text = dr.Item("code")
-            concountry.Text = dr.Item("country")
-            conphone.Text = dr.Item("phone")
-            conmobile.Text = dr.Item("mobile")
-            txtaltstreet.Text = dr.Item("altstreet")
-            txtaltcity.Text = dr.Item("altcity")
-            txtaltstate.Text = dr.Item("altstate")
-            txtaltpost.Text = dr.Item("altcode")
-            txtaltcountry.Text = dr.Item("altcountry")
-            ComboBox1.SelectedItem = dr.Item("profession")
-            condesi.Text = dr.Item("designation")
-            concomname.Text = dr.Item("cname")
-            conadd.Text = dr.Item("cadd")
-            conweb.Text = dr.Item("website")
-            dr.Close()
-        End If
-        con.Close()
+        Try
+            cmd.Connection = con
+            con.Open()
+            cmd.CommandText = "select * from Contacts where fname='" & conlistbox.SelectedValue & "'"
+            dr = cmd.ExecuteReader()
+            If dr.HasRows() Then
+                dr.Read()
+                confirstname.Text = dr.Item("fname")
+                conemail.Text = dr.Item("email")
+                constreet.Text = dr.Item("street")
+                concity.Text = dr.Item("city")
+                constate.Text = dr.Item("state")
+                concode.Text = dr.Item("code")
+                concountry.Text = dr.Item("country")
+                conphone.Text = dr.Item("phone")
+                conmobile.Text = dr.Item("mobile")
+                txtaltstreet.Text = dr.Item("altstreet")
+                txtaltcity.Text = dr.Item("altcity")
+                txtaltstate.Text = dr.Item("altstate")
+                txtaltpost.Text = dr.Item("altcode")
+                txtaltcountry.Text = dr.Item("altcountry")
+                ComboBox1.SelectedItem = dr.Item("profession")
+                condesi.Text = dr.Item("designation")
+                concomname.Text = dr.Item("cname")
+                conadd.Text = dr.Item("cadd")
+                conweb.Text = dr.Item("website")
+                dr.Close()
+            End If
+            con.Close()
+        Catch
+            con.Close()
+        End Try
     End Sub
 
     Private Sub btnconupdate1_Click(sender As Object, e As EventArgs) Handles btnconupdate1.Click
+        cmd.Connection = con
+        con.Open()
+        cmd.CommandText = "UPDATE Contacts SET fname= '" & confirstname.Text & "', email = '" & conemail.Text & "', street = '" & constreet.Text & "', city='" & concity.Text & "', state = '" & constate.Text & "', code = '" & concode.Text & "', country = '" & concountry.Text & "', profession = '" & ComboBox1.SelectedValue.ToString() & "', designation = '" & condesi.Text & "', cname = '" & concomname.Text & "', cadd = '" & conadd.Text & "', website = '" & conweb.Text & "', phone = '" & conphone.Text & "', mobile = '" & conmobile.Text & "', altstreet = '" & txtaddstreet.Text & "', altcity = '" & txtaltcity.Text & "', altstate = '" & txtaltstate.Text & "', altcode = '" & txtaltpost.Text & "', altcountry = '" & txtaltcountry.Text & "' WHERE fname = '" & conlistbox.SelectedValue & "'"
+        cmd.ExecuteNonQuery()
+        MsgBox("Contact Updated Successfully.")
+
+        CRMDataSet4.Clear()
+        ContactsTableAdapter2.Fill(CRMDataSet4.Contacts)
+        ldlistbox.DataSource = CRMDataSet4.Contacts
+        ldlistbox.DisplayMember = "fname"
+        ldlistbox.ValueMember = "fname"
 
     End Sub
 
     Private Sub btnconreset_Click(sender As Object, e As EventArgs) Handles btnconreset.Click
+
+        CRMDataSet4.Clear()
+        ContactsTableAdapter2.Fill(CRMDataSet4.Contacts)
+        ldlistbox.DataSource = CRMDataSet4.Contacts
+        ldlistbox.DisplayMember = "fname"
+        ldlistbox.ValueMember = "fname"
+
         confirstname.Text = ""
         conemail.Text = ""
         constreet.Text = ""
@@ -160,6 +189,32 @@ Public Class Dashboard
         cmd.CommandText = "delete from Contacts where fname='" & conlistbox.SelectedValue & "'"
         cmd.ExecuteNonQuery()
         MsgBox("Contact Deleted.")
+
+        CRMDataSet4.Clear()
+        ContactsTableAdapter2.Fill(CRMDataSet4.Contacts)
+        ldlistbox.DataSource = CRMDataSet4.Contacts
+        ldlistbox.DisplayMember = "fname"
+        ldlistbox.ValueMember = "fname"
+
+        confirstname.Text = ""
+        conemail.Text = ""
+        constreet.Text = ""
+        concity.Text = ""
+        constate.Text = ""
+        concode.Text = ""
+        concountry.Text = ""
+        conphone.Text = ""
+        conmobile.Text = ""
+        txtaltstreet.Text = ""
+        txtaltcity.Text = ""
+        txtaltstate.Text = ""
+        txtaltpost.Text = ""
+        txtaltcountry.Text = ""
+        ComboBox1.SelectedIndex = -1
+        condesi.Text = ""
+        concomname.Text = ""
+        conadd.Text = ""
+        conweb.Text = "http://"
 
         con.Close()
     End Sub

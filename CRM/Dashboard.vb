@@ -60,7 +60,7 @@ Public Class Dashboard
                     con.Open()
                     cmd.CommandText = "insert into Contacts(fname,street,city,state,code,country,email,phone,mobile,altstreet,altcity,altstate,altcode,altcountry,profession,designation,cname,cadd,website) values('" & confirstname.Text & "','" & constreet.Text & "','" & concity.Text & "', '" & constate.Text & "','" & concode.Text & "','" & concountry.Text & "','" & conemail.Text & "',
 '" & conphone.Text & "','" & conmobile.Text & "','" & txtaltstreet.Text & "','" & txtaltcity.Text & "','" & txtaltstate.Text & "','" & txtaltpost.Text & "','" & txtaltcountry.Text & "',
-'" & ComboBox1.SelectedText.ToString() & "','" & condesi.Text & "','" & concomname.Text & "','" & conadd.Text & "','" & conweb.Text & "')"
+'" & ComboBox1.SelectedItem.ToString() & "','" & condesi.Text & "','" & concomname.Text & "','" & conadd.Text & "','" & conweb.Text & "')"
 
 
                     cmd.ExecuteNonQuery()
@@ -141,7 +141,7 @@ Public Class Dashboard
     Private Sub btnconupdate1_Click(sender As Object, e As EventArgs) Handles btnconupdate1.Click
         cmd.Connection = con
         con.Open()
-        cmd.CommandText = "UPDATE Contacts SET fname= '" & confirstname.Text & "', email = '" & conemail.Text & "', street = '" & constreet.Text & "', city='" & concity.Text & "', state = '" & constate.Text & "', code = '" & concode.Text & "', country = '" & concountry.Text & "', profession = '" & ComboBox1.SelectedValue.ToString() & "', designation = '" & condesi.Text & "', cname = '" & concomname.Text & "', cadd = '" & conadd.Text & "', website = '" & conweb.Text & "', phone = '" & conphone.Text & "', mobile = '" & conmobile.Text & "', altstreet = '" & txtaddstreet.Text & "', altcity = '" & txtaltcity.Text & "', altstate = '" & txtaltstate.Text & "', altcode = '" & txtaltpost.Text & "', altcountry = '" & txtaltcountry.Text & "' WHERE fname = '" & conlistbox.SelectedValue & "'"
+        cmd.CommandText = "UPDATE Contacts SET fname = '" & confirstname.Text & "', email = '" & conemail.Text & "', street = '" & constreet.Text & "', city = '" & concity.Text & "', state = '" & constate.Text & "', code = '" & concode.Text & "', country = '" & concountry.Text & "', profession = '" & ComboBox1.SelectedItem.ToString() & "', designation = '" & condesi.Text & "', cname = '" & concomname.Text & "', cadd = '" & conadd.Text & "', website = '" & conweb.Text & "', phone = '" & conphone.Text & "', mobile = '" & conmobile.Text & "', altstreet = '" & txtaltstreet.Text & "', altcity = '" & txtaltcity.Text & "', altstate = '" & txtaltstate.Text & "', altcode = '" & txtaltpost.Text & "', altcountry = '" & txtaltcountry.Text & "' WHERE fname = '" & conlistbox.SelectedValue & "'"
         cmd.ExecuteNonQuery()
         MsgBox("Contact Updated Successfully.")
 
@@ -151,6 +151,7 @@ Public Class Dashboard
         ldlistbox.DisplayMember = "fname"
         ldlistbox.ValueMember = "fname"
 
+        con.Close()
     End Sub
 
     Private Sub btnconreset_Click(sender As Object, e As EventArgs) Handles btnconreset.Click
@@ -422,6 +423,7 @@ Public Class Dashboard
         ldlistbox.DisplayMember = "f_name"
         ldlistbox.ValueMember = "f_name"
 
+        con.Close()
     End Sub
     'End of Lead Tab Coding
 

@@ -1380,7 +1380,7 @@ Partial Class Dashboard
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Salaried", "Self Employed(Professionals)", "Self Employed(Business)", "Student", "Retired", "House-Wife", "Salaried", "Self Employed(Professionals)", "Self Employed(Business)", "Student", "Retired", "House-Wife"})
+        Me.ComboBox1.Items.AddRange(New Object() {"Salaried", "Self Employed(Professionals)", "Self Employed(Business)", "Student", "Retired", "House-Wife"})
         Me.ComboBox1.Location = New System.Drawing.Point(84, 24)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(201, 21)
